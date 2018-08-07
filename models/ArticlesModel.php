@@ -63,3 +63,62 @@ function getArticleById($articleId){
                 
        
 }
+
+/*
+ * обновление главной фотографии стати
+ * 
+ */
+
+function updateArticleImage($itemId, $newFileName){
+    
+    $rs = updateArticleInDb($itemId, NULL, NULL, NULL, NULL, NULL, NULL, NULL, $newFileName);
+    
+    return $rs;
+    
+}
+
+/*
+ * обновление данных стати
+ * 
+ */
+               
+ function updateArticleInDb($itemId, $itemName, $itemDate, $itemStatus, 
+         $itemTeaser, $itemText, $itemCat, $itemTeg, $newFileName = null){
+     global $db;                                                                                    
+     $set = array();
+     
+     if ($itemName){
+         $set[]="`name`='{$itemName}'";
+          }
+     
+    if ($itemDate >0 ){
+         $set[]="`date`='{$itemDate}'";
+          }
+    if ($itemStatus !==null){
+         $set[]="`status`='{$itemStatus}'";
+          }
+    if ($itemTeg !==null){
+         $set[]="`teg`='{$itemTeg}'";
+          }
+     if ($itemDescShort){
+         $set[]="`teaser`='{$itemTeaser}'";
+          }
+     if ($itemDesc){
+         $set[]="`text`='{$itemText}'";
+          }
+     if ($itemCat){
+         $set[]="`category_id`='{$itemCat}'";
+          }
+    if ($newFileName){
+         $set[]="`image`='{$newFileName}'";
+          }
+          
+   $setStr = implode($set, ",");
+   
+   $sql = "UPDATE `articles` 
+                    SET {$setStr}
+                    WHERE id = '{$itemId}' ";
+                    
+   $rs = mysqli_query($db, $sql);
+    return $rs;
+}

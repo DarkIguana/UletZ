@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-06 05:35:48
+/* Smarty version 3.1.32, created on 2018-08-07 19:05:41
   from '/home/lizard/www/site.local/views/admin/adminEditArticle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b67c214102d89_01016665',
+  'unifunc' => 'content_5b69d165bb43f2_06079382',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd02e1e9668a540fc0d7dc47c2e7c2ba08f81583e' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminEditArticle.tpl',
-      1 => 1533526543,
+      1 => 1533661457,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b67c214102d89_01016665 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b69d165bb43f2_06079382 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<h1>edit Экскурсии </h1>
+<h1>edit статьи </h1>
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsArticle']->value, 'item', false, NULL, 'article', array (
 ));
@@ -34,16 +34,17 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
                  <h2>Изображение</h2>
             <div>
                 <?php if ($_smarty_tpl->tpl_vars['item']->value['image']) {?>
-                      <img src="/images/<?php echo $_smarty_tpl->tpl_vars['country']->value;?>
-/articles/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
+                      <img src="/images/articles/<?php echo $_smarty_tpl->tpl_vars['country']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
 " width="400"/>
                 <?php }?>
                           <form action="/<?php echo $_smarty_tpl->tpl_vars['country']->value;?>
-/admin/upload/"  method="post" enctype="multipart/form-data">
+/admin/uploadart/"  method="post" enctype="multipart/form-data">
                   
                                 <input type="file" name="filename"></br>
                                 <input type="hidden" name="itemId" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 "></br>
+                               
                                 <input type="submit" value="загрузить"></br>
                        
                         </form>
@@ -75,21 +76,28 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <div><input type="edit" id="itemName_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 " />  </div>
+
+<h1>Teg</h1>
+         <div>
+        <input type="edit" id="itemTeg_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['teaser'];?>
+" /> 
+         </div>
         
 <h1>Дата</h1>
-        <div><input type="edit" id="itemPrice_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+        <div><input type="edit" id="itemDate_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['date'];?>
 " />           </div>
         
 <h1>Описание короткое</h1>
          <div>
-        <input type="edit" id="itemDescShort_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+        <input type="edit" id="itemTeaser_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['teaser'];?>
 " /> 
          </div>
          
 <h1>Описание</h1>
-          <div><textarea id="itemDesc_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+          <div><textarea id="itemText_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 ">
                      <?php echo $_smarty_tpl->tpl_vars['item']->value['text'];?>
 
@@ -107,7 +115,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?> 
  <div>
-                     <input type="button" value="Сохранить" onclick="updateExcursion('<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+                     <input type="button" value="Сохранить" onclick="updateArticleJs('<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+, <?php echo $_smarty_tpl->tpl_vars['country']->value;?>
 ');"/>
 </div>
    <?php }

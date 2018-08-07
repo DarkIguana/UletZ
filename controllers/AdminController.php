@@ -170,7 +170,12 @@ function addproductAction(){
     return;
         
     }
-      
+ 
+  /**
+  * получаем данные об экскурсии из формы и посылаем в БД
+  * 
+  * @return type
+  */     
 function updateexcursionAction(){
     $itemId                 = $_POST['itemId'];
     $itemName           = $_POST['itemName'];
@@ -199,14 +204,12 @@ function updateexcursionAction(){
  * загрузка файлов на сервер с изменением имени
  */
     
-function uploadexcAction($country){
-    //$itemId= isset($_GET['id']) ? $_GET['id'] : null;
-    //$country= isset($_GET['country']) ? $_GET['country'] : null;    
+function uploadexcAction(){
+    global $country;
     
     $maxSize=2*1024*1024;
     $itemId =$_POST['itemId'];
-    
-  d($country);
+   
      // получаем расширение файла
         $ext= pathinfo($_FILES['filename']['name'], PATHINFO_EXTENSION );
     
@@ -315,6 +318,8 @@ function editarticleAction($smarty, $idArticle, $country){
  */
     
 function uploadartAction($country){
+        
+       global $country;
         $maxSize=2*1024*1024;
         $itemId =$_POST['itemId'];
         
@@ -331,14 +336,45 @@ function uploadartAction($country){
          
          // проверка загружен ли файл
          if(is_uploaded_file($_FILES['filename']['tmp_name'])){
-             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/images/excursions/'.$newFileName);                             
+             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/images/articles/'.$country.'/'.$newFileName);                             
                 if($res){
-                     $res=updateProductImage($itemId, $newFileName);
+                     $res=updateArticleImage($itemId, $newFileName);
                          if($res){
-                             header ("Location: /{$country}/admin/editarticle/$itemId/");
+                             header ("Location: /$country/admin/editarticle/$itemId/");
                          }
  
          }
          }
 }
     
+
+  /**
+  * получаем данные об экскурсии из формы и посылаем в БД
+  * 
+  * @return type
+  */     
+function updatearticleAction(){
+    $itemId                 = $_POST['itemId'];
+    $itemName           = $_POST['itemName'];
+    $itemDate           = $_POST['itemDate'];
+    $itemStatus          = $_POST['itemStatus'];
+    $itemTeaser    = $_POST['itemTeaser'];
+    $itemText           = $_POST['itemText'];
+    $itemCat             = $_POST['itemCatId']; 
+    $itemTeg            = $_POST['itemTeg']; 
+    //  $newFileName      = $_POST['newFileName'];   
+    
+     $res=updateArticleInDb($itemId, $itemName, $itemDate, 
+                                    $itemStatus, $itemTeaser, $itemText, $itemCat, $itemTeg);
+     
+     if($res){
+        $resData['success'] = 1;
+        $resData['message']= ' Изменения успншно внесены';
+    } else {
+        $resData['success'] = 0;
+        $resData['message']= ' Ошика изменения данных';
+    }
+    echo json_encode($resData);
+    return;
+    }
+ 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-06 06:05:17
+/* Smarty version 3.1.32, created on 2018-08-07 16:40:22
   from '/home/lizard/www/site.local/views/admin/adminEditExcursion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b67c8fd1f8672_85790925',
+  'unifunc' => 'content_5b69af561d49c4_18578349',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '98d7a1383cebeae405cd7044b96837bbb2b10ffe' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminEditExcursion.tpl',
-      1 => 1533528309,
+      1 => 1533652812,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b67c8fd1f8672_85790925 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b69af561d49c4_18578349 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1>edit Экскурсии </h1>
         <?php
@@ -34,12 +34,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
                  <h2>Изображение</h2>
             <div>
                 <?php if ($_smarty_tpl->tpl_vars['item']->value['image']) {?>
-                      <img src="/images/<?php echo $_smarty_tpl->tpl_vars['country']->value;?>
-/excursions/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
+                      <img src="/images/excursions/<?php echo $_smarty_tpl->tpl_vars['country']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
 " width="400"/>
                 <?php }?>
                           <form action="/<?php echo $_smarty_tpl->tpl_vars['country']->value;?>
-/admin/uploadexc/"  method="post" enctype="multipart/form-data">
+/admin/uploadexc/"  method="post" 
+                                                            enctype="multipart/form-data">
                   
                                 <input type="file" name="filename"></br>
                                 <input type="hidden" name="itemId" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>

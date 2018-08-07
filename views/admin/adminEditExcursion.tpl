@@ -6,9 +6,10 @@
                  <h2>Изображение</h2>
             <div>
                 {if $item['image']}
-                      <img src="/images/{$country}/excursions/{$item['image']}" width="400"/>
+                      <img src="/images/excursions/{$country}/{$item['image']}" width="400"/>
                 {/if}
-                          <form action="/{$country}/admin/uploadexc/"  method="post" enctype="multipart/form-data">
+                          <form action="/{$country}/admin/uploadexc/"  method="post" 
+                                                            enctype="multipart/form-data">
                   
                                 <input type="file" name="filename"></br>
                                 <input type="hidden" name="itemId" value="{$item['id']}"></br>

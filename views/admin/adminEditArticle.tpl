@@ -1,12 +1,12 @@
 {* щаблон Редактирования одной экскурсии*}
 
-<h1>edit Экскурсии </h1>
+<h1>edit статьи </h1>
         {foreach $rsArticle as $item name=article}
                  <h3>ID = {$item['id']}  </h3>
                  <h2>Изображение</h2>
             <div>
                 {if $item['image']}
-                      <img src="/images/{$country}/articles/{$item['image']}" width="400"/>
+                      <img src="/images/articles/{$country}/{$item['image']}" width="400"/>
                 {/if}
                           <form action="/{$country}/admin/uploadart/"  method="post" enctype="multipart/form-data">
                   
@@ -32,17 +32,22 @@
              
 <h1>Название</h1>
         <div><input type="edit" id="itemName_{$item['id']}" value="{$item['name']}" />  </div>
+
+<h1>Teg</h1>
+         <div>
+        <input type="edit" id="itemTeg_{$item['id']}" value="{$item['teaser']}" /> 
+         </div>
         
 <h1>Дата</h1>
-        <div><input type="edit" id="itemPrice_{$item['id']}" value="{$item['date']}" />           </div>
+        <div><input type="edit" id="itemDate_{$item['id']}" value="{$item['date']}" />           </div>
         
 <h1>Описание короткое</h1>
          <div>
-        <input type="edit" id="itemDescShort_{$item['id']}" value="{$item['teaser']}" /> 
+        <input type="edit" id="itemTeaser_{$item['id']}" value="{$item['teaser']}" /> 
          </div>
          
 <h1>Описание</h1>
-          <div><textarea id="itemDesc_{$item['id']}">
+          <div><textarea id="itemText_{$item['id']}">
                      {$item['text']}
                  </textarea>
             </div>
@@ -54,6 +59,6 @@
         </div>
      {/foreach} 
  <div>
-                     <input type="button" value="Сохранить" onclick="updateExcursion('{$item['id']}');"/>
+                     <input type="button" value="Сохранить" onclick="updateArticleJs('{$item['id']}, {$country}');"/>
 </div>
    

@@ -19,7 +19,7 @@
               <input type="checkbox" id="itemStatus_{$item['id']}" {if $item['status'] == 0 } checked="checked"{/if} />
           </td>
           <td> {if $item['image']}
-                  <img src="/images/{$country}/excursions/{$item['image']}" width="100"/>
+                  <img src="/images/excursions/{$country}/{$item['image']}" width="100"/>
               {/if}</td>
           <td>
                        <form method="LINK" action="/{$country}/admin/editexcursion/{$item['id']}/">

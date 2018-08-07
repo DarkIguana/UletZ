@@ -132,3 +132,40 @@ function updateExcursion(itemId){
         });
 }
 
+
+/*
+ * обновление данных в таблице статей
+ * 
+ * вызывает updatearticleAction
+*/
+         
+function updateArticleJs(itemId, country){
+    
+    var itemName        = $('#itemName_'+itemId).val();
+    var itemDate         = $('#itemDate_'+itemId).val();
+    var itemCatId        = $('#itemCatId_'+itemId).val();
+    var itemTeaser      = $('#itemTeaser_'+itemId).val();
+    var itemText        = $('#itemText_'+itemId).val();
+    var itemStatus     = $('#itemStatus_'+itemId).attr('checked');
+    var itemTeg        = $('#itemTeg_'+itemId).val();
+   // var newFileName        = $('#newFileName_'+itemId).val(); 
+    if( ! itemStatus){
+        itemStatus=1
+    } else {
+        itemStatus=0
+    }  
+   
+    var postData      = {itemId: itemId, itemName: itemName, itemDate : itemDate , 
+        itemCatId: itemCatId, itemTeaser: itemTeaser, itemText: itemText, itemStatus: itemStatus, itemTeg: itemTeg};
+      
+        $.ajax ({
+          type: 'POST',
+           async: false, 
+           url: "/admin/updatearticle/",
+           data: postData,
+          dataType: 'json',
+          success: function(data){
+                alert (data['message']);
+              }
+        });
+}

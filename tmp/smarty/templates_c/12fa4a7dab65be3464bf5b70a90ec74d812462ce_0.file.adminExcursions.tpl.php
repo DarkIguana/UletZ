@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-06 05:47:35
+/* Smarty version 3.1.32, created on 2018-08-07 16:44:43
   from '/home/lizard/www/site.local/views/admin/adminExcursions.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b67c4d7e39ec4_07435066',
+  'unifunc' => 'content_5b69b05b046927_44516513',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12fa4a7dab65be3464bf5b70a90ec74d812462ce' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminExcursions.tpl',
-      1 => 1533527253,
+      1 => 1533653079,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b67c4d7e39ec4_07435066 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b69b05b046927_44516513 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2> Экскурсии </h2>
 
 <table >
@@ -51,8 +51,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 " <?php if ($_smarty_tpl->tpl_vars['item']->value['status'] == 0) {?> checked="checked"<?php }?> />
           </td>
           <td> <?php if ($_smarty_tpl->tpl_vars['item']->value['image']) {?>
-                  <img src="/images/<?php echo $_smarty_tpl->tpl_vars['country']->value;?>
-/excursions/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
+                  <img src="/images/excursions/<?php echo $_smarty_tpl->tpl_vars['country']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
 " width="100"/>
               <?php }?></td>
           <td>
