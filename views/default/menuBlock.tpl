@@ -11,8 +11,8 @@
         </div>
                 
         <div id="subMenu">
-                <a href="/{$country}/excursions/">  Экскурсии </a><br/>
-                <a href="/{$country}/articles/"> Статьи </a><br/>
+                <a href="/{$smcountry}/excursions/">  Экскурсии </a><br/>
+                <a href="/{$smcountry}/articles/"> Статьи </a><br/>
         </div>
     
 </div>

@@ -19,7 +19,7 @@ function indexAction($smarty, $id, $country){
     $rsExcursions = getExcursionsByCat($countryId);
 
     $smarty->assign('countries', $countries);
-    $smarty->assign('country', $country);
+    $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
   
@@ -49,7 +49,7 @@ function itemAction($smarty){
     $rsExcursion = getExcursionById($idExcursion);
 
     $smarty->assign('countries', $countries);
-    $smarty->assign('country', $country);
+    $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
     

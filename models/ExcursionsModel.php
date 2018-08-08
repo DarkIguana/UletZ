@@ -54,7 +54,7 @@ function getExcursionsAndCatName(){
   * 
   */
  
- function insertProduct ($itemName, $itemPrice,$itemDescShort, $itemDesc, $itemCat){
+ function insertExcursion($itemName, $itemPrice,$itemDescShort, $itemDesc, $itemCat, $itemStatus){
      global $db;
      
    $sql = "INSERT INTO `excursions`
@@ -63,6 +63,7 @@ function getExcursionsAndCatName(){
                         `price`='{$itemPrice}',  
      `description_short` ='{$itemDescShort}',
                `description`='{$itemDesc}',   
+                      `status`='{$itemStatus}',
               `category_id`='{$itemCat}'   " ; 
    
   $rs = mysqli_query($db, $sql);

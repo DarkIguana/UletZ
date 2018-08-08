@@ -17,10 +17,10 @@ function getArticles($limit = null){
     return createSmartyRsArray($rs);
 }
 
- /*
+ /**
  * получить список всех статей по стране
  * 
- */
+ **/
 
 function getArticlesByCat($countryId){
      global $db;
@@ -31,6 +31,7 @@ function getArticlesByCat($countryId){
   return createSmartyRsArray($rs);
  }
 
+ 
 
  /*
  * список статей с именем категории
@@ -96,14 +97,14 @@ function updateArticleImage($itemId, $newFileName){
           }
     if ($itemStatus !==null){
          $set[]="`status`='{$itemStatus}'";
-          }
+        }
     if ($itemTeg !==null){
          $set[]="`teg`='{$itemTeg}'";
           }
-     if ($itemDescShort){
+     if ($itemTeaser){
          $set[]="`teaser`='{$itemTeaser}'";
           }
-     if ($itemDesc){
+     if ($itemText){
          $set[]="`text`='{$itemText}'";
           }
      if ($itemCat){
@@ -122,3 +123,27 @@ function updateArticleImage($itemId, $newFileName){
    $rs = mysqli_query($db, $sql);
     return $rs;
 }
+
+
+
+  /**
+  * добавляем новую статью
+  * 
+  **/
+ 
+ function insertArticleToDb($itemName, $itemTeaser,$itemText, $itemTeg, $itemCat, $itemStatus){
+     global $db;
+ 
+   $sql = "INSERT INTO `articles`
+                  SET
+                       `name`='{$itemName}',    
+                        `Teaser`='{$itemTeaser}',  
+                        `text` ='{$itemText}',
+                        `teg`='{$itemTeg}',   
+                        `category_id`='{$itemCat}',
+                        `status`='{$itemStatus}' " ; 
+   
+  $rs = mysqli_query($db, $sql);
+  return $rs;
+ }
+ 

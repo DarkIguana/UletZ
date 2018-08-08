@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-06 05:22:07
+/* Smarty version 3.1.32, created on 2018-08-08 12:32:07
   from '/home/lizard/www/site.local/views/admin/adminArticles.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b67bedfa7f140_27476105',
+  'unifunc' => 'content_5b6ac6a7c53fe7_83224029',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'df58bf68ce98b281bb968dbf813782edfa764734' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminArticles.tpl',
-      1 => 1533525720,
+      1 => 1533724070,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b67bedfa7f140_27476105 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b6ac6a7c53fe7_83224029 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <table >
-    <caption> Редактирование Статей</caption>
+    <caption> Редактирование Статей <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+ </caption>
     <tr>
         <th>ID</th>
         <th>Название</th>
@@ -44,19 +45,18 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 </td>
           <td><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </td> 
-          <td><?php echo $_smarty_tpl->tpl_vars['item']->value['cat_name'];?>
-</td> 
+         
           <td>
               <input type="checkbox" id="itemStatus_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " <?php if ($_smarty_tpl->tpl_vars['item']->value['status'] == 0) {?> checked="checked"<?php }?> />
           </td>
           <td> <?php if ($_smarty_tpl->tpl_vars['item']->value['image']) {?>
-                  <img src="/images/<?php echo $_smarty_tpl->tpl_vars['country']->value;?>
-/articles/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
+                  <img src="/images/articles/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
 " width="100"/>
               <?php }?></td>
           <td>
-                       <form method="LINK" action="/<?php echo $_smarty_tpl->tpl_vars['country']->value;?>
+                       <form method="LINK" action="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /admin/editarticle/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 /">
                                     <input type="submit" value="Изменить">

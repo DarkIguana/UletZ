@@ -1,8 +1,8 @@
 <?php
 
-/* 
+/**
  * контроллер админки
- */
+ **/
 
 // подключаем модели
 include_once '../models/MenuModel.php';
@@ -21,7 +21,7 @@ function indexAction($smarty, $id, $country){
     $rsMenu = getMenuByCounry($countryId);
 
     $smarty->assign('countries', $countries);
-    $smarty->assign('country', $country);
+    $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
       
@@ -32,9 +32,9 @@ function indexAction($smarty, $id, $country){
     loadTemplate($smarty, 'adminFooter');
 }
 
-/*
+/**
  * добавление новой категории
- */
+ **/
 
 function addnewcatAction(){
     $catMenuName     = $_POST['newMenuCategoryName'];
@@ -52,9 +52,9 @@ function addnewcatAction(){
     return;
 }
 
-/*
+/**
  * обновление данных категории
- */
+ **/
 
 function updatecategoryAction(){
     $itemId         = $_POST['itemId'];
@@ -74,20 +74,21 @@ function updatecategoryAction(){
     return;
 }
 
+/** -------------------------Экскурсии ---------------**/
 
-/*
+/**
  * страница управления Экскурсиями
- */
+ **/
 
 function excursionsAction($smarty, $id, $country){
     
     $countries =getMainCutMenu();
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
-    $rsExcursions = getExcursionsAndCatName();
+    $rsExcursions = getExcursionsByCat($countryId);
 
     $smarty->assign('countries', $countries);
-    $smarty->assign('country', $country);
+    $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
     $smarty->assign('rsExcursions', $rsExcursions);
@@ -99,9 +100,9 @@ function excursionsAction($smarty, $id, $country){
      loadTemplate($smarty, 'adminFooter');
 }
 
-/*
+/**
  * страница добавления Экскурсии
- */
+ **/
 
 function addexcursionAction($smarty, $id, $country){
    
@@ -112,7 +113,7 @@ function addexcursionAction($smarty, $id, $country){
     //$rsExcursions = getExcursionsAndCatName();
 
     $smarty->assign('countries', $countries);
-    $smarty->assign('country', $country);
+    $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
     
@@ -123,9 +124,9 @@ function addexcursionAction($smarty, $id, $country){
      loadTemplate($smarty, 'adminFooter');
 }
 
-/*
+/**
  * страница изменения одной Экскурсии
- */
+ **/
 
 function editexcursionAction($smarty,$idExcursion, $country){
     
@@ -136,7 +137,7 @@ function editexcursionAction($smarty,$idExcursion, $country){
     $rsExcursion = getExcursionById($idExcursion);
     
     $smarty->assign('countries', $countries);
-    $smarty->assign('country', $country);
+    $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
     
@@ -150,14 +151,18 @@ function editexcursionAction($smarty,$idExcursion, $country){
      loadTemplate($smarty, 'adminFooter');
 }
 
-function addproductAction(){
+/** 
+ *  добавлениe Экскурсии в БД
+ **/
+
+function addexcursiontodbAction(){
     $itemName           = $_POST['itemName'];
     $itemPrice             = $_POST['itemPrice'];
     $itemDesc             = $_POST['itemDesc'];
     $itemDescShort     = $_POST['itemDescShort'];
     $itemCat               = $_POST['itemCatId'];
-                             
-    $res=insertProduct($itemName, $itemPrice,$itemDescShort, $itemDesc, $itemCat);
+    $itemStatus          = $_POST['itemStatus'];                         
+    $res=insertExcursion($itemName, $itemPrice,$itemDescShort, $itemDesc, $itemCat, $itemStatus);
  
     if($res){
         $resData['success'] = 1;
@@ -200,12 +205,12 @@ function updateexcursionAction(){
     return;
     }
  
- /*
+ /**
  * загрузка файлов на сервер с изменением имени
- */
+ **/
     
 function uploadexcAction(){
-    global $country;
+     $country = isset($_GET['country']) ? $_GET['country'] : null;
     
     $maxSize=2*1024*1024;
     $itemId =$_POST['itemId'];
@@ -234,21 +239,22 @@ function uploadexcAction(){
          }
 }
     
-  /*  -----------------------------Статьи----------------------------------------  */  
+  /**  -----------------------------Статьи----------------------------------------  **/  
 
-/*
+/**
  * страница управления Статьями
- */
+ **/
 
 function articlesAction($smarty, $id, $country){
     
     $countries =getMainCutMenu();
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
-    $rsArticles = getArticlesAndCatName();
+    
+    $rsArticles = getArticlesByCat($countryId);
    
     $smarty->assign('countries', $countries);
-    $smarty->assign('country', $country);
+    $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
     $smarty->assign('rsArticles', $rsArticles);
@@ -260,9 +266,9 @@ function articlesAction($smarty, $id, $country){
      loadTemplate($smarty, 'adminFooter');
 }
 
-/*
+/**
  * страница добавления Статьи
- */
+ **/
 
 function addarticleAction($smarty, $id, $country){
         
@@ -272,7 +278,7 @@ function addarticleAction($smarty, $id, $country){
     $rsArticles = getArticlesAndCatName();
    
     $smarty->assign('countries', $countries);
-    $smarty->assign('country', $country);
+    $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
     $smarty->assign('rsArticles', $rsArticles);
@@ -284,9 +290,9 @@ function addarticleAction($smarty, $id, $country){
      loadTemplate($smarty, 'adminFooter');
 }
 
-/*
+/**
  * страница изменения одной Статьи
- */
+ **/
 
 function editarticleAction($smarty, $idArticle, $country){
     
@@ -295,7 +301,7 @@ function editarticleAction($smarty, $idArticle, $country){
     $rsMenu = getMenuByCounry($countryId);
        
     $smarty->assign('countries', $countries);
-    $smarty->assign('country', $country);
+    $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
       
@@ -313,13 +319,14 @@ function editarticleAction($smarty, $idArticle, $country){
 }
 
 
-/*
+/**
  * загрузка файлов на сервер с изменением имени
- */
+ **/
     
-function uploadartAction($country){
+function uploadartAction(){
+      $country = isset($_GET['country']) ? $_GET['country'] : null;
         
-       global $country;
+      
         $maxSize=2*1024*1024;
         $itemId =$_POST['itemId'];
         
@@ -363,7 +370,7 @@ function updatearticleAction(){
     $itemCat             = $_POST['itemCatId']; 
     $itemTeg            = $_POST['itemTeg']; 
     //  $newFileName      = $_POST['newFileName'];   
-    
+ 
      $res=updateArticleInDb($itemId, $itemName, $itemDate, 
                                     $itemStatus, $itemTeaser, $itemText, $itemCat, $itemTeg);
      
@@ -378,3 +385,29 @@ function updatearticleAction(){
     return;
     }
  
+    /** 
+ *  добавлениe Статьи в БД
+ **/
+
+function addarticletodbAction(){
+    $itemName           = $_POST['itemName'];
+    $itemTeaser             = $_POST['itemTeaser'];
+    $itemText            = $_POST['itemText'];
+    $itemTeg     = $_POST['itemTeg'];
+    $itemCat               = $_POST['itemCatId'];
+  
+    $itemStatus              = $_POST['itemStatus'];    
+    
+    $res=insertArticleToDb($itemName, $itemTeaser,$itemText, $itemTeg, $itemCat, $itemStatus);
+ 
+    if($res){
+        $resData['success'] = 1;
+        $resData['message']= ' Изменения успншно внесены';
+    } else {
+        $resData['success'] = 0;
+        $resData['message']= ' Ошика изменения данных';
+    }
+    echo json_encode($resData);
+    return;
+        
+    }

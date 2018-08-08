@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-06 04:51:00
+/* Smarty version 3.1.32, created on 2018-08-08 12:35:09
   from '/home/lizard/www/site.local/views/default/menuBlock.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b67b79409d252_61479637',
+  'unifunc' => 'content_5b6ac75d8bf0f8_00594154',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '040ed727f48c0bdcb363ad1775a70843118e4201' => 
     array (
       0 => '/home/lizard/www/site.local/views/default/menuBlock.tpl',
-      1 => 1533523855,
+      1 => 1533724378,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b67b79409d252_61479637 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b6ac75d8bf0f8_00594154 (Smarty_Internal_Template $_smarty_tpl) {
 ?>                
 <div id="menuBlock">
         
@@ -42,9 +42,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
                 
         <div id="subMenu">
-                <a href="/<?php echo $_smarty_tpl->tpl_vars['country']->value;?>
+                <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /excursions/">  Экскурсии </a><br/>
-                <a href="/<?php echo $_smarty_tpl->tpl_vars['country']->value;?>
+                <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /articles/"> Статьи </a><br/>
         </div>
     

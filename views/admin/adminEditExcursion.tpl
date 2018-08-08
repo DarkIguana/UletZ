@@ -1,16 +1,19 @@
 {* щаблон Редактирования одной экскурсии*}
 
-<h1>edit Экскурсии </h1>
+<h1>edit Экскурсии {$smcountry}</h1>
         {foreach $rsExcursion as $item name=excursion}
-                 <h3>ID = {$item['id']}  </h3>
-                 <h2>Изображение</h2>
-            <div>
-                {if $item['image']}
-                      <img src="/images/excursions/{$country}/{$item['image']}" width="400"/>
-                {/if}
-                          <form action="/{$country}/admin/uploadexc/"  method="post" 
+            <h3>ID = {$item['id']}  </h3>
+            <h2>Не отображать</h2>
+                    <div>
+                            <input type="checkbox" id="itemStatus_{$item['id']}" {if $item['status'] == 0 } checked="checked"{/if} />
+                    </div>
+            <h2>Изображение</h2>
+                <div>
+                    {if $item['image']}
+                      <img src="/images/excursions/{$smcountry}/{$item['image']}" width="400"/>
+                    {/if}
+                          <form action="/{$smcountry}/admin/uploadexc/"  method="post" 
                                                             enctype="multipart/form-data">
-                  
                                 <input type="file" name="filename"></br>
                                 <input type="hidden" name="itemId" value="{$item['id']}"></br>
                                 <input type="submit" value="загрузить"></br>
@@ -20,11 +23,11 @@
             
         
  
-<h1>Категория</h1>
+<h1>Страна</h1>
         <div>
             <select id="itemCatId_{$item['id']}">
-                <option value="0">Главная Категория
-                     {foreach $rsMenu as $itemCat}
+               
+                     {foreach $countries as $itemCat}
                          <option value="{$itemCat['id']}" {if $item['category_id'] == $itemCat['id'] } selected{/if}> {$itemCat['cat_name']}
                       {/foreach}    
                 </select>
@@ -46,14 +49,11 @@
                      {$item['description']}
                  </textarea>
             </div>
-                 
+          
    
-<h2>Не отображать</h2>
-        <div>
-            <input type="checkbox" id="itemStatus_{$item['id']}" {if $item['status'] == 0 } checked="checked"{/if} />
-        </div>
+
      {/foreach} 
  <div>
-                     <input type="button" value="Сохранить" onclick="updateExcursion('{$item['id']}');"/>
+                     <input type="button" value="Сохранить" onclick="updateExcursionJs('{$item['id']}');"/>
 </div>
    

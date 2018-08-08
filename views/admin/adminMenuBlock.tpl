@@ -11,12 +11,12 @@
         </div>
         
         <div id="subMenu">
-                    <a href="/{$country}/admin/"> Главная</a></br>
-                    <a href="/{$country}/admin/"> Добавить категорию</a></br>
-                    <a href="/{$country}/admin/excursions/"> Редактировать Экскурсии</a> </br>
-                    <a href="/{$country}/admin/addexcursion/"> Добавить Экскурсию</a> </br>
-                    <a href="/{$country}/admin/articles/"> Редактировать Статьи</a> </br>
-                    <a href="/{$country}/admin/addarticle/"> Добавить Статью</a> </br>
+                    <a href="/{$smcountry}/admin/"> Главная</a></br>
+                    <a href="/{$smcountry}/admin/"> Добавить категорию</a></br>
+                    <a href="/{$smcountry}/admin/excursions/"> Редактировать Экскурсии</a> </br>
+                    <a href="/{$smcountry}/admin/addexcursion/"> Добавить Экскурсию</a> </br>
+                    <a href="/{$smcountry}/admin/articles/"> Редактировать Статьи</a> </br>
+                    <a href="/{$smcountry}/admin/addarticle/"> Добавить Статью</a> </br>
         </div>      
 </div>
 

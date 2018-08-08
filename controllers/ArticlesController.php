@@ -19,7 +19,7 @@ function indexAction($smarty, $id, $country){
     $rsMenu = getMenuByCounry($countryId);
    
     $smarty->assign('countries', $countries);
-    $smarty->assign('country', $country);
+    $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
    
@@ -51,7 +51,7 @@ function itemAction($smarty){
     $rsArticle = getArticleById($idArticle);
 
     $smarty->assign('countries', $countries);
-    $smarty->assign('country', $country);
+    $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
     

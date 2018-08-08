@@ -2,14 +2,14 @@
 
 <h2>Не отображать</h2>
         <div>
-            <input type="checkbox" id="itemStatus" />
+            <input type="checkbox" id="newitemStatus" />
         </div>
         
-<h2>Категория</h2>
+<h2>Страна</h2>
          <div>
                 <select id="newItemCatId">
-                                    <option value="0">Главная Категория
-                                             {foreach $rsMenu as $itemCat}
+                                    
+                                             {foreach $countries as $itemCat}
                                                  <option value="{$itemCat['id']}">{$itemCat['cat_name']}
                                              {/foreach}
                  </select>
@@ -35,9 +35,8 @@
                     <textarea id="newItemDesc"></textarea>
           </div>
 
-<h2>Сохранить</h2>
         <div>
-                <input type="button" value="Сохранить" onclick="addProduct();"/>
+                <input type="button" value="Сохранить" onclick="addExcursionJs();"/>
         </div>
         
 
