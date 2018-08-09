@@ -11,14 +11,18 @@
                      </a><br/>
                 {/foreach} 
         </div>
-        <p> Редактировать </p>
+        
+               <a href="/{$smcountry}/admin/"> Добавить</a></br> 
+                     <p>  </p>
+               <p> Редактировать </p>
+        
         <div id="subMenu">
                     
                  
                     {foreach $smSubMenu as $item }
                             
                                       <a href="/{$smcountry}/admin/{$item['url_cat_name']}/" 
-                                            {if $item['cat_name'] == $smcountry } id="selectMenu"{/if}  > 
+ {if $item['cat_name'] == $smcountry } id="selectMenu"{/if}  > 
                                        {$item['cat_name']}
                                                 
                                   </a><br/>

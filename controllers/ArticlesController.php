@@ -18,6 +18,9 @@ function indexAction($smarty, $id, $country){
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
    
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+    
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -48,6 +51,9 @@ function itemAction($smarty){
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
    
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+    
     $rsArticle = getArticleById($idArticle);
 
     $smarty->assign('countries', $countries);
