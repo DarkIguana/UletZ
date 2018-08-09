@@ -14,8 +14,6 @@
                 {/if}
                           <form action="/{$smcountry}/admin/uploadart/"  method="post" 
                                                             enctype="multipart/form-data">
-                {*<form action="/?controller=admin&action=uploadart"  method="post" enctype="multipart/form-data">
-                  **}
                                 <input type="file" name="filename"></br>
                                 <input type="hidden" name="itemId" value="{$item['id']}"></br>
                                

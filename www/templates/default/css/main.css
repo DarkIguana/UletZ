@@ -17,12 +17,21 @@ body{
     width: 100%;
 }
 
-#topMenu{
+#selectMenu{
+    color: red;
+}
+#countryMenu{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+#subMenu{
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 20px;
 }
-
 #contentBlock{
 	width: 600px;
 	float: left;

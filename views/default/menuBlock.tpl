@@ -4,7 +4,7 @@
         
         <div id="countryMenu">
                  {foreach $countries as $item }
-                     <a href="/{$item['url_cat_name']}/"> 
+                     <a href="/{$item['url_cat_name']}/" {if $item['url_cat_name'] == $smcountry } id="selectMenu"{/if}> 
                             {$item['cat_name']}
                      </a><br/>
                  {/foreach} 
