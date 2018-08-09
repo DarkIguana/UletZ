@@ -1,14 +1,14 @@
 <?php
 
-/* 
+/**
  * модель для таблицы экскурсий (Excursions)
  * 
- */
+ **/
 
- /*
+ /**
  * получить список всех экскурсий по категории
  * 
- */
+ **/
 
 function getExcursions (){
      global $db;
@@ -19,10 +19,10 @@ function getExcursions (){
   return createSmartyRsArray($rs);
  }
 
-  /*
+  /**
  * получить список всех экскурсий по категории (стране)
  * 
- */
+ **/
 
 function getExcursionsByCat($countryId){
      global $db;
@@ -32,11 +32,26 @@ function getExcursionsByCat($countryId){
   $rs = mysqli_query($db, $sql);
   return createSmartyRsArray($rs);
  }
+ 
+  /**
+ * получить список всех активных экскурсий по категории (стране)
+ * 
+ **/
+
+function getActiveExcursionsByCat($countryId){
+     global $db;
+    $sql = " SELECT * 
+                FROM `excursions` 
+                WHERE `category_id`='{$countryId}' 
+                AND `status`='1' "; 
+  $rs = mysqli_query($db, $sql);
+  return createSmartyRsArray($rs);
+ }
 
  
- /*
+ /**
  * список экскурсий с именем категории
- */
+ **/
 
 function getExcursionsAndCatName(){
     global $db;
@@ -49,10 +64,10 @@ function getExcursionsAndCatName(){
     return createSmartyRsArray($rs);
 }
  
- /*
+ /**
   * добавляем новую экскурсию
   * 
-  */
+ **/
  
  function insertExcursion($itemName, $itemPrice,$itemDescShort, $itemDesc, $itemCat, $itemStatus){
      global $db;
@@ -70,10 +85,10 @@ function getExcursionsAndCatName(){
   return $rs;
  }
  
- /*
+ /**
  * обновление данных экскурсий
  * 
- */
+ **/
  
  function updateProduct ($itemId, $itemName, $itemPrice, $itemStatus, 
          $itemDescShort, $itemDesc, $itemCat, $newFileName = null){
@@ -113,10 +128,10 @@ function getExcursionsAndCatName(){
     return $rs;
 }
  
-/*
+/**
  * обновление фотографии экскурсий
  * 
- */
+ **/
 
 function updateProductImage($itemId, $newFileName){
     
@@ -126,9 +141,9 @@ function updateProductImage($itemId, $newFileName){
     
 }
 
-/*
+/**
  * получить экскурсию с именем категории по ID
- */
+ **/
 
 function getExcursionById($excursionId){
     global $db;

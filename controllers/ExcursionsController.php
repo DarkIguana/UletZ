@@ -16,8 +16,11 @@ function indexAction($smarty, $id, $country){
     $countries =getMainCutMenu();
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
-    $rsExcursions = getExcursionsByCat($countryId);
+    $rsExcursions = getActiveExcursionsByCat($countryId);
 
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+    
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -48,6 +51,9 @@ function itemAction($smarty){
    
     $rsExcursion = getExcursionById($idExcursion);
 
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+        
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);

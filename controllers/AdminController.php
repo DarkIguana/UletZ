@@ -19,11 +19,13 @@ function indexAction($smarty, $id, $country){
     $countries =getMainCutMenu();
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
-
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
+       
       
     $smarty->assign('pageTitle', 'Admin Page');
     
@@ -87,6 +89,9 @@ function excursionsAction($smarty, $id, $country){
     $rsMenu = getMenuByCounry($countryId);
     $rsExcursions = getExcursionsByCat($countryId);
 
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+        
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -112,6 +117,9 @@ function addexcursionAction($smarty, $id, $country){
     $rsMenu = getMenuByCounry($countryId);
     //$rsExcursions = getExcursionsAndCatName();
 
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+    
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -135,6 +143,9 @@ function editexcursionAction($smarty,$idExcursion, $country){
     $rsMenu = getMenuByCounry($countryId);
     $idExcursion= isset($_GET['id']) ? $_GET['id'] : "2";
     $rsExcursion = getExcursionById($idExcursion);
+    
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
     
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
@@ -253,6 +264,10 @@ function articlesAction($smarty, $id, $country){
     
     $rsArticles = getArticlesByCat($countryId);
    
+    $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+    
+    
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -277,6 +292,9 @@ function addarticleAction($smarty, $id, $country){
     $rsMenu = getMenuByCounry($countryId);
     $rsArticles = getArticlesAndCatName();
    
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+    
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -304,7 +322,10 @@ function editarticleAction($smarty, $idArticle, $country){
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-      
+    
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+    
     
     $idArticle= isset($_GET['id']) ? $_GET['id'] : "2";
     $rsArticle = getArticleById($idArticle);

@@ -1,13 +1,13 @@
 <?php
 
-/* 
+/**
  * модель для таблицы категорий (Menu)
  * 
- */
+ **/
  
- /*
+ /**
  * получить подкатегории заданной категории
- */
+ **/
 
 function getMenuChildrenForCat($catId){
     global $db;
@@ -20,10 +20,10 @@ function getMenuChildrenForCat($catId){
         return createSmartyRsArray($rs);
 }
 
-/* 
+/** 
  *  получить все категории и подкатегории
  * 
- */
+ **/
 
 function getMenuAllMainCutWithChildren(){
     global $db;
@@ -45,10 +45,10 @@ function getMenuAllMainCutWithChildren(){
     return $smartyRs;
 }
   
-/* 
+/**
  *  
  * получить все главные категории
- */
+ **/
 
 function getMainCutMenu(){
     global $db;
@@ -60,10 +60,10 @@ function getMainCutMenu(){
      return createSmartyRsArray($rs);
 }
 
-/* 
+/** 
  *  
  * получить название страны по ID
- */
+ **/
 
 function getCountryId($rsCountry){
     global $db;
@@ -79,10 +79,10 @@ function getCountryId($rsCountry){
 }
 
 
-/* 
+/** 
  * получить меню по названию страны 
  * 
- */
+ **/
 
 function  getMenuByCounry($countryId){
     global $db;
@@ -94,14 +94,11 @@ function  getMenuByCounry($countryId){
   
      return createSmartyRsArray($rs);
 }
-
-
- 
   
-/* 
+/** 
  *  
  * получить главную категорию по ID
- */
+ **/
 
 function getMainCutMenuById($rsCountry){
     global $db;
@@ -113,11 +110,11 @@ function getMainCutMenuById($rsCountry){
      return createSmartyRsArray($rs);
 }
 
-/*
+/**
  * получить все категории и подкатегории 
  * 
  * и сортировать по parent_id
- */
+ **/
 
 function getAllMenu(){
     global $db;
@@ -129,10 +126,10 @@ function getAllMenu(){
   return createSmartyRsArray($rs);
 }
 
-/*
+/**
  * добавить новую категорию 
  * 
- */
+ **/
 
 function insertCat($catName, $catParentId=0){
     global $db;
@@ -144,10 +141,10 @@ function insertCat($catName, $catParentId=0){
     return $id;
 }
 
-/*
+/**
  * обновление данных категории
  * 
- */
+ **/
 
 function updateCategoryData($itemId, $parentId=-1, $newName=' '){
     $set = array();

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-08 12:32:10
+/* Smarty version 3.1.32, created on 2018-08-09 08:22:30
   from '/home/lizard/www/site.local/views/admin/adminExcursions.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b6ac6aa17c661_92933741',
+  'unifunc' => 'content_5b6bdda615c2d3_31201354',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12fa4a7dab65be3464bf5b70a90ec74d812462ce' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminExcursions.tpl',
-      1 => 1533724260,
+      1 => 1533795747,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b6ac6aa17c661_92933741 (Smarty_Internal_Template $_smarty_tpl) {
-?><h2> Экскурсии </h2>
+function content_5b6bdda615c2d3_31201354 (Smarty_Internal_Template $_smarty_tpl) {
+?><h2>  Редактирование Экскурсий <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+ </h2>
 
 <table >
-    <caption> Редактирование Экскурсий <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-</caption>
-    <tr>
+     <tr>
         <th>ID</th>
         <th>Название</th>
-        <th>Категория</th>
-        <th>Удалить</th>
+        <th>Не отображать</th>
         <th>Изображение</th>
         <th>Изменить</th>
     </tr>

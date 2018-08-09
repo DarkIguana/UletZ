@@ -4,19 +4,29 @@
       
         <div id="countryMenu">
                  {foreach $countries as $item }
-                     <a href="/{$item['url_cat_name']}/admin/"> 
+                     <a href="/{$item['url_cat_name']}/admin/" 
+                                  {if $item['url_cat_name'] == $smcountry } id="selectMenu"{/if}  > 
                             {$item['cat_name']}
+                                                    
                      </a><br/>
                 {/foreach} 
         </div>
         
+               <a href="/{$smcountry}/admin/"> Добавить</a></br> 
+                     <p>  </p>
+               <p> Редактировать </p>
+        
         <div id="subMenu">
-                    <a href="/{$smcountry}/admin/"> Главная</a></br>
-                    <a href="/{$smcountry}/admin/"> Добавить категорию</a></br>
-                    <a href="/{$smcountry}/admin/excursions/"> Редактировать Экскурсии</a> </br>
-                    <a href="/{$smcountry}/admin/addexcursion/"> Добавить Экскурсию</a> </br>
-                    <a href="/{$smcountry}/admin/articles/"> Редактировать Статьи</a> </br>
-                    <a href="/{$smcountry}/admin/addarticle/"> Добавить Статью</a> </br>
-        </div>      
+                    
+                 
+                    {foreach $smSubMenu as $item }
+                            
+                                      <a href="/{$smcountry}/admin/{$item['url_cat_name']}/" 
+ {if $item['cat_name'] == $smcountry } id="selectMenu"{/if}  > 
+                                       {$item['cat_name']}
+                                                
+                                  </a><br/>
+                    {/foreach} 
+        </div>  
+        
 </div>
-
