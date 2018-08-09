@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-08 12:37:20
+/* Smarty version 3.1.32, created on 2018-08-09 08:24:45
   from '/home/lizard/www/site.local/views/default/excursions.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b6ac7e0659005_16628012',
+  'unifunc' => 'content_5b6bde2da731b2_59496550',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '247a219a0b5c2a3db60f5f2a5d0d85d352852c15' => 
     array (
       0 => '/home/lizard/www/site.local/views/default/excursions.tpl',
-      1 => 1533724638,
+      1 => 1533795881,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b6ac7e0659005_16628012 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b6bde2da731b2_59496550 (Smarty_Internal_Template $_smarty_tpl) {
 echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 
 <?php
@@ -32,7 +32,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 $_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration']++;
 ?>
     <div style='float:left; padding: 0px 30px 40px 0px;'>
-        <a href="/excursions/item/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+        <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+/excursions/item/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 /">
             <img src="/images/excursions/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>

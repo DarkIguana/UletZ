@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-08 16:38:25
+/* Smarty version 3.1.32, created on 2018-08-09 07:41:25
   from '/home/lizard/www/site.local/views/admin/adminEditExcursion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b6b00614ece01_58862037',
+  'unifunc' => 'content_5b6bd40590b812_63755732',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '98d7a1383cebeae405cd7044b96837bbb2b10ffe' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminEditExcursion.tpl',
-      1 => 1533738241,
+      1 => 1533739657,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b6b00614ece01_58862037 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b6bd40590b812_63755732 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1>edit Экскурсии <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 </h1>
@@ -47,7 +47,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
                           <form action="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /admin/uploadexc/"  method="post" 
                                                             enctype="multipart/form-data">
-                  
                                 <input type="file" name="filename"></br>
                                 <input type="hidden" name="itemId" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 "></br>

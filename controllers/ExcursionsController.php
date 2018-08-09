@@ -16,7 +16,7 @@ function indexAction($smarty, $id, $country){
     $countries =getMainCutMenu();
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
-    $rsExcursions = getExcursionsByCat($countryId);
+    $rsExcursions = getActiveExcursionsByCat($countryId);
 
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);

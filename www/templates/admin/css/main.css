@@ -17,7 +17,14 @@ body{
     width: 100%;
 }
 
-#topMenu{
+#countryMenu{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+#subMenu{
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 20px;
@@ -27,6 +34,16 @@ body{
 	width: 600px;
 	float: left;
     padding-left: 90px;
+}
+
+#adminMainSL{
+	float: left;
+                padding-left: 90px;
+}
+
+#adminMainSR{
+	float: left;
+                padding-left: 90px;
 }
 
 #footer{

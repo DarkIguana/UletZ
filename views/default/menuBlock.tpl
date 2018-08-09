@@ -8,7 +8,8 @@
                             {$item['cat_name']}
                      </a><br/>
                  {/foreach} 
-        </div>
+                 
+                 </div>
                 
         <div id="subMenu">
                 <a href="/{$smcountry}/excursions/">  Экскурсии </a><br/>

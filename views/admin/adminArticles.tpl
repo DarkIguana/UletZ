@@ -1,7 +1,6 @@
 
-
+<h2> Редактирование Статей {$smcountry} </h2>
 <table >
-    <caption> Редактирование Статей {$smcountry} </caption>
     <tr>
         <th>ID</th>
         <th>Название</th>

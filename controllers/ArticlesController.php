@@ -23,7 +23,7 @@ function indexAction($smarty, $id, $country){
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
    
-    $rsArticles = getArticlesByCat($countryId);
+    $rsArticles = getActiveArticlesByCat($countryId);
    
     $smarty->assign('pageTitle', 'Статьи');
    
