@@ -1,28 +1,67 @@
 body {
- font-family: Arial, sans-serif;
- padding: 0px;
- margin: 0px;
- text-align:left;
- line-height: 1.5;
- background: url(/images/global/background-sea-short.jpg) repeat-x, #fdfaf2;   /* топ картинка */
+    font-family: Arial, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    text-align:left;
+    line-height: 1.5;
+    background: url(/images/global/background-sea-short.jpg) repeat-x, #fdfaf2;   /* топ картинка */
 }
 
+/*  --------------------- шрифты ------------------------  */
+h1 {
+    color: #6A8E11;
+    text-align: left;
+    font-weight: normal;
+}
+h2 {
+    line-height: 1.2;
+    font-weight: normal;
+    height: 30px;
+}
+h3 {
+    font-weight: normal;
+    color: #51c9c8;
+}
+.long_header2 {
+    height: 50px;
+}
+.long_header3 {
+    height: 90px;
+}
+.p {
+    text-align: center;
+    margin-top: 80px;
+}
+/*   -------------- шрифты end------------------  */
 .hideme{
     display: none;
 }
-
-#logo{
-	height: 70px;
-	text-align: center;
+#logo {
+    position: relative; 
+    width:740px;
+    left:50%; 
+    margin-left:-370px;
+    margin-top:60px;
 }
 
+/* --------------menu--------------- */
 #menuBlock{
     display: block;
     width: 100%;
 }
 
 #selectMenu{
-    color: red;
+    text-decoration: none;
+    background:  #f1829c; 
+    border-radius: 5px; 
+    color: black; 
+    padding: 10px 10px;
+}
+#unSelectMenu{
+    text-decoration: none;
+
+    color: black; 
+    padding: 10px 10px;
 }
 #countryMenu{
     margin-left: auto;
@@ -32,16 +71,125 @@ body {
 }
 
 #subMenu{
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 20px;
-}
-#contentBlock{
-	width: 600px;
-	float: left;
-    padding-left: 90px;
+    position:relative;
+    display: block; 
+    text-align: center;
+    width:980px;
+    left:50%; 
+    margin-left:-490px;
 }
 
-#footer{
-	clear: both;
+
+#subMenuButton1{
+    position:relative; 
+    height:24px;
+    float:left;
+    text-align:center; 
+    color: #fff;
+    padding: 10px 0px 10px 0px;
+    border-radius: 5px;
+    font-weight: bold;
+    border-left: none;
+    background: #a5c929;
+    width: 26%;
+}
+#subMenuButton2 {
+    position:relative; 
+    height:24px;
+    float:left;
+    text-align:center; 
+    color: #fff;
+    padding: 10px 0px 10px 0px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: #91cc9d;
+    width: 29%;
+    margin: 0px 0.5% 0px 0.5%; 
+}
+
+#subMenuButton3 {
+    position:relative; 
+    height:24px;
+    float:left;
+    text-align:center; 
+    color: #fff;
+    padding: 10px 0px 10px 0px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: #5ad2a9;
+    width: 17%;
+    margin: 0px 0.5% 0px 0px;
+}
+#subMenuButton4 {
+    position:relative; 
+    height:24px;
+    float:left;
+    text-align:center; 
+    color: #fff;
+    padding: 10px 0px 10px 0px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: #51c9c8;
+    width: 26%;
+}
+
+/* --------------main content--------------- */
+#contentBlock{
+    margin-top: 20px;
+    margin-left:-390px; 
+    width: 980px;
+    left: 50%;
+    position: relative;
+}
+.img_conteiner {
+	width: 100%;
+	float: none;
+	padding-top: 10px;
+}
+.img_content_l {
+	float: left;
+	width: 49%;
+}
+.img_content_r {
+	float: left;
+	width: 49%;
+	margin-left: 2%;
+}
+
+#imgHeaderArticles{
+    float: left;
+}
+
+#descriptionHeaderArticles {
+   margin-left: 50px;
+}
+
+#button_back {
+	position:relative; 
+	height: 25px;
+	margin: 10px 0px 0px 0px; 
+ padding: 10px;
+ border-radius: 5px;
+ text-align:center; 
+ color: #ffffff;
+ background: #51c9c8;
+ font-family: arial;
+ display: inline-block;
+ font-weight: bold;   
+}
+
+
+#footer {
+    clear: both;
+	position: relative;	
+	width: 980px;
+	height: 45px;
+	left: 50%;
+		
+	margin-left: -490px;
+	text-align: center;
+	background: #51c9c8;
+	margin-top: 40px;
+	color: #fff;
+
 }

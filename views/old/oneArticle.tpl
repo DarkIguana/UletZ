@@ -2,14 +2,17 @@
 
  {foreach $rsArticle as $item name=article}
     <div style='float:left; padding: 0px 30px 40px 0px;'>
-        <a href="/article/{$item['id']}/">
-            <img src="/images/articles/{$smcountry}/{$item['image']}" width="200" />
-        </a><br/>
-        <div id="shortTxt">{$item['name']}</div><br/>
+        <div id="name">
+            <h1>{$item['name']}</h1>
+        </div><br/>
        
-        <div id="shortTxt">{$item['text']}</div><br/>
+        <div id="contentBlock">{$item['text']}</div><br/>
     </div>
   
     {/foreach}
-     
+<div id="contentBlock">    
+ <a href="/{$smcountry}/articles/">
+<div id="button_back"> Вернутьcя в раздел Статьи</div>													<!-- button back -->
+</a>   
+</div>
         
