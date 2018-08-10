@@ -1,0 +1,944 @@
+body {
+ font-family: Arial, sans-serif;
+ padding: 0px;
+ margin: 0px;
+ text-align:left;
+ line-height: 1.5;
+ background: url(/images/background-sea-short.jpg) repeat-x, #fdfaf2;   /* топ картинка */
+}
+table { 
+ border: 0px; 						/* Рамка вокруг таблицы */
+ border-collapse: collapse; 	/* Отображать только одинарные линии */
+ padding: 0px;
+ border-spacing: 0px;
+}
+.iconmessengers {
+	height: 50px;
+}
+a:hover {
+	cursor: pointer;
+}
+a:link {
+ color: #1b6fb6;
+}
+/* --------------menu--------------- */
+.button1_menu {
+	position:relative; 
+	height:24px;
+	float:left;
+ text-align:center; 
+ color: #fff;
+ padding: 10px 0px 10px 0px;
+ border-radius: 5px;
+ font-weight: bold;
+	border-left: none;
+ background: #a5c929;
+ width: 26%;
+}
+.button2_menu {
+	position:relative; 
+	height:24px;
+	float:left;
+ text-align:center; 
+ color: #fff;
+ padding: 10px 0px 10px 0px;
+ border-radius: 5px;
+ font-weight: bold;
+ background: #91cc9d;
+ width: 29%;
+ margin: 0px 0.5% 0px 0.5%; 
+}
+.button3_menu {
+	position:relative; 
+	height:24px;
+	float:left;
+ text-align:center; 
+ color: #fff;
+ padding: 10px 0px 10px 0px;
+ border-radius: 5px;
+ font-weight: bold;
+ background: #5ad2a9;
+ width: 17%;
+ margin: 0px 0.5% 0px 0px;
+}
+.button4_menu {
+	position:relative; 
+	height:24px;
+	float:left;
+ text-align:center; 
+ color: #fff;
+ padding: 10px 0px 10px 0px;
+ border-radius: 5px;
+ font-weight: bold;
+ background: #51c9c8;
+ width: 26%;
+}
+/* --------------viet menu--------------- */
+.viet_button1_menu {
+	position:relative; 
+	height:24px;
+	float:left;
+ text-align:center; 
+ color: #fff;
+ padding: 10px 0px 10px 0px;
+ border-radius: 5px;
+ font-weight: bold;
+	border-left: none;
+	background: #a5c929;
+	width: 33%;
+}
+.viet_button2_menu {
+	position:relative; 
+	height:24px;
+	float:left;
+ text-align:center; 
+ color: #fff;
+ padding: 10px 0px 10px 0px;
+ border-radius: 5px;
+ font-weight: bold;
+ background: #91cc9d;
+ width: 33%;
+ margin: 0px 0.5% 0px 0.5%; 
+}
+.viet_button3_menu {
+	position:relative; 
+	height:24px;
+	float:left;
+ text-align:center; 
+ color: #fff;
+ padding: 10px 0px 10px 0px;
+ border-radius: 5px;
+ font-weight: bold;
+ background: #5ad2a9;
+ width: 33%;
+ }
+/*  --------------------- шрифты ------------------------  */
+h1 {
+	color: #6A8E11;
+	text-align: left;
+ font-weight: normal;
+}
+h2 {
+	line-height: 1.2;
+ font-weight: normal;
+ height: 30px;
+}
+h3 {
+	font-weight: normal;
+ color: #51c9c8;
+}
+.long_header2 {
+	height: 50px;
+}
+.long_header3 {
+	height: 90px;
+}
+.p {
+	text-align: center;
+	margin-top: 80px;
+}
+/*   -------------- шрифты end------------------  */
+.button {
+	width: 120px; 
+	height:30px; 
+	border-radius: 10px; 
+	border: 1px;
+	text-align:center;
+	display: flex;
+	justify-content: center; /*Центрирование по горизонтали*/
+ align-items: center;     /*Центрирование по вертикали */
+}
+.messengersicon {				/* messenger icon */
+	 text-align: right;
+	 padding-right: 10px;
+	 border: none;
+}
+.numsize {
+	 font-size: 120%;
+}
+/*phone number */
+.numtd {						
+	width:60%;
+	height:220px;
+	border: none;
+	text-align: left;
+}
+.opisanie {
+ margin-top: 30px;
+	height: 170px;
+}
+.opisanie2 {
+ margin-top: 30px;
+	height: 240px;
+}
+.opisanie1 {
+ margin-top: 30px;
+	height: 170px;
+}
+/*зачеркнутый прайс */
+.changep { 							
+	text-decoration: line-through;
+}
+/* podrobno button */
+.button_podrobno {
+ width: 100%;
+ font-style: italic;
+ text-align:center;
+ color: #fdfaf2;
+}
+.button_podrobno_price {
+	background:  #a5c929;
+	color: white;
+	padding-right: 10%;
+	width: 55%;
+ background-repeat: no-repeat;
+ background-image: url(../images/button-arrow-300px.gif);
+ background-position: right center;
+ }
+ .button_podrobno_price_inner {
+  width: 100%;
+  font-style: italic;
+  text-align:center;
+  color: white;
+ }
+ .button_podrobno_podrobno_inner {
+ background: #f1829c;
+ width: 45%;
+ text-decoration: underline;
+ }
+/* end podrobno button */
+.price_wrapper {
+ overflow-x: auto; 
+}
+.price_table {
+	width: 90%; /* Ширина таблицы */
+	margin-left: 5%;
+	border-collapse: collapse; /* Убираем двойные линии между ячейками */
+	border-top: 10px solid #51c9c8;
+	border-bottom: 2px solid #51c9c8;
+	text-align:center;
+}	
+.price_table_th {
+	color: #6A8E11;
+	font-style: italic;
+	font-weight: normal;
+	padding: 10px; /* Поля вокруг содержимого таблицы */
+ border: 1px solid #DCDCDC; /* Параметры рамки */
+}
+.price_table_td {
+	padding: 10px; /* Поля вокруг содержимого таблицы */
+ border: 1px solid #DCDCDC; /* Параметры рамки */
+}
+.button_back {
+	position:relative; 
+	height: 25px;
+	margin: 10px 0px 0px 0px; 
+ padding: 10px;
+ border-radius: 5px;
+ text-align:center; 
+ color: #ffffff;
+ background: #51c9c8;
+ font-family: arial;
+ display: inline-block;
+ font-weight: bold;   
+}
+.link_button {
+	text-decoration: none;
+}
+/*  ---------стиль для широкого экрана ------------------------------------------*/
+/* --------------menu--------------- */
+.menu_block {
+	position:relative;
+	display: block; 
+	text-align: center;
+	width:980px;
+	left:50%; 
+	margin-left:-490px;
+}
+/* --------------viet menu--------------- */
+.viet_menu_block {
+	position:relative;
+	display: block; 
+	text-align: center;
+	width:980px;
+ left:50%; 
+ margin-left:-490px;
+}
+/* --------------viet menu end--------------- */
+.logo {
+	position: relative; 
+	width:740px;
+	left:50%; 
+	margin-left:-370px;
+	margin-top:60px;
+}
+/*  phone box */
+.contact {						
+	width: 480px;
+	float: right;
+	position:relative; 
+	right: 50%;
+	margin-right: -490px;
+	margin-top: 20px;
+	background-image: url(../images/wave.png), url(../images/wave.png);
+	background-repeat: repeat-x, repeat-x;
+	background-position: 0 15%, 0 100%;	
+	background-size: 50px;
+}
+.numsize {
+	 font-size: 150%;
+}
+	/* text next to phone */
+.intro {					
+	width: 480px;
+	float:left;
+	left: 50%;
+	position:relative; 
+	margin-left:-490px;
+	margin-top: 20px;
+	display: block;
+}
+/* excursia left */
+.ml {				
+	position: relative;	
+	width: 480px;
+	float:left;
+	left: 50%;
+	margin-left: -490px;
+	margin-top: 20px;
+	display: block;
+}
+/* excursia right*/
+.mr {				
+	position: relative;	
+	width: 480px;
+	float:left;
+	left: 50%;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+/* block opisanie main page */
+.opisanie {
+ margin-top: 30px;
+	height: 160px;
+}
+.opisanie2 {
+ margin-top: 30px;
+	height: 200px;
+}
+.opisanie1 {
+ margin-top: 30px;
+	height: 170px;
+}
+.content {
+	margin-top: 20px;
+	margin-left:-490px; 
+	width: 980px;
+	left: 50%;
+	position: relative;
+}
+.price_table {
+	width: 980px; /* Ширина таблицы */
+	margin-left: -490px;
+	left: 50%;
+	position: relative;
+}
+.img_conteiner {
+	width: 100%;
+	float: none;
+	padding-top: 10px;
+}
+.img_content_l {
+	float: left;
+	width: 49%;
+}
+.img_content_r {
+	float: left;
+	width: 49%;
+	margin-left: 2%;
+}
+.foot {
+	position: relative;	
+	width: 980px;
+	height: 45px;
+	left: 50%;
+		
+	margin-left: -490px;
+	text-align: center;
+	background: #51c9c8;
+	margin-top: 40px;
+	color: #fff;
+/*	font-size: 70%; */
+}
+.foot a {
+ color:#fff;
+}
+/*  -----------------------------стиль для экрана ipad------------------------------------------*/
+@media screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {	
+/* --------------menu--------------- */
+.menu_block {
+	position:relative;
+	display: block; 
+	text-align: center;
+	width:90%;
+	left:50%; 
+	margin-left:-45%;
+}
+/* -------------- viet menu--------------- */
+.viet_menu_block {
+	position:relative;
+	display: block; 
+	text-align: center;
+	width:90%;
+	left:50%; 
+	margin-left:-45%;
+}
+/* --------------viet menu--------------- */
+.logo {
+	position: relative; 
+	width:60%;
+	left:50%; 
+	margin-left:-30%;
+	margin-top:60px;
+}
+/*  phone box */
+.contact {						
+	width: 44%;
+	right: 0px;
+	margin-right: 5%;
+}
+	/* text next to phone */
+.intro {					
+	width: 44%;
+	float:right;
+	left: 0px;
+	margin-left:1%;
+	margin-right: 2%;
+}
+/* excursia left */
+.ml {				
+	width: 44%;
+	left: 0px;
+	margin-left:5%;
+	margin-right: 1%;
+}
+	/* excursia right*/
+.mr {			
+	width: 44%;
+	left: 0px;
+	float:right;
+	margin-left:1%;
+	margin-right: 5%;
+}
+.content {
+	margin-top: 20px;
+	margin-left:5%; 
+	/*font-size: 16px; */
+	width: 90%;
+	left: auto;
+}
+.price_table {
+	width: 90%; /* Ширина таблицы */
+	margin-left: 5%;
+ border-collapse: collapse; /* Убираем двойные линии между ячейками */
+	border-top: 10px solid #51c9c8;
+	border-bottom: 2px solid #51c9c8;
+	text-align:center;
+	left: 0px;
+}
+.foot {
+	width: 90%;
+	margin-left: 5%;
+	left: 0px;
+}
+}
+/*  -----------стиль для нормального экрана -----------------------------------------*/
+@media (max-width: 1140px) {	
+/* --------------menu--------------- */
+.menu_block {
+	position:relative;
+	display: block; 
+	text-align: center;
+	width:90%;
+	left:50%; 
+	margin-left:-45%;
+}
+/* -------------- viet menu--------------- */
+.viet_menu_block {
+	position:relative;
+	display: block; 
+	text-align: center;
+	width:90%;
+	left:50%; 
+	margin-left:-45%;
+}
+/* --------------viet menu end--------------- */
+.logo {
+	position: relative; 
+	width:60%;
+	left:50%; 
+	margin-left:-30%;
+	margin-top:60px;
+}
+/*  phone box */
+.contact {						
+	width: 44%;
+	right: 0px;
+	margin-right: 5%;
+}
+/* text next to phone */
+.intro {						
+	width: 44%;
+	float:right;
+	left: 0px;
+	margin-left:1%;
+	margin-right: 2%;
+}
+/* excursia left */
+.ml {				
+	width: 44%;
+	left: 0px;
+	margin-left:5%;
+	margin-right: 1%;
+}
+	/* excursia right*/
+.mr {			
+	width: 44%;
+	left: 0px;
+	float:right;
+	margin-left:1%;
+	margin-right: 5%;
+}
+/* block opisanie main page */
+.opisanie {
+ margin-top: 30px;
+	height: 170px;
+}
+.opisanie1 {
+ margin-top: 30px;
+	height: 200px;
+}
+.opisanie2 {
+ margin-top: 30px;
+	height: 240px;
+}
+.content {
+	margin-top: 20px;
+	margin-left:5%; 
+	width: 90%;
+	left: auto;
+}
+.price_table {
+	width: 90%; /* Ширина таблицы */
+	margin-left: 5%;
+ border-collapse: collapse; /* Убираем двойные линии между ячейками */
+	border-top: 10px solid #51c9c8;
+	border-bottom: 2px solid #51c9c8;
+	text-align:center;
+	left: 0px;
+}
+.foot {
+	width: 90%;
+	margin-left: 5%;
+	left: 0px;
+}
+}
+/*  ---------------стиль для узкого экрана iphone------------------------------------------*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {	
+body {
+	font-size: 300%;
+}
+ /*-------------------------- menu ----------------------*/ 
+.menu_block {
+	display: block;
+	width:90%;
+	margin: auto;
+	left: -1px;
+	min-width: 99px;
+}
+.button1_menu {
+	display: block;
+ float: none;
+ height: 70px;
+	width: 100%;
+	margin: 8px 0px 8px 0px;
+	padding: 10px 0px;
+}
+.button2_menu {
+	display: block;
+ float: none;
+ height: 70px;
+ width: 100%;
+ margin: 8px 0px 8px 0px;
+ padding: 10px 0px;
+}
+.button3_menu {
+	display: block;
+ float: none;
+ height: 70px;
+ width: 100%;
+ margin: 8px 0px 8px 0px;
+}
+.button4_menu {
+	display: block;
+ float: none;
+ height: 70px;
+ width: 100%;
+}
+ /* -------viet menu ---------------------- */ 
+.viet_menu_block {
+	display: block;
+	width:90%;
+	margin: auto;
+	left: -1px;
+	min-width: 99px;
+}
+.viet_button1_menu {
+	display: block;
+ float: none;
+ height: 70px;
+	width: 100%;
+	margin: 8px 0px 8px 0px;
+	padding: 10px 0px;
+}
+.viet_button2_menu {
+	display: block;
+ float: none;
+ height: 70px;
+ width: 100%;
+ margin: 8px 0px 8px 0px;
+ padding: 10px 0px;
+}
+.viet_button3_menu {
+	display: block;
+ float: none;
+ height: 70px;
+ width: 100%;
+ margin: 8px 0px 8px 0px;
+}
+/*-------------------------- viet menu end----------------------*/
+.logo {
+	position:relative; 
+	width:90%;
+	left:50%; 
+	margin-left:-45%;
+	margin-top:40px;
+	min-width: 250px; 
+}
+/* messenger icon */
+.messengersicon {				
+	text-align: right;
+	padding-right: 30px;
+}
+.numsize {
+	font-size: 120%;
+}
+	.button {
+  width: auto;
+  padding: 0px 30px 0px 30px;
+  height:90px;
+}
+  /*  phone */
+.contact {            
+	display: block;
+	width: 100%;
+	float: left;
+	position: static;
+	margin-top: 5px;
+}
+/*phone number */
+.numtd {						
+	width:67%;
+	height:220px;
+}
+.iconmessengers {
+	height: 80px;
+}
+ /* text next to phone */
+.intro {             
+	display: block;
+	float: left;
+	width: 90%;
+	height: auto;
+	text-align: left;
+	margin-left: 5%;
+	margin-bottom: 20px;
+	left: 0px;
+}
+ /* excursia L */ 
+.ml {				
+ display: block;
+ width: 90%;
+ float: none;
+ text-align: left;
+ margin-left:5.5%;
+ margin-top: 20px; 
+ height: auto; 
+ left: 0px;
+}
+ /* excursia R */ 
+.mr {				
+	display: block;
+	width: 90%;
+	float: none;
+	text-align: left;
+	margin-left: 5%;
+	margin-top: 20px;
+	height: auto;
+	left: 0px;
+}
+.button_podrobno_img {
+	height: 96px;
+}
+/* block opisanie main page */
+.opisanie {
+	height: auto;
+	padding-bottom: 20px;
+	}
+ .opisanie2 {
+	height: auto;
+	padding-bottom: 20px;
+	}
+ .opisanie1 {
+ margin-top: 30px;
+	height: auto;
+}
+	.img_content_l {
+  width: 100%;
+}
+.img_content_r {
+	width: 100%;
+	margin: 20px 0px 0px 0px;
+}
+.content {
+	margin-top: 20px;
+	margin-left:5%; 
+	width: 90%;
+	left: auto;
+}
+.button_back {
+	height: auto;
+}
+h2 {
+	font-weight: normal;
+ height: auto;
+	}
+.long_header {
+	font-weight: normal;
+ height: auto;
+	}
+.long_header2 {
+	height: auto;
+}
+.long_header3 {
+	height: auto;
+}
+.foot {
+	width: 90%;
+	height: auto;
+	margin-left: 5%;
+	left: 0px;
+	font-size: 50%;
+}
+.price_table {
+ width: 10%;
+}
+}
+/*  --------стиль для узкого экрана ------------------------------------------*/
+@media (max-width : 800px) {	
+ /*-------------------------- menu ----------------------*/ 
+.menu_block {
+	display: block;
+	width:90%;
+	margin: auto;
+	left: -1px;
+	min-width: 99px;
+}
+.button1_menu {
+	display: block;
+ float: none;
+ height: 30px;
+	width: 100%;
+	margin: 8px 0px 8px 0px;
+	padding: 10px 0px;
+}
+.button2_menu {
+	display: block;
+ float: none;
+ height: 30px;
+ width: 100%;
+ margin: 8px 0px 8px 0px;
+ padding: 10px 0px;
+}
+.button3_menu {
+	display: block;
+ float: none;
+ height: 30px;
+ width: 100%;
+ margin: 8px 0px 8px 0px;
+}
+.button4_menu {
+	display: block;
+ float: none;
+ height: 30px;
+ width: 100%;
+}
+/* ------viet menu ----------------------*/ 
+.viet_menu_block {
+	display: block;
+	width:90%;
+	margin: auto;
+	left: -1px;
+	min-width: 99px;
+}
+.viet_button1_menu {
+	display: block;
+ float: none;
+ height: 70px;
+	width: 100%;
+	margin: 8px 0px 8px 0px;
+	padding: 10px 0px;
+}
+.viet_button2_menu {
+	display: block;
+ float: none;
+ height: 70px;
+ width: 100%;
+ margin: 8px 0px 8px 0px;
+ padding: 10px 0px;
+}
+.viet_button3_menu {
+	display: block;
+ float: none;
+ height: 70px;
+ width: 100%;
+ margin: 8px 0px 8px 0px;
+}
+/* --- viet menu ----------------------*/
+.logo {
+  position:relative; 
+  width:90%;
+  left:50%; 
+ 	margin-left:-45%;
+ 	margin-top:40px;
+ 	min-width: 250px; 
+}
+	/* messenger icon */
+.messengersicon {			
+	 text-align: right;
+	 padding-right: 30px;
+}
+.numsize {
+	 font-size: 120%;
+}
+.button {
+	width: auto;
+	padding: 0px 30px 0px 30px;
+	height:90px;
+}
+/*  phone */
+.contact {              
+	display: block;
+	width: 100%;
+	float: left;
+	position: static;
+	margin-top: 5px;
+}
+/*phone number */
+.numtd {						
+	width:67%;
+	height:220px;
+}
+.iconmessengers {
+	height: 80px;
+}
+/* text next to phone */
+.intro {             
+	display: block;
+	float: left;
+	width: 90%;
+	height: auto;
+	text-align: left;
+	margin-left: 5%;
+	margin-bottom: 20px;
+	left: 0px;
+}
+	/* excursia L */  
+.ml {			
+ display: block;
+ width: 90%;
+ float: none;
+ text-align: left;
+ margin-left:5.5%;
+ margin-top: 20px; 
+ height: auto; 
+ left: 0px;
+}
+/* excursia R */  
+.mr {				
+	display: block;
+	width: 90%;
+	float: none;
+	text-align: left;
+	margin-left: 5%;
+	margin-top: 20px;
+	height: auto;
+	left: 0px;
+}
+.button_podrobno_img {
+	height: 96px;
+}
+.opisanie {
+	height: auto;
+	padding-bottom: 20px;
+}
+.opisanie1 {
+	height: auto;
+	padding-bottom: 20px;
+}
+.opisanie2 {
+	height: auto;
+	padding-bottom: 20px;
+}
+	.img_content_l {
+	width: 100%;
+}
+.img_content_r {
+	width: 100%;
+	margin: 20px 0px 0px 0px;
+}
+.content {
+	margin-top: 20px;
+	margin-left:5%; 
+	width: 90%;
+	left: auto;
+}
+.button_back {
+	height: auto;
+}
+h2 {
+	font-weight: normal;
+ height: auto;
+	}	
+.long_header {
+	font-weight: normal;
+ height: auto;
+}
+.long_header2 {
+	height: auto;
+}
+.long_header3 {
+	height: auto;
+}
+
+.foot {
+	width: 90%;
+	height: auto;
+	margin-left: 5%;
+	left: 0px;
+}
+}

@@ -1,0 +1,61 @@
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=900" />
+	<link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+ 	<link rel="stylesheet" type="text/css" href="/styles/main.css">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter48965876 = new Ya.Metrika({
+                    id:48965876,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/48965876" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --> 	
+</head>
+<body>
+<!-- ================= Logo ================================= -->
+ 	<div class="logo">  																				 
+ 		<img src="/images/logo.png" width="100%" /> 
+ 	</div>
+
+<!-- ================= submenu ================== --> 	
+<div style="clear: both; padding-top: 20px;"></div>   <!-- zaglushka dl'a div otstupa  -->
+	<div style="text-align: center;">
+  		<a href="/index.php" style="color: black;"> Таиланд </a>
+		<a href="#0" style="margin: 0 15px; text-decoration: none; color: black;"> / </a>
+  		<a href="/Vietnam/vietnam.php" style="text-decoration: none; background:  #f1829c; border-radius: 5px; color: black; padding: 10px 10px;" > Вьетнам </a>
+</div> 
+	
+<div style="clear: both; padding-bottom: 40px;"></div>   <!-- zaglushka dl'a div otstupa  -->
+
+<!-- ================= submenu   ================================= -->
+<!-- =================  menu   ================================= -->
+
+	<div class="viet_menu_block" >																								<!--  блок меню -->
+			<a href="/Vietnam/vietnam.php" class="link_button"><div class="viet_button1_menu"> Экскурсии по Вьетнаму</div></a>													<!-- меню пункт 1-->
+			<a href="/Vietnam/pages/Mototoursviet.php" class="link_button"><div class="viet_button2_menu" > Мототуры </div></a>							<!-- меню пункт 3-->
+			<a href="/Vietnam/pages/Articlesviet.php" class="link_button"><div class="viet_button3_menu" > Статьи о Вьетнаме </div></a> 			<!-- меню пункт 4-->
+	</div>	
+
+
+<!-- =================  menu  ================================= -->
+ <div style="clear: both;"></div>   <!-- zaglushka dl'a div otstupa  -->

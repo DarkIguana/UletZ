@@ -9,7 +9,7 @@ define('PathPostfix', 'Controller.php');
 //<
 
 //>используемый шаблон
-$template = 'default';
+$template = 'old';
 $templateAdmin = 'admin';
 
 // пути к файлам шаблонов (*.tpl)

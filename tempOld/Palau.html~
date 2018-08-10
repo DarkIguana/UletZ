@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+
+<head profile="http://gmpg.org/xfn/11">
+	<title>Улетаем зимовать</title>
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+	<meta name="viewport" content="width=900" />
+	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+ 	<link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+ 
+<body>
+<!-- -------------------Logo----------------------- -->
+ 	<div class="logo">  																				 
+ 		<img src="images/logo.png" width="100%" /> 
+ 	</div>
+<!-- ------------------------ submenu  ---------------- --> 	
+<div style="clear: both; padding-bottom: 20px;"></div>   <!-- zaglushka dl'a div otstupa  -->
+		
+	<div style="width: 50%; float: left">
+			<div class="button" style="float:right; background: #f1829c; margin-right: 10px">Таиланд</div>
+	</div>
+	<div class="button" style="float: left;">&#8260;&#8195;&#8195;Вьетнам</div> 
+		
+<div style="clear: both; padding-bottom: 40px;"></div>   <!-- zaglushka dl'a div otstupa  -->
+
+<!-- ------------------------ submenu  ---------------- -->
+
+<!-- ------------------------ menu  ---------------- -->
+
+	<div class="menu_block" >																								<!--  блок меню -->
+			<a href="index.html" class="link_button"><div class="button1_menu"> Экскурсии в Хуахине</div></a>						<!-- меню пункт 1-->
+			<a href="Englishforkids.html" class="link_button"><div class="button2_menu">Английский и море детям</div></a>	<!-- меню пункт 2-->
+			<a href="Mototours.html" class="link_button"><div class="button3_menu" > Мототуры </div></a>							<!-- меню пункт 3-->
+			<a href="Articlesthai.html" class="link_button"><div class="button4_menu" >Статьи о Тайланде</div></a> 			<!-- меню пункт 4-->
+	</div>	
+
+ <!-------------------------- menu  ------------------>
+ <div style="clear: both;"></div>   <!-- zaglushka dl'a div otstupa  -->
+ 
+<!-- -------------------------------- Content ----------------------------- -->	
+
+<div class="content">
+
+	<h1> Искупаться в горной реке с рыбами и спуститься в пещеру к летучим мышам</h1>
+		
+		<p>
+Искупаться в горной реке с рыбами и спуститься в пещеру к летучим мышам
+</p>
+<p>
+
+Вокруг Хуахина есть несколько пещер, образовавшихся ещё в палеозое, 250-500 миллионов лет назад. Кто знает, какие доисторические животные в них прятались от тропических ливней и непогоды? Одна из них вполне обитаема и в наши дни, правда жители — не грозные динозавры, а маленькие летающие мыши, похожие на смешных мохнатых хомяков.
+</p>
+<p>
+
+Мне очень нравится это место, потому что оно не туристическое. За пещерой следят монахи и даже сделали ступеньки, чтобы было удобно спуститься вниз.  
+</p>
+<p>
+
+По легенде много лет назад здесь жила монахиня, душа которой и по сей день обитает в пещере, чтобы помогать людям. Поэтому некоторые люди приходят сюда молиться.
+</p>
+<p>
+
+Сама пещера невероятно красива: затейливые залы, сталактиты и сталагмиты, высокие своды… 
+</p>
+
+<!-- -------------------------------- Blok IMG ----------------------------- -->
+		<div class="img_conteiner">
+		   	 <img src="images/scale_1200-5.jpg" class="img_content_l" > 
+			    <img src="images/scale_1200-6.jpg" class="img_content_r" > 
+		</div>	
+		<div style="clear: both; padding-bottom: 10px;"></div>   <!-- zaglushka dl'a div otstupa  -->
+<!-- -------------------------------- Blok IMG ----------------------------- -->
+
+<p>
+
+Маршрут путешествия: пещера с летучими мышами, тибетский храм (кони ветра), прогулка по джунглям, купание в водопаде с рыбами, ананасовые плантации и каучуковые деревья.
+</p>
+
+<h3>
+Джунгли, река и водопад
+</h3>
+<p> 
+Около границы с Бирмой в джунглях протекает река. Спускаясь с гор, она образует красивые водопады и запруды, в которых живут рыбы (карпы). Некоторые их них достигают до полуметра в длину! 
+</p>
+<p>
+
+Как же здорово прогуляться по настоящим тропическим джунглям и ощутить себя отважным путешественником, как Индиана Джонс. А потом окунуться в прохладную воду у водопада. 
+</p>
+<p>
+
+Для детей станет незабываемым развлечением покормить рыб, которые будут пытаться выпрыгнуть к вам на берег и есть прямо из рук, словно нетерпеливые котята. 
+</p>
+
+<!-- -------------------------------- Blok IMG ----------------------------- -->
+		<div class="img_conteiner">
+		   	 <img src="images/scale_1200-15.jpg" class="img_content_l" > 
+			    <img src="images/zen_141032.jpg" class="img_content_r" > 
+		</div>	
+		<div style="clear: both; padding-bottom: 10px;"></div>   <!-- zaglushka dl'a div otstupa  -->
+<!-- -------------------------------- Blok IMG ----------------------------- -->
+
+
+<p>
+
+Кстати, а вы умеете ловить карпов руками?
+
+</p>
+<p>
+Рекомендации по одежде: удобная обувь, купальники и полотенца. 
+
+</p>
+<p>
+Цена экскурсии с русским гидом: 3300 бат на человека при группе 2 чел, 2800 бат при группе 3 чел, 2500 бат при группе от 4 человек. Ребёнок 4-12 лет 2000 бат.
+</p>
+<p>
+
+Время проведения: 9:00 – 15:30 
+</p>
+<p>
+
+Маршрут экскурсии можно изменить по вашему желанию. Также возможна поездка по маршруту без гида, стоимость экскурсии в этом случае будет ниже. 
+</p>
+		
+	
+<!-- -------------------------------- Blok IMG ----------------------------- -->
+		<div class="img_conteiner">
+		   	 <img src="images/scale_1200-5.jpg" class="img_content_l" > 
+			    <img src="images/scale_1200-6.jpg" class="img_content_r" > 
+		</div>	
+		<div style="clear: both; padding-bottom: 10px;"></div>   <!-- zaglushka dl'a div otstupa  -->
+<!-- -------------------------------- Blok IMG ----------------------------- -->
+
+</div>
+
+	
+<!-- -------------------------------- Content End ----------------------------- -->		
+<div class="content">
+	<h3>Заказать экскурсию:</h3>
+		<p>
+			Viber, WhatsApp: +7 916 678-73-27 <br>
+			e-mail: annagross.com@gmail.com
+		</p>
+<a href="index.html">
+<div class="button_back"> Вернутья в раздел Экскурсии в Хуахине</div>													<!-- button back -->
+</a>
+</div>
+
+<div class="foot">
+	Сайт мой, контент тоже! Смотреть, читать, копитовать можно никому!
+</div> 
+
+</body>
+
+
+</html>
+
+

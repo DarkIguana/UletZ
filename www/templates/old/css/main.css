@@ -1,0 +1,47 @@
+body {
+ font-family: Arial, sans-serif;
+ padding: 0px;
+ margin: 0px;
+ text-align:left;
+ line-height: 1.5;
+ background: url(/images/global/background-sea-short.jpg) repeat-x, #fdfaf2;   /* топ картинка */
+}
+
+.hideme{
+    display: none;
+}
+
+#logo{
+	height: 70px;
+	text-align: center;
+}
+
+#menuBlock{
+    display: block;
+    width: 100%;
+}
+
+#selectMenu{
+    color: red;
+}
+#countryMenu{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+#subMenu{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+#contentBlock{
+	width: 600px;
+	float: left;
+    padding-left: 90px;
+}
+
+#footer{
+	clear: both;
+}
