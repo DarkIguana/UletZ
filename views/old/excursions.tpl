@@ -5,7 +5,7 @@
     <div style='
         display: flex;
         flex-direction: column;
-         align-items: stretch;
+         
          margin: 1%;
          width: 48%;'>
         
