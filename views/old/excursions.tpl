@@ -1,23 +1,54 @@
 {* щаблон главной странцы*}
 
+<div class="excursionsTwoList">
 {foreach $rsExcursions as $item name=excursion}
-    <div style='float:left; padding: 0px 30px 40px 0px;'>
+    <div style='
+        display: flex;
+        flex-direction: column;
+         align-items: stretch;
+         margin: 1%;
+         width: 48%;'>
         
         
-            <a href="/{$smcountry}/excursions/item/{$item['id']}/">{$item['name']}</a>
+        <h2 >    <a href="/{$smcountry}/excursions/item/{$item['id']}/">{$item['name']}</a> </h2>
         
             <div id="shortTxt">{$item['description_short']}</div><br/>
         
-            <div id="price">{$item['price']}</div><br/>
-        
-            <a href="/{$smcountry}/excursions/item/{$item['id']}/">
-                <img src="/images/excursions/{$smcountry}/{$item['image']}" width="200" />
-            </a><br/>
+            
+            <!-- button Podrobney and Price -->		
+         <a href="/{$smcountry}/excursions/item/{$item['id']}/">
+            <table class="button_podrobno" >
+                <tr>
+                    <td class="button_podrobno_price" >
+                        <table class="button_podrobno_price_inner">
+                            <tr>
+                                <td style="padding: 10px 05px;"> <strong>Цена:</strong> {$item['price']}&nbsp;бат</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="button_podrobno_podrobno_inner">Подрoбнee</td> 					
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <!-- button Podrobney and Price -->
+            <div class="fpimg">
+                           <img src="/images/excursions/{$smcountry}/{$item['image']}" width="100%"/>
+           </div>
+                    </td>
+                </tr>
+            </table>		
+            
+            </a>
    
     </div>
-    {if $smarty.foreach.excursion.iteration mod 3==0}
+    {if $smarty.foreach.excursion.iteration mod 2==0}
+        </div>
+        
         <div style="clear:both;">   </div>
+        
+        <div class="excursionsTwoList">
         {/if} 
     {/foreach}
      
+    </div>
      

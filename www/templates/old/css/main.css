@@ -6,7 +6,19 @@ body {
     line-height: 1.5;
     background: url(/images/global/background-sea-short.jpg) repeat-x, #fdfaf2;   /* топ картинка */
 }
-
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    
+}
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    height: inherit;
+}
 /*  --------------------- шрифты ------------------------  */
 h1 {
     color: #6A8E11;
@@ -36,6 +48,10 @@ h3 {
 .hideme{
     display: none;
 }
+
+.logo{
+    text-align: center;
+}
 #logo {
     position: relative; 
     width:740px;
@@ -45,7 +61,57 @@ h3 {
 }
 
 /* --------------menu--------------- */
-#menuBlock{
+.menuBlock li {
+    display: inline-block;
+    height: 20px;
+    margin: 10px 0;
+}
+.menuBlock li a, .menuBlock div a {
+    color: inherit;
+   
+    padding: 5px;
+}
+
+.menuBlock {
+    text-align: center;
+}
+
+#countryMenuActive{
+    background: #f1829c;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.subMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+
+.subMenu div{
+    text-align:center;
+    color: #fff;
+    padding: 10px 30px;
+    margin: 5px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    border-left: none;
+    min-width: 200px;
+}
+.subMenu div:nth-child(1) {
+
+    background: #5ad2a9;
+}
+.subMenu div:nth-child(2) {
+
+    background: #91cc9d;
+}
+.subMenu div:nth-child(3) {
+
+    background: #a5c929;
+}
+.menuBlock{
     display: block;
     width: 100%;
 }
@@ -63,12 +129,6 @@ h3 {
     color: black; 
     padding: 10px 10px;
 }
-#countryMenu{
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-}
 
 #subMenu{
     position:relative;
@@ -78,7 +138,6 @@ h3 {
     left:50%; 
     margin-left:-490px;
 }
-
 
 #subMenuButton1{
     position:relative; 
@@ -134,6 +193,43 @@ h3 {
 }
 
 /* --------------main content--------------- */
+
+/* podrobno button */
+.button_podrobno {
+    width: 100%;
+    font-style: italic;
+    text-align:center;
+    color: #fdfaf2;
+    bottom: 0px;
+}
+.button_podrobno_price {
+    background:  #a5c929;
+    color: white;
+    padding-right: 10%;
+    width: 55%;
+    background-repeat: no-repeat;
+    background-image: url( /images/global/button-arrow-300px.gif);
+    background-position: right center;
+}
+.button_podrobno_price_inner {
+    width: 100%;
+    font-style: italic;
+    text-align:center;
+    color: white;
+}
+.button_podrobno_podrobno_inner {
+    background: #f1829c;
+    width: 45%;
+    text-decoration: underline;
+}
+/* end podrobno button */
+table { 
+    border: 0px; 						/* Рамка вокруг таблицы */
+    border-collapse: collapse; 	/* Отображать только одинарные линии */
+    padding: 0px;
+    border-spacing: 0px;
+}
+
 #contentBlock{
     margin-top: 20px;
     margin-left:-390px; 
@@ -142,18 +238,24 @@ h3 {
     position: relative;
 }
 .img_conteiner {
-	width: 100%;
-	float: none;
-	padding-top: 10px;
+    width: 100%;
+    float: none;
+    padding-top: 10px;
 }
 .img_content_l {
-	float: left;
-	width: 49%;
+    float: left;
+    width: 49%;
 }
 .img_content_r {
-	float: left;
-	width: 49%;
-	margin-left: 2%;
+    float: left;
+    width: 49%;
+    margin-left: 2%;
+}
+
+.excursionsTwoList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
 }
 
 #imgHeaderArticles{
@@ -161,35 +263,36 @@ h3 {
 }
 
 #descriptionHeaderArticles {
-   margin-left: 50px;
+   overflow: hidden;
+   padding-left: 20px;
 }
 
 #button_back {
-	position:relative; 
-	height: 25px;
-	margin: 10px 0px 0px 0px; 
- padding: 10px;
- border-radius: 5px;
- text-align:center; 
- color: #ffffff;
- background: #51c9c8;
- font-family: arial;
- display: inline-block;
- font-weight: bold;   
+    position:relative; 
+    height: 25px;
+    margin: 10px 0px 0px 0px; 
+    padding: 10px;
+    border-radius: 5px;
+    text-align:center; 
+    color: #ffffff;
+    background: #51c9c8;
+    font-family: arial;
+    display: inline-block;
+    font-weight: bold;   
 }
 
 
 #footer {
     clear: both;
-	position: relative;	
-	width: 980px;
-	height: 45px;
-	left: 50%;
-		
-	margin-left: -490px;
-	text-align: center;
-	background: #51c9c8;
-	margin-top: 40px;
-	color: #fff;
+    position: relative;	
+    width: 980px;
+    height: 45px;
+    left: 50%;
+
+    margin-left: -490px;
+    text-align: center;
+    background: #51c9c8;
+    margin-top: 40px;
+    color: #fff;
 
 }
