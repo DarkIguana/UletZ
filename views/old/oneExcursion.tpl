@@ -1,16 +1,16 @@
 {* щаблон странцы одной экскурсии*}
 
  {foreach $rsExcursion as $item name=excursion}
-    <div style='float:left; padding: 0px 30px 40px 0px;'>
+    <div >
           <div id="name">
             <h1>{$item['name']}</h1>
         </div><br/>
         
-        <div id="contentBlock">{$item['description']}</div><br/>
+        <div class="contentBlock">{$item['description']}</div><br/>
     </div>
     
     {/foreach}
-    <div id="contentBlock">
+    <div class="contentBlock">
 	<h3>Заказать экскурсию:</h3>
 		<p>
 			Viber, WhatsApp: +7 916 678-73-27 <br>

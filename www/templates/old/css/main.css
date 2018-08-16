@@ -10,9 +10,18 @@ body {
     margin: 0;
     padding: 0;
 }
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
 a {
     text-decoration: none;
-    
+    color: black;
+}
+p {
+    text-align: justify;
+    padding: 15px 0;
 }
 .wrapper {
     max-width: 960px;
@@ -40,10 +49,7 @@ h3 {
 .long_header3 {
     height: 90px;
 }
-.p {
-    text-align: center;
-    margin-top: 80px;
-}
+
 /*   -------------- шрифты end------------------  */
 .hideme{
     display: none;
@@ -68,14 +74,16 @@ h3 {
 }
 .menuBlock li a, .menuBlock div a {
     color: inherit;
-   
+
     padding: 5px;
 }
 
 .menuBlock {
     text-align: center;
 }
-
+.countryMenu{
+    margin-top: 17px;
+}
 #countryMenuActive{
     background: #f1829c;
     border-radius: 5px;
@@ -86,7 +94,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 10px;
+    margin: 30px 0;
 }
 
 .subMenu div{
@@ -193,15 +201,31 @@ h3 {
 }
 
 /* --------------main content--------------- */
+.excursionsTwoList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+.excursionsListItemBox{ 
+    display: flex;
 
+    flex-direction: column;  
+    margin: 1%;
+    width: 48%;
+    min-width: 320px;
+}
 /* podrobno button */
+.buttonAndImage{
+    margin-top:auto;
+}
 .button_podrobno {
     width: 100%;
     font-style: italic;
     text-align:center;
     color: #fdfaf2;
     bottom: 0px;
-    margin-top:auto;
+
 }
 .button_podrobno_price {
     background:  #a5c929;
@@ -238,6 +262,10 @@ table {
     left: 50%;
     position: relative;
 }
+
+#content_Block{
+    padding-top: 17px;  
+}
 .img_conteiner {
     width: 100%;
     float: none;
@@ -253,19 +281,16 @@ table {
     margin-left: 2%;
 }
 
-.excursionsTwoList{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
-}
+
 
 #imgHeaderArticles{
     float: left;
+    padding: 3px 0px;
 }
 
 #descriptionHeaderArticles {
-   overflow: hidden;
-   padding-left: 20px;
+    overflow: hidden;
+    padding-left: 20px;
 }
 
 #button_back {

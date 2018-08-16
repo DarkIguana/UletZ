@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-10 16:15:22
+/* Smarty version 3.1.32, created on 2018-08-16 05:56:48
   from '/home/lizard/www/site.local/views/old/articles.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b6d9dfa14dae0_07132892',
+  'unifunc' => 'content_5b74f6002fcd24_42039587',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0fc1e3c18805a3c3243428b8524cc7d7858758b9' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/articles.tpl',
-      1 => 1533910519,
+      1 => 1534391804,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b6d9dfa14dae0_07132892 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b74f6002fcd24_42039587 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsArticles']->value, 'item', false, NULL, 'articles', array (
 ));
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
-    <div style='padding: 0px 30px 40px 0px;'>
+    <div class="clearfix">
         <div id="imgHeaderArticles" >        
             <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /articles/item/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
@@ -39,16 +39,15 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
         <div id="descriptionHeaderArticles" >  
             <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /articles/item/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-/"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
-</a>  <br/> 
-            <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-/articles/item/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-/"><?php echo $_smarty_tpl->tpl_vars['item']->value['teaser'];?>
-</a>
+/">
+                <h2><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+ </h2>
+                <p><?php echo $_smarty_tpl->tpl_vars['item']->value['teaser'];?>
+</p>
+            </a>
         </div>     
     </div>
-    <div style="clear: both;"></div>   <!-- zaglushka dla div otstupa  -->
-<?php
+    <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>    
