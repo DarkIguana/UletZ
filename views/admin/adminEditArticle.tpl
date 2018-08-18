@@ -55,10 +55,13 @@
                  </textarea>
             </div>
                  
-   
+   <script>CKEDITOR.replace("#itemText_{$item['id']}");
+                         </script>
 
      {/foreach} 
  <div>
                      <input type="button" value="Сохранить" onclick="updateArticleJs('{$item['id']}, {$smcountry}');"/>
+                     
 </div>
    
+            

@@ -20,7 +20,7 @@ a {
     color: black;
 }
 p {
-    text-align: justify;
+    text-align: left;
     padding: 15px 0;
 }
 .wrapper {
