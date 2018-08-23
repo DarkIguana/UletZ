@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-17 10:35:41
+/* Smarty version 3.1.32, created on 2018-08-23 11:02:21
   from '/home/lizard/www/site.local/views/admin/adminEditArticle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b7688dd150626_83451071',
+  'unifunc' => 'content_5b7e781da62a55_28585933',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd02e1e9668a540fc0d7dc47c2e7c2ba08f81583e' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminEditArticle.tpl',
-      1 => 1534494936,
+      1 => 1535014828,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b7688dd150626_83451071 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b7e781da62a55_28585933 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1>edit статьи <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 </h1>
@@ -102,27 +102,22 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
          </div>
          
 <h1>Описание</h1>
-          <div><textarea id="itemText_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-">
+          <div><textarea class="ckeditor" name="edit" id="itemText_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" >
                      <?php echo $_smarty_tpl->tpl_vars['item']->value['text'];?>
 
                  </textarea>
-            </div>
-                 
-   <?php echo '<script'; ?>
->CKEDITOR.replace("#itemText_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-");
-                         <?php echo '</script'; ?>
->
-
+            </div>   
      <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?> 
+    
  <div>
                      <input type="button" value="Сохранить" onclick="updateArticleJs('<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 , <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 ');"/>
+                  
                      
 </div>
    

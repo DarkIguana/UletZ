@@ -50,17 +50,15 @@
          </div>
          
 <h1>Описание</h1>
-          <div><textarea id="itemText_{$item['id']}">
+          <div><textarea class="ckeditor" name="edit" id="itemText_{$item['id']}" >
                      {$item['text']}
                  </textarea>
-            </div>
-                 
-   <script>CKEDITOR.replace("#itemText_{$item['id']}");
-                         </script>
-
+            </div>   
      {/foreach} 
+    
  <div>
                      <input type="button" value="Сохранить" onclick="updateArticleJs('{$item['id']}, {$smcountry}');"/>
+                  
                      
 </div>
    

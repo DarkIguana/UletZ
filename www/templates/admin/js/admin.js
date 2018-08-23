@@ -157,8 +157,11 @@ function updateArticleJs(itemId){
     var itemStatus     = $('#itemStatus_'+itemId).prop('checked');   
     if( ! itemStatus){  itemStatus=1  }                         
             else {   itemStatus=0    }  
-   
-    var postData      = {itemId: itemId, itemName: itemName, itemDate : itemDate , 
+    
+
+    
+    
+    var postData   = {itemId: itemId, itemName: itemName, itemDate : itemDate , 
         itemCatId: itemCatId, itemTeaser: itemTeaser, itemText: itemText, itemStatus: itemStatus, itemTeg: itemTeg};
       
         $.ajax ({
