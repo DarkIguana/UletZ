@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-23 10:59:21
+/* Smarty version 3.1.32, created on 2018-08-23 13:23:56
   from '/home/lizard/www/site.local/views/admin/adminArticles.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b7e776915ead4_54953315',
+  'unifunc' => 'content_5b7e994cdf8724_75564505',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'df58bf68ce98b281bb968dbf813782edfa764734' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminArticles.tpl',
-      1 => 1535014757,
+      1 => 1535014806,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b7e776915ead4_54953315 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b7e994cdf8724_75564505 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h2> Редактирование Статей <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
  </h2>
@@ -28,7 +28,6 @@ function content_5b7e776915ead4_54953315 (Smarty_Internal_Template $_smarty_tpl)
     <tr>
         <th>ID</th>
         <th>Название</th>
-        
         <th>Удалить</th>
         <th>Изображение</th>
         <th>Изменить</th>

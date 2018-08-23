@@ -57,7 +57,7 @@
      {/foreach} 
     
  <div>
-                     <input type="button" value="Сохранить" onclick="updateArticleJs('{$item['id']}, {$smcountry}');"/>
+                     <input type="button" value="Сохранить" onclick="updateArticleJs('{$item['id']}');"/>
                   
                      
 </div>
