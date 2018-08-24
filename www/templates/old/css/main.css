@@ -296,7 +296,7 @@ table {
 #button_back {
     position:relative; 
     height: 25px;
-    margin: 10px 0px 0px 0px; 
+    margin: 10px 0px 30px 0px; 
     padding: 10px;
     border-radius: 5px;
     text-align:center; 
@@ -309,16 +309,10 @@ table {
 
 
 #footer {
-    clear: both;
-    position: relative;	
-    width: 980px;
-    height: 45px;
-    left: 50%;
-
-    margin-left: -490px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background: #51c9c8;
-    margin-top: 40px;
     color: #fff;
 
 }
