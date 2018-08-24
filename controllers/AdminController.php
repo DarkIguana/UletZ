@@ -239,7 +239,7 @@ function uploadexcAction(){
          
          // проверка загружен ли файл
          if(is_uploaded_file($_FILES['filename']['tmp_name'])){
-             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/images/excursions/'.$country.'/'.$newFileName);                             
+             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/upload/images/excursions/'.$country.'/'.$newFileName);                             
                 if($res){
                      $res=updateProductImage($itemId, $newFileName);
                          if($res){
@@ -364,7 +364,7 @@ function uploadartAction(){
          
          // проверка загружен ли файл
          if(is_uploaded_file($_FILES['filename']['tmp_name'])){
-             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/images/articles/'.$country.'/'.$newFileName);                             
+             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/upload/images/articles/'.$country.'/'.$newFileName);                             
                 if($res){
                      $res=updateArticleImage($itemId, $newFileName);
                          if($res){

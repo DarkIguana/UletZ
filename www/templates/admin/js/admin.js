@@ -113,7 +113,7 @@ function updateExcursionJs(itemId){
     var itemPrice         = $('#itemPrice_'+itemId).val();
     var itemCatId        = $('#itemCatId_'+itemId).val();
     var itemDescShort = $('#itemDescShort_'+itemId).val();
-    var itemDesc        = $('#itemDesc_'+itemId).val();
+    var itemDesc        = CKEDITOR.instances['itemDesc_'+itemId].getData();
     var itemStatus     = $('#itemStatus_'+itemId).prop('checked');
    // var newFileName        = $('#newFileName_'+itemId).val(); 
     if( ! itemStatus){
