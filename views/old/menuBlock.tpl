@@ -17,8 +17,7 @@
         <div class="subMenu">
             {foreach from=$smSubMenu item=item name=subMenu}
                 <div>
-                    <a href="/{$smcountry}/{$item.url_cat_name}/" 
-                       > 
+                    <a href="/{$smcountry}/{$item.url_cat_name}/"> 
                         {$item.cat_name}
                     </a>
                 </div>
@@ -26,3 +25,13 @@
         </div>  
     </div>
 </div>
+<script>
+    function myFunction() {
+        var x = document.getElementById("menuBlock");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>

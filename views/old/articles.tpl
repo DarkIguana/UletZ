@@ -4,7 +4,7 @@
     <div class="clearfix">
         <div id="imgHeaderArticles" >        
             <a href="/{$smcountry}/articles/item/{$item['id']}/">
-                <img src="/images/articles/{$smcountry}/{$item['image']}" width="300" />
+                <img src="/images/articles/{$smcountry}/{$item['image']}" class="imgConteinerArticleHead" />
             </a>
         </div>
         <div id="descriptionHeaderArticles" >  

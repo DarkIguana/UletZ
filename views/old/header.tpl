@@ -6,7 +6,7 @@
     <body>
         <div class="wrapper"> 
             <div class="logo"> 
-                <img src="/images/global/logo.png" width="80%" />
+                <img src="/images/global/logo.png" class="logoImg" />
             </div>
                 {include file='menuBlock.tpl'}
         </div>
