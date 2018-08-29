@@ -11,4 +11,4 @@
                 {include file='menuBlock.tpl'}
         </div>
         <div class="wrapper"> 
-        <div id="content_Block">
+        <div id="content_Block" class="clearfix">

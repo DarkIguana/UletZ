@@ -43,7 +43,8 @@ function getActiveExcursionsByCat($countryId){
     $sql = " SELECT * 
                 FROM `excursions` 
                 WHERE `category_id`='{$countryId}' 
-                AND `status`='1' "; 
+                AND `status`='1'
+                ORDER BY `id` ASC"; 
   $rs = mysqli_query($db, $sql);
   return createSmartyRsArray($rs);
  }
@@ -157,3 +158,15 @@ function getExcursionById($excursionId){
                 
        
 }
+/**
+ * получить intro (по стране)
+ * 
+ **/
+function getIntro($countryId){
+     global $db;
+    $sql = "SELECT * 
+                              FROM general 
+                              WHERE category_id='{$countryId}'"; 
+  $rs = mysqli_query($db, $sql);
+  return createSmartyRsArray($rs);
+ }

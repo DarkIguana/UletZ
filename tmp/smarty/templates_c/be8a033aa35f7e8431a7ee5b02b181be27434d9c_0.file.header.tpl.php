@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-15 10:25:11
+/* Smarty version 3.1.32, created on 2018-08-29 07:41:05
   from '/home/lizard/www/site.local/views/old/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b73e367401b33_19882791',
+  'unifunc' => 'content_5b8631f1042505_60093367',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'be8a033aa35f7e8431a7ee5b02b181be27434d9c' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/header.tpl',
-      1 => 1534321508,
+      1 => 1535521262,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menuBlock.tpl' => 1,
   ),
 ),false)) {
-function content_5b73e367401b33_19882791 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b8631f1042505_60093367 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
     <head>
         <title><?php echo $_smarty_tpl->tpl_vars['pageTitle']->value;?>
@@ -38,6 +38,6 @@ css/main.css" type="text/css" />
 ?>
         </div>
         <div class="wrapper"> 
-        <div id="content_Block">
+        <div id="content_Block" class="clearfix">
 <?php }
 }
