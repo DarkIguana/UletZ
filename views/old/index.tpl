@@ -9,7 +9,7 @@
         <div class="phoneBox">
             <div class="phoneBoxImgPhone collomnminwidh">
                 <div><img src="/images/global/messengers-icons.png" class="iconmessengers"/></div>
-                <div><h2>{$smIntro[0].description}</h2></div>
+                <div class="phoneNum"><h2> {$smIntro[0].description} </h2></div>
             </div>
          </div>
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-29 16:05:10
+/* Smarty version 3.1.32, created on 2018-09-03 12:40:53
   from '/home/lizard/www/site.local/views/old/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b86a816c27a59_45206032',
+  'unifunc' => 'content_5b8d0fb5601354_47719669',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eb6a563a67f1c61a339a2b52add99a6bfad3b40b' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/index.tpl',
-      1 => 1535551484,
+      1 => 1535971250,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b86a816c27a59_45206032 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b8d0fb5601354_47719669 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="subHead">
     
@@ -33,8 +33,8 @@ function content_5b86a816c27a59_45206032 (Smarty_Internal_Template $_smarty_tpl)
         <div class="phoneBox">
             <div class="phoneBoxImgPhone collomnminwidh">
                 <div><img src="/images/global/messengers-icons.png" class="iconmessengers"/></div>
-                <div><h2><?php echo $_smarty_tpl->tpl_vars['smIntro']->value[0]['description'];?>
-</h2></div>
+                <div class="phoneNum"><h2> <?php echo $_smarty_tpl->tpl_vars['smIntro']->value[0]['description'];?>
+ </h2></div>
             </div>
          </div>
 

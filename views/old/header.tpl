@@ -2,7 +2,8 @@
     <head>
         <title>{$pageTitle}</title>  
         <link rel="stylesheet" href="{$templateWebPath}css/main.css" type="text/css" />
-    </head>
+         <script type="text/javascript" src="/js/jquery-3.3.1.js"> </script>
+        </head>
     <body>
         <div class="wrapper"> 
             <div class="logo"> 
