@@ -1,0 +1,169 @@
+/*  ---------------стиль для узкого экрана iphone------------------------------------------
+@media only screen 
+and (min-device-width : 520px) 
+and (max-device-width : 480px)  */
+@media screen and (max-width: 600px){	
+    body {
+        font-size: 150%;
+    }
+    /*-------------------------- menu ----------------------*/ 
+    .headBlock{
+    }
+ .mobLogoImg {
+        display: block;
+        width: 200px;
+        /*  position: relative;   
+        vertical-align: middle;*/
+        position: absolute;
+        top: 14px;
+        right: 20px 
+    }
+    .countryMenu{
+        margin-top: 0px;
+    }
+    .menu-icon {
+        height: 20px;
+        width: 25px;
+        position: relative;
+        float: left;
+        padding-top: 10px;
+        
+    }
+    .mobileMenuHeader{
+        display: inline;
+        padding-left: 9px;
+
+    }
+    .menu-icon__bar {
+        position: absolute;
+        top: 50%;
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        -webkit-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+    }
+    .menu-icon__bar::before, .menu-icon__bar::after {
+        height: 2px;
+        width: 100%;
+        content: "";
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        -webkit-transition: -webkit-transform 0.5s ease;
+        transition: -webkit-transform 0.5s ease;
+        transition: transform 0.5s ease;
+        transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    }
+    .menu-icon__bar::before {
+        top: -10px;
+    }
+    .menu-icon__bar::after {
+        bottom: -10px;
+    }
+    .menu-icon--open .menu-icon {
+        position: relative;
+    }
+    .menu-icon--open .menu-icon__bar {
+        background: transparent;
+    }
+    .menu-icon--open .menu-icon__bar::before, .menu-icon--open .menu-icon__bar::after {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .menu-icon--open .menu-icon__bar::after {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+    .menu-icon--open .menu-icon__bar::before {
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+    }
+
+    .menuBlock{
+        /* overflow: hidden;
+        position: relative;*/
+        background-color:  #00ccc6;
+
+    }
+    .menu{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-width: 456px;
+    } 
+    .menuToggle{
+        display: inline-block;
+        /* margin: 20px 0 0 30px;  */
+        color: #fff;
+        font-weight: bold;
+    }
+    .subMenu a:hover {
+     color: #f1829c;   
+    }
+    .subMenu div{
+        text-align:center;
+        color: #fff;
+        padding: 15px 0;
+        margin: 0;
+        font-weight: bold;
+        width: 100%;
+    }
+    .subMenu div:nth-child(n+1){
+        background:  #00ccc6;
+    }
+     .subMenu div:last-child{
+        padding-bottom: 600px;
+    }
+  /*-------------------------- menu end----------------------*/ 
+    .collomnwidh{
+        width: 100%;  
+    }
+    .wrapper {
+        max-width: 960px;
+        margin: 0 ;
+        height: inherit;
+    }
+    .excursionsListItemBox{ 
+        margin: 0;
+    }
+    .excursionsTwoList{
+        margin: 10px 0;
+    }
+    p{
+        margin: 0 10px 0 10px;
+    }
+    h2, h1 {
+        margin: 10px 10px 0 10px;
+    }
+    
+    #content_Block{
+        padding-top: 60px;  
+    }
+    #imgHeaderArticles{
+        float: none;
+        padding: 3px 0px;
+    }
+    .imgConteinerArticleHead {
+        width: 100%;
+    }
+   .img_content_l {
+    float: none;
+    width: 100%;
+    margin: 5px 0px;
+}
+.img_content_r {
+    float: none;
+    width: 100%;
+     margin: 5px 0px;
+}
+}

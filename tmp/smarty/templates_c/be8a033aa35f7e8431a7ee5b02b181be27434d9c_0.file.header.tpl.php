@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-04 16:14:51
+/* Smarty version 3.1.32, created on 2018-09-13 17:12:23
   from '/home/lizard/www/site.local/views/old/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b8e935b73cb11_02823284',
+  'unifunc' => 'content_5b9a7e57bfe107_81505914',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'be8a033aa35f7e8431a7ee5b02b181be27434d9c' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/header.tpl',
-      1 => 1536070486,
+      1 => 1536851522,
       2 => 'file',
     ),
   ),
@@ -21,13 +21,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menuBlock.tpl' => 1,
   ),
 ),false)) {
-function content_5b8e935b73cb11_02823284 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b9a7e57bfe107_81505914 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
     <head>
         <title><?php echo $_smarty_tpl->tpl_vars['pageTitle']->value;?>
 </title>  
         <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
 css/main.css" type="text/css" />
+      
         <?php echo '<script'; ?>
  type="text/javascript" src="/js/jquery-3.3.1.js"><?php echo '</script'; ?>
 >

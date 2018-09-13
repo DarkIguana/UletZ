@@ -1,9 +1,9 @@
 {* menu block *}
 
 <nav>
-
+<!-- <div style="margin: 20px;"> -->
     <div class="menuToggle" style="position: static; display: inline;">
-        <div class="menu-icon" data-behaviour="toggle-menu-icon"><span class="menu-icon__bar"></div>
+       <div style="margin: 20px;"> <div class="menu-icon" data-behaviour="toggle-menu-icon"><span class="menu-icon__bar"></div></div>
         <div class="mobileMenuHeader">Меню</div></div><img src="/images/global/logo.png" class="mobLogoImg" />
 
 
@@ -29,7 +29,7 @@
             {/foreach} 
         </div>  
     </div>
-
+<!--  </div> -->
 </nav>
 <script>
     $(function () {
@@ -42,5 +42,17 @@
             });
         });
     });
+    
+   $(function() {
+  function init() {
+    $('[data-behaviour="toggle-menu-icon"]').on('click', toggleMenuIcon);
+   };
+  
+  function toggleMenuIcon() {
+    $(this).toggleClass('menu-icon--open');
+      };
+    
+  init()
+});
 
 </script>
