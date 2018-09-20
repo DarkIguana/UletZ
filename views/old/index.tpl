@@ -2,12 +2,12 @@
 
 <div class="subHead">
     
-    <div class="introBox collomnminwidh collomnwidh">
+    <div class="introBox collomnMinWidh collomnWidh">
         <h1>{$smIntro[1].name}</h1>
         <p>{$smIntro[1].description}</p>
     </div>
         <div class="phoneBox">
-            <div class="phoneBoxImgPhone collomnminwidh">
+            <div class="phoneBoxImgPhone collomnMinWidh">
                 <div><img src="/images/global/messengers-icons.png" class="iconmessengers"/></div>
                 <div class="phoneNum"><h2> {$smIntro[0].description} </h2></div>
             </div>
@@ -17,7 +17,7 @@
 
 <div class="excursionsTwoList">
     {foreach $rsExcursions as $item name=excursion}
-        <div class="excursionsListItemBox collomnminwidh collomnwidh">
+        <div class="excursionsListItemBox collomnMinWidh collomnWidh">
             <div>
             <h2 ><a href="/{$smcountry}/excursions/item/{$item['id']}/">{$item['name']}</a> </h2>
             </div>

@@ -24,14 +24,14 @@ function content_5b8d0fb5601354_47719669 (Smarty_Internal_Template $_smarty_tpl)
 ?>
 <div class="subHead">
     
-    <div class="introBox collomnminwidh collomnwidh">
+    <div class="introBox collomnMinWidh collomnWidh">
         <h1><?php echo $_smarty_tpl->tpl_vars['smIntro']->value[1]['name'];?>
 </h1>
         <p><?php echo $_smarty_tpl->tpl_vars['smIntro']->value[1]['description'];?>
 </p>
     </div>
         <div class="phoneBox">
-            <div class="phoneBoxImgPhone collomnminwidh">
+            <div class="phoneBoxImgPhone collomnMinWidh">
                 <div><img src="/images/global/messengers-icons.png" class="iconmessengers"/></div>
                 <div class="phoneNum"><h2> <?php echo $_smarty_tpl->tpl_vars['smIntro']->value[0]['description'];?>
  </h2></div>
@@ -49,7 +49,7 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 $_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration']++;
 ?>
-        <div class="excursionsListItemBox collomnminwidh collomnwidh">
+        <div class="excursionsListItemBox collomnMinWidh collomnWidh">
             <div>
             <h2 ><a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /excursions/item/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>

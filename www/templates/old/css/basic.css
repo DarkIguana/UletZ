@@ -21,16 +21,24 @@ a {
 }
 p {
     text-align: left;
-    padding: 15px 0;
+    padding: 15px 0px;
+}
+table { 
+    border: 0px; /* Рамка вокруг таблицы */
+    border-collapse: collapse; /* Отображать только одинарные линии */
+    padding: 0px;
+    border-spacing: 0px;
 }
 .wrapper {
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
     height: inherit;
     min-width: 465px;
     overflow: hidden;
 }
-/*  --------------------- шрифты ------------------------  */
+/*  --------------------- шрифты ----------------  */
 h1 {
     color: #6A8E11;
     text-align: left;
@@ -44,24 +52,21 @@ h3 {
     font-weight: normal;
     color: #51c9c8;
 }
-
 /*   -------------- шрифты end------------------  */
-
 .logo{
     text-align: center;
-
 }
 .logoImg {
     width: 80%;
-}
-.menuToggle{
-    display: none;
-    cursor: pointer;
 }
 .mobLogoImg {
     display: none; 
 }
 /* --------------menu--------------- */
+.menuToggle{
+    display: none;
+    cursor: pointer;
+}
 .menuBlock li {
     display: inline-block;
     height: 20px;
@@ -117,15 +122,28 @@ h3 {
 }
 .mobileMenuHeader{
     display: none;
-
-
 }
-/* --------------main content--------------- */
-.collomnminwidh{ 
+/* --------------main content --------------- */
+#contentBlock{
+    margin-top: 20px;
+    margin-left:-390px; 
+    width: 980px;
+    left: 50%;
+    position: relative;
+}
+#content_Block{
+    padding-top: 17px;  
+}
+/* -------------- content articles--------------- */
+#descriptionHeaderArticles {
+    overflow: hidden;
+    padding-left: 20px;
+}
+/* --------------main content excursion main--------------- */
+.collomnMinWidh{ 
     min-width: 320px;
 }
-
-.collomnwidh{
+.collomnWidh{
     width: 48%;  
 }
 .subHead{
@@ -186,7 +204,6 @@ h3 {
     text-align:center;
     color: #fdfaf2;
     bottom: 0px;
-
 }
 .button_podrobno_price {
     background:  #a5c929;
@@ -209,24 +226,7 @@ h3 {
     text-decoration: underline;
 }
 /* end podrobno button */
-table { 
-    border: 0px; 						/* Рамка вокруг таблицы */
-    border-collapse: collapse; 	/* Отображать только одинарные линии */
-    padding: 0px;
-    border-spacing: 0px;
-}
-
-#contentBlock{
-    margin-top: 20px;
-    margin-left:-390px; 
-    width: 980px;
-    left: 50%;
-    position: relative;
-}
-
-#content_Block{
-    padding-top: 17px;  
-}
+/* --------------IMG--------------- */
 .img_conteiner {
     width: 100%;
     float: none;
@@ -241,19 +241,11 @@ table {
     width: 49%;
     margin-left: 2%;
 }
-
-
-
 #imgHeaderArticles{
     float: left;
     padding: 3px 0px;
 }
-
-#descriptionHeaderArticles {
-    overflow: hidden;
-    padding-left: 20px;
-}
-
+/* --------------footer--------------- */
 #button_back {
     position:relative; 
     height: 25px;
@@ -275,5 +267,4 @@ table {
     background: #51c9c8;
     color: #fff;
     padding: 0 20px 0 20px;
-
 }

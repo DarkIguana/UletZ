@@ -9,7 +9,7 @@ and (max-device-width : 480px)  */
     /*-------------------------- menu ----------------------*/ 
     .headBlock{
     }
- .mobLogoImg {
+    .mobLogoImg {
         display: block;
         width: 200px;
         /*  position: relative;   
@@ -27,7 +27,7 @@ and (max-device-width : 480px)  */
         position: relative;
         float: left;
         padding-top: 10px;
-        
+
     }
     .mobileMenuHeader{
         display: inline;
@@ -108,7 +108,7 @@ and (max-device-width : 480px)  */
         font-weight: bold;
     }
     .subMenu a:hover {
-     color: #f1829c;   
+        color: #f1829c;   
     }
     .subMenu div{
         text-align:center;
@@ -121,16 +121,18 @@ and (max-device-width : 480px)  */
     .subMenu div:nth-child(n+1){
         background:  #00ccc6;
     }
-     .subMenu div:last-child{
+    .subMenu div:last-child{
         padding-bottom: 600px;
     }
-  /*-------------------------- menu end----------------------*/ 
-    .collomnwidh{
+    /*-------------------------- menu end----------------------*/ 
+    .collomnWidh{
         width: 100%;  
     }
     .wrapper {
         max-width: 960px;
         margin: 0 ;
+        padding-left: 0;
+        padding-right: 0;
         height: inherit;
     }
     .excursionsListItemBox{ 
@@ -145,7 +147,7 @@ and (max-device-width : 480px)  */
     h2, h1 {
         margin: 10px 10px 0 10px;
     }
-    
+
     #content_Block{
         padding-top: 60px;  
     }
@@ -156,14 +158,14 @@ and (max-device-width : 480px)  */
     .imgConteinerArticleHead {
         width: 100%;
     }
-   .img_content_l {
-    float: none;
-    width: 100%;
-    margin: 5px 0px;
-}
-.img_content_r {
-    float: none;
-    width: 100%;
-     margin: 5px 0px;
-}
+    .img_content_l {
+        float: none;
+        width: 100%;
+        margin: 5px 0px;
+    }
+    .img_content_r {
+        float: none;
+        width: 100%;
+        margin: 5px 0px;
+    }
 }

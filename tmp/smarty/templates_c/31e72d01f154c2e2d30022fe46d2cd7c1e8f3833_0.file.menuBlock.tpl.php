@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-13 16:19:24
+/* Smarty version 3.1.32, created on 2018-09-19 05:14:16
   from '/home/lizard/www/site.local/views/old/menuBlock.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b9a71ec8a07d4_93804073',
+  'unifunc' => 'content_5ba1bf08031b02_60635245',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31e72d01f154c2e2d30022fe46d2cd7c1e8f3833' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/menuBlock.tpl',
-      1 => 1536848361,
+      1 => 1537326853,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b9a71ec8a07d4_93804073 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba1bf08031b02_60635245 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav>
 <!-- <div style="margin: 20px;"> -->
     <div class="menuToggle" style="position: static; display: inline;">
        <div style="margin: 20px;"> <div class="menu-icon" data-behaviour="toggle-menu-icon"><span class="menu-icon__bar"></div></div>
-        <div class="mobileMenuHeader">Меню</div></div><img src="/images/global/logo.png" class="mobLogoImg" />
+       <div class="mobileMenuHeader">Меню</div></div><a href="/"><img src="/images/global/logo.png" class="mobLogoImg" /></a>
 
 
     <div class="menuBlock">
@@ -75,28 +75,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </nav>
 <?php echo '<script'; ?>
 >
-    $(function () {
-        $(".menuToggle").on('click', function () {
-
-            $('.menu').slideToggle(500, function () {
-                if ($(this).css('display') === 'none') {
-                    $(this).removeAttr('style');
-                }
-            });
-        });
-    });
-    
-   $(function() {
-  function init() {
-    $('[data-behaviour="toggle-menu-icon"]').on('click', toggleMenuIcon);
-   };
   
-  function toggleMenuIcon() {
-    $(this).toggleClass('menu-icon--open');
-      };
-    
-  init()
-});
 
 <?php echo '</script'; ?>
 ><?php }

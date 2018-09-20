@@ -4,7 +4,7 @@
 <!-- <div style="margin: 20px;"> -->
     <div class="menuToggle" style="position: static; display: inline;">
        <div style="margin: 20px;"> <div class="menu-icon" data-behaviour="toggle-menu-icon"><span class="menu-icon__bar"></div></div>
-        <div class="mobileMenuHeader">Меню</div></div><img src="/images/global/logo.png" class="mobLogoImg" />
+       <div class="mobileMenuHeader">Меню</div></div><a href="/"><img src="/images/global/logo.png" class="mobLogoImg" /></a>
 
 
     <div class="menuBlock">
@@ -32,27 +32,6 @@
 <!--  </div> -->
 </nav>
 <script>
-    $(function () {
-        $(".menuToggle").on('click', function () {
-
-            $('.menu').slideToggle(500, function () {
-                if ($(this).css('display') === 'none') {
-                    $(this).removeAttr('style');
-                }
-            });
-        });
-    });
-    
-   $(function() {
-  function init() {
-    $('[data-behaviour="toggle-menu-icon"]').on('click', toggleMenuIcon);
-   };
   
-  function toggleMenuIcon() {
-    $(this).toggleClass('menu-icon--open');
-      };
-    
-  init()
-});
 
 </script>
