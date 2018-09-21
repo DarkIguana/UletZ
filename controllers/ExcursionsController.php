@@ -31,7 +31,7 @@ function indexAction($smarty, $id, $country){
   
     $smarty->assign('rsExcursions', $rsExcursions);
     
-    $smarty->assign('pageTitle', 'Главная страница');
+    $smarty->assign('pageTitle', 'Экскурсии');
     
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'index');
@@ -64,7 +64,7 @@ function itemAction($smarty){
     
     $smarty->assign('rsExcursion', $rsExcursion);
   
-    $smarty->assign('pageTitle', 'Главная страница');
+    $smarty->assign('pageTitle', 'Экскурсии');
 
     
     loadTemplate($smarty, 'header');

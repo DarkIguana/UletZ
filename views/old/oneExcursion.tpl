@@ -2,11 +2,7 @@
 
  {foreach $rsExcursion as $item name=excursion}
     <div >
-          <div id="name">
-            <h1>{$item['name']}</h1>
-        </div><br/>
-        
-        <div class="contentBlock">{$item['description']}</div><br/>
+           <div class="contentBlock">{$item['description']}</div><br/>
     </div>
     
     {/foreach}

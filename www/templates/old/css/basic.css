@@ -72,7 +72,7 @@ h3 {
     height: 20px;
     margin: 10px 0;
 }
-.menuBlock li a, .menuBlock div a {
+.menuBlock li a{
     color: inherit;
 
     padding: 5px;
@@ -96,7 +96,7 @@ h3 {
     justify-content: center;
     margin: 30px 0;
 }
-.subMenu div{
+.subMenu a{
     text-align:center;
     color: #fff;
     padding: 10px 30px;
@@ -106,13 +106,13 @@ h3 {
     border-left: none;
     min-width: 200px;
 }
-.subMenu div:nth-child(1) {
+.subMenu a:nth-child(1) {
     background: #5ad2a9;
 }
-.subMenu div:nth-child(2) {
+.subMenu a:nth-child(2) {
     background: #91cc9d;
 }
-.subMenu div:nth-child(3) {
+.subMenu a:nth-child(3) {
     background: #a5c929;
 }
 #unSelectMenu{
@@ -194,6 +194,24 @@ h3 {
 .imgConteinerArticleHead {
     width: 300;
 }
+.price_table {
+    width: 100%; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    border-top: 10px solid #51c9c8;
+    border-bottom: 2px solid #51c9c8;
+    text-align:center;
+}	
+.price_table th {
+    color: #6A8E11;
+    font-style: italic;
+    font-weight: normal;
+    padding: 10px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid #DCDCDC; /* Параметры рамки */
+}
+.price_table td {
+    padding: 10px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid #DCDCDC; /* Параметры рамки */
+}
 /* podrobno button */
 .buttonAndImage{
     margin-top:auto;
@@ -231,6 +249,7 @@ h3 {
     width: 100%;
     float: none;
     padding-top: 10px;
+    overflow: hidden;
 }
 .img_content_l {
     float: left;

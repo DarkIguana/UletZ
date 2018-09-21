@@ -56,4 +56,3 @@
  <div>
                      <input type="button" value="Сохранить" onclick="updateExcursionJs('{$item['id']}');"/>
 </div>
-   

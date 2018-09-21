@@ -21,11 +21,13 @@
 
         <div class="subMenu menu">
             {foreach from=$smSubMenu item=item name=subMenu}
-                <div>
+                
                     <a href="/{$smcountry}/{$item.url_cat_name}/"> 
+                        
                         {$item.cat_name}
+                    
                     </a>
-                </div>
+                
             {/foreach} 
         </div>  
     </div>

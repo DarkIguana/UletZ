@@ -28,7 +28,8 @@ function getExcursionsByCat($countryId){
      global $db;
     $sql = "SELECT * 
                               FROM excursions 
-                              WHERE category_id='{$countryId}'"; 
+                              WHERE category_id='{$countryId}'
+                              ORDER BY id ASC"; 
   $rs = mysqli_query($db, $sql);
   return createSmartyRsArray($rs);
  }
