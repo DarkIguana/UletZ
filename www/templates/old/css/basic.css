@@ -139,6 +139,19 @@ h3 {
     overflow: hidden;
     padding-left: 20px;
 }
+.wrapperArticle{
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+figcaption{
+    font-style: italic;
+    color: rgba(0,0,0,.6);
+    font-size: 14px;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 10px; 
+}
 /* --------------main content excursion main--------------- */
 .collomnMinWidh{ 
     min-width: 320px;

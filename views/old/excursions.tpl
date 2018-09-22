@@ -1,4 +1,4 @@
-{* щаблон главной странцы*}
+{* шаблон главной странцы*}
 
 <div class="excursionsTwoList">
     {foreach $rsExcursions as $item name=excursion}

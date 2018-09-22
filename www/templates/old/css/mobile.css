@@ -83,10 +83,7 @@ and (max-device-width : 480px)  */
     }
 
     .menuBlock{
-        /* overflow: hidden;
-        position: relative;*/
-        background-color:  #00ccc6;
-
+               background-color:  #00ccc6;
     }
     .menu{
         display: none;
@@ -103,14 +100,14 @@ and (max-device-width : 480px)  */
     } 
     .menuToggle{
         display: inline-block;
-        /* margin: 20px 0 0 30px;  */
         color: #fff;
         font-weight: bold;
     }
     .subMenu a:hover {
         color: #f1829c;   
     }
-    .subMenu div{
+    .subMenu a{
+        display: block;
         text-align:center;
         color: #fff;
         padding: 15px 0;
@@ -118,10 +115,10 @@ and (max-device-width : 480px)  */
         font-weight: bold;
         width: 100%;
     }
-    .subMenu div:nth-child(n+1){
+    .subMenu a:nth-child(n+1){
         background:  #00ccc6;
     }
-    .subMenu div:last-child{
+    .subMenu a:last-child{
         padding-bottom: 600px;
     }
     /*-------------------------- menu end----------------------*/ 

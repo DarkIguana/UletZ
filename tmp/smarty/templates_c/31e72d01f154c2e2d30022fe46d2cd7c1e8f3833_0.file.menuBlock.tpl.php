@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-21 17:12:23
+/* Smarty version 3.1.32, created on 2018-09-22 19:01:49
   from '/home/lizard/www/site.local/views/old/menuBlock.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba50a574dae12_05132519',
+  'unifunc' => 'content_5ba6757d553a23_49082448',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31e72d01f154c2e2d30022fe46d2cd7c1e8f3833' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/menuBlock.tpl',
-      1 => 1537542739,
+      1 => 1537635705,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba50a574dae12_05132519 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba6757d553a23_49082448 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav>
 <!-- <div style="margin: 20px;"> -->
@@ -75,8 +75,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
 <!--  </div> -->
 </nav>
-<?php echo '<script'; ?>
->
+
   
 
 <?php echo '</script'; ?>
