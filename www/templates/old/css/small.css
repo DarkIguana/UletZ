@@ -31,4 +31,8 @@
     #button_back {
         margin-left: 20px;
     } 
+    .img_conteiner{
+        padding-left: 0;
+        padding-right: 0px;
+    }
 }

@@ -207,6 +207,9 @@ figcaption{
 .imgConteinerArticleHead {
     width: 300;
 }
+   figure img{
+        width: 100%;
+    }
 .price_table {
     width: 100%; /* Ширина таблицы */
     border-collapse: collapse; /* Убираем двойные линии между ячейками */
