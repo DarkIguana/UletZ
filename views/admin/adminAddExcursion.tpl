@@ -1,44 +1,40 @@
-<h2> Добавить Экскурсию</h2>
-
+<h1> Добавить новую Экскурсию</h1>
 <h2>Не отображать</h2>
-        <div>
-            <input type="checkbox" id="newitemStatus" />
-        </div>
-        
+<div>
+    <input type="checkbox" id="newitemStatus" />
+</div>        
 <h2>Страна</h2>
-         <div>
-                <select id="newItemCatId">
-                                    
-                                             {foreach $countries as $itemCat}
-                                                 <option value="{$itemCat['id']}">{$itemCat['cat_name']}
-                                             {/foreach}
-                 </select>
-         </div>
+<div>
+    <select id="newItemCatId">                                    
+        {foreach $countries as $itemCat}
+            <option value="{$itemCat['id']}">{$itemCat['cat_name']}
+        {/foreach}
+    </select>
+</div>
 
 <h2>Название</h2>
-    <div>
-              <input type="edit" id="newItemName" value=" " />   
-    </div>
+<div>
+    <input type="edit" id="newItemName" value=" " />   
+</div>
 
 <h2>Цена</h2>
-         <div>
-               <input type="edit" id="newItemPrice" value=" " /> 
-         </div>
+<div>
+    <input type="edit" id="newItemPrice" value=" " /> 
+</div>
 
 <h2>Краткое Описание</h2>
-         <div>
-                    <textarea id="newItemDescShort"></textarea>
-         </div>
+<div>
+    <textarea id="newItemDescShort"></textarea>
+</div>
 
 <h2>Описание</h2>
-         <div>
-                    <textarea id="newItemDesc"></textarea>
-          </div>
+<div>
+    <textarea id="newItemDesc"></textarea>
+</div>
 
-        <div>
-                <input type="button" value="Сохранить" onclick="addExcursionJs();"/>
-        </div>
-        
+<div>
+    <input type="button" value="Сохранить" onclick="addExcursionJs();"/>
+</div>
 
-       
- 
+
+

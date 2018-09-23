@@ -30,7 +30,19 @@ function getArticlesByCat($countryId){
   $rs = mysqli_query($db, $sql);
   return createSmartyRsArray($rs);
  }
+/**
+ * получить список заголовков всех статей по стране
+ * 
+ **/
 
+function getHeadArticlesByCat($countryId){
+     global $db;
+    $sql = "SELECT id, name, status, image 
+                              FROM articles 
+                              WHERE category_id='{$countryId}'"; 
+  $rs = mysqli_query($db, $sql);
+  return createSmartyRsArray($rs);
+ }
  /**
  * получить список всех активных статей по стране
  * 

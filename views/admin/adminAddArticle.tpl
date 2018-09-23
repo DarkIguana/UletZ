@@ -1,45 +1,34 @@
 <h2> Добавить Статью</h2>
-
 <h2>Не отображать</h2>
-        <div>
-            <input type="checkbox" id="newItemStatus" />
-        </div>
-        
+<div>
+    <input type="checkbox" id="newItemStatus" />
+</div>
 <h2>Страна</h2>
-         <div>
-                <select id="newItemCatId">
-                                    
-                                             {foreach $countries as $itemCat}
-                                                 <option value="{$itemCat['id']}">{$itemCat['cat_name']}
-                                             {/foreach}
-                 </select>
-         </div>
+<div>
 
+    <select id="newItemCatId">
+        {foreach $countries as $itemCat}
+            <option value="{$itemCat['id']}" {if  $smcountry == $itemCat['url_cat_name'] } selected{/if}>{$itemCat['cat_name']}
+        {/foreach}
+    </select>
+</div>
 <h2>Название</h2>
-    <div>
-              <input type="edit" id="newItemName" value=" " />   
-    </div>
-
+<div>
+    <input type="edit" id="newItemName" value=" " />   
+</div>
 <h2>Краткое Описание</h2>
-         <div>
-               <input type="edit" id="newItemTeaser" value=" " /> 
-         </div>
-
+<div>
+    <input type="edit" id="newItemTeaser" value=" " /> 
+</div>
 <h2>Текст</h2>
-         <div>
-                    <textarea id="newItemText"></textarea>
-         </div>
-
+<div>
+    <textarea id="newItemText"></textarea>
+</div>
 <h2>Тег</h2>
-         <div>
-                    <textarea id="newItemTeg"></textarea>
-          </div>
-
+<div>
+    <textarea id="newItemTeg"></textarea>
+</div>
 <h2>Сохранить</h2>
-        <div>
-                <input type="button" value="Сохранить" onclick="addArticleJs();"/>
-        </div>
-        
-
-       
- 
+<div>
+    <input type="button" value="Сохранить" onclick="addArticleJs();"/>
+</div>

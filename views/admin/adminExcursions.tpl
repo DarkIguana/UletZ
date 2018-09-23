@@ -1,5 +1,4 @@
-<h2>  Редактирование Экскурсий {$smcountry} </h2>
-
+<h1>  Редактирование Экскурсий  - {$smcountry} </h1>
 <table >
      <tr>
         <th>ID</th>
@@ -8,7 +7,7 @@
         <th>Изображение</th>
         <th>Изменить</th>
     </tr>
-                     {foreach $rsExcursions as $item name=products}
+                     {foreach $rsExcursionsHead as $item name=products}
      <tr>
           <td>{$item['id']}</td>
           <td>{$item['name']}</td> 

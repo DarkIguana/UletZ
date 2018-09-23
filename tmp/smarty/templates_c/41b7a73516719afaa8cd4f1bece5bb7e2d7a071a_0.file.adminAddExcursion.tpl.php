@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-08 11:19:40
+/* Smarty version 3.1.32, created on 2018-09-23 20:03:18
   from '/home/lizard/www/site.local/views/admin/adminAddExcursion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b6ab5ac7d00c2_07394457',
+  'unifunc' => 'content_5ba7d5668e0d86_41185179',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41b7a73516719afaa8cd4f1bece5bb7e2d7a071a' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminAddExcursion.tpl',
-      1 => 1533719978,
+      1 => 1537725797,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b6ab5ac7d00c2_07394457 (Smarty_Internal_Template $_smarty_tpl) {
-?><h2> Добавить Экскурсию</h2>
-
+function content_5ba7d5668e0d86_41185179 (Smarty_Internal_Template $_smarty_tpl) {
+?><h1> Добавить новую Экскурсию</h1>
 <h2>Не отображать</h2>
         <div>
             <input type="checkbox" id="newitemStatus" />
