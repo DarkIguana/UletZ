@@ -387,18 +387,20 @@ function updatearticleAction(){
     $itemDate           = $_POST['itemDate'];
     $itemStatus          = $_POST['itemStatus'];
     $itemTeaser    = $_POST['itemTeaser'];
-    $itemText           = $_POST['itemText'];
+    $itemText          = $_POST['itemText'];
     $itemCat             = $_POST['itemCatId']; 
     $itemTeg            = $_POST['itemTeg']; 
-    //  $newFileName      = $_POST['newFileName'];   
- 
+    //  $newFileName      = $_POST['newFileName'];  
+    
+    
      $res=updateArticleInDb($itemId, $itemName, $itemDate, 
                                     $itemStatus, $itemTeaser, $itemText, $itemCat, $itemTeg);
      
-     if($res){
+   if($res){
         $resData['success'] = 1;
         $resData['message']= ' Изменения успншно внесены';
-    } else {
+    } 
+    else {
         $resData['success'] = 0;
         $resData['message']= ' Ошика изменения данных';
     }

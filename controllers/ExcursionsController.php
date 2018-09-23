@@ -21,6 +21,9 @@ function indexAction($smarty, $id, $country){
         $rsSubMenu = getMenuChildrenForCat($countryId);  
         $smarty->assign('smSubMenu', $rsSubMenu);
     
+             $rsIntro = getIntro($countryId);  
+             $smarty->assign('smIntro', $rsIntro);
+        
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -28,10 +31,10 @@ function indexAction($smarty, $id, $country){
   
     $smarty->assign('rsExcursions', $rsExcursions);
     
-    $smarty->assign('pageTitle', 'Главная страница');
+    $smarty->assign('pageTitle', 'Экскурсии');
     
     loadTemplate($smarty, 'header');
-    loadTemplate($smarty, 'excursions');
+    loadTemplate($smarty, 'index');
     loadTemplate($smarty, 'footer');
 }
 
@@ -61,7 +64,7 @@ function itemAction($smarty){
     
     $smarty->assign('rsExcursion', $rsExcursion);
   
-    $smarty->assign('pageTitle', 'Главная страница');
+    $smarty->assign('pageTitle', 'Экскурсии');
 
     
     loadTemplate($smarty, 'header');

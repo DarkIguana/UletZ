@@ -3,7 +3,8 @@
         <title>{$pageTitle}</title>  
         <link rel="stylesheet" href="{$templateWebPath}css/main.css" type="text/css" />
         <script type="text/javascript" src="/js/jquery-3.3.1.js"> </script>
-        <script type="text/javascript" src="{$templateWebPath}js/admin.js" ></script>      
+        <script type="text/javascript" src="{$templateWebPath}js/admin.js" ></script>  
+        <script src="/editor/ckeditor.js"></script>
     </head>
     <body>
         <div id="logo">

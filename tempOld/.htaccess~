@@ -1,4 +1,0 @@
-AddHandler server-parsed .html
-AddDefaultCharset utf-8
-php_value default_charset utf-8
-

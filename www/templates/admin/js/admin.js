@@ -113,7 +113,7 @@ function updateExcursionJs(itemId){
     var itemPrice         = $('#itemPrice_'+itemId).val();
     var itemCatId        = $('#itemCatId_'+itemId).val();
     var itemDescShort = $('#itemDescShort_'+itemId).val();
-    var itemDesc        = $('#itemDesc_'+itemId).val();
+    var itemDesc        = CKEDITOR.instances['itemDesc_'+itemId].getData();
     var itemStatus     = $('#itemStatus_'+itemId).prop('checked');
    // var newFileName        = $('#newFileName_'+itemId).val(); 
     if( ! itemStatus){
@@ -151,14 +151,15 @@ function updateArticleJs(itemId){
     var itemDate         = $('#itemDate_'+itemId).val();
     var itemCatId        = $('#itemCatId_'+itemId).val();
     var itemTeaser      = $('#itemTeaser_'+itemId).val();
-    var itemText        = $('#itemText_'+itemId).val();
+    var itemText = CKEDITOR.instances['itemText_'+itemId].getData();
+         
      // var newFileName        = $('#newFileName_'+itemId).val(); 
     var itemTeg        = $('#itemTeg_'+itemId).val();
     var itemStatus     = $('#itemStatus_'+itemId).prop('checked');   
     if( ! itemStatus){  itemStatus=1  }                         
             else {   itemStatus=0    }  
    
-    var postData      = {itemId: itemId, itemName: itemName, itemDate : itemDate , 
+    var postData   = {itemId: itemId, itemName: itemName, itemDate : itemDate , 
         itemCatId: itemCatId, itemTeaser: itemTeaser, itemText: itemText, itemStatus: itemStatus, itemTeg: itemTeg};
       
         $.ajax ({

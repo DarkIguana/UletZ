@@ -1,0 +1,38 @@
+
+@media screen and (max-width: 700px){
+    .collomnWidh{
+        width: 100%;  
+    }
+    .subMenu div{
+        width: 100%;
+    }
+    .img_content_l {
+        float: none;
+        width: 100%;
+        margin: 5px 0px;
+    }
+    .img_content_r{
+        float: none;
+        width: 100%;
+        margin: 5px 0px;
+    }
+    h1 {
+        padding: 0px 15px;
+    }
+    h2 {
+        padding: 0px 15px;
+    }
+    h3 {
+        padding: 0px 15px;
+    }
+    p {   
+        padding: 15px 20px;
+    }
+    #button_back {
+        margin-left: 20px;
+    } 
+    .img_conteiner{
+        padding-left: 0;
+        padding-right: 0px;
+    }
+}

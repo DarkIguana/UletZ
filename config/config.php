@@ -33,3 +33,6 @@ $smarty->setCacheDir('../tmp/smarty/cache');
 $smarty->setConfigDir('../library/Smarty/configs');
 $smarty->assign('templateWebPath', TemplateWebPath);
 //>
+
+// Turn off all error reporting
+// error_reporting(0);

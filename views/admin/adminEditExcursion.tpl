@@ -45,7 +45,7 @@
          </div>
          
 <h1>Описание</h1>
-          <div><textarea id="itemDesc_{$item['id']}">
+          <div><textarea class="ckeditor" id="itemDesc_{$item['id']}">
                      {$item['description']}
                  </textarea>
             </div>
@@ -56,4 +56,3 @@
  <div>
                      <input type="button" value="Сохранить" onclick="updateExcursionJs('{$item['id']}');"/>
 </div>
-   

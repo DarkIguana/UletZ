@@ -50,15 +50,16 @@
          </div>
          
 <h1>Описание</h1>
-          <div><textarea id="itemText_{$item['id']}">
+          <div><textarea class="ckeditor" name="edit" id="itemText_{$item['id']}" >
                      {$item['text']}
                  </textarea>
-            </div>
-                 
-   
-
+            </div>   
      {/foreach} 
+    
  <div>
-                     <input type="button" value="Сохранить" onclick="updateArticleJs('{$item['id']}, {$smcountry}');"/>
+                     <input type="button" value="Сохранить" onclick="updateArticleJs('{$item['id']}');"/>
+                  
+                     
 </div>
    
+            

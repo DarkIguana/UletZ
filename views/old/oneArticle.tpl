@@ -1,15 +1,13 @@
 {* щаблон странцы одной экскурсии*}
-
- {foreach $rsArticle as $item name=article}
-    <div style='float:left; padding: 0px 30px 40px 0px;'>
-        <a href="/article/{$item['id']}/">
-            <img src="/images/articles/{$smcountry}/{$item['image']}" width="200" />
-        </a><br/>
-        <div id="shortTxt">{$item['name']}</div><br/>
-       
-        <div id="shortTxt">{$item['text']}</div><br/>
+<div class="wrapperArticle">
+{foreach $rsArticle as $item name=article}
+    <div>
+        <h1>{$item['name']}</h1>
+        <p>{$item['text']}</p>
     </div>
-  
-    {/foreach}
-     
-        
+
+{/foreach}
+      <a href="/{$smcountry}/articles/">
+        <div id="button_back"> Вернутьcя в раздел Статьи</div>													<!-- button back -->
+    </a>   
+</div>
