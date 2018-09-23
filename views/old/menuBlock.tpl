@@ -18,20 +18,14 @@
                     </a></li>
                 {/foreach} 
         </ul>
-
         <div class="subMenu menu">
-            {foreach from=$smSubMenu item=item name=subMenu}
-                
-                    <a href="/{$smcountry}/{$item.url_cat_name}/"> 
-                        
-                        {$item.cat_name}
-                    
-                    </a>
-                
+            {foreach from=$smSubMenu item=item name=subMenu}                
+                    <a href="/{$smcountry}/{$item.url_cat_name}/">                         
+                        {$item.cat_name}                    
+                    </a>                
             {/foreach} 
         </div>  
     </div>
-<!--  </div> -->
 </nav>
 
   

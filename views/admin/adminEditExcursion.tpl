@@ -1,6 +1,6 @@
 {* щаблон Редактирования одной экскурсии*}
 
-<h1>edit Экскурсии {$smcountry}</h1>
+<h1>{$smcountry}</h1>
         {foreach $rsExcursion as $item name=excursion}
             <h3>ID = {$item['id']}  </h3>
             <h2>Не отображать</h2>

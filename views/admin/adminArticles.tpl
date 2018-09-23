@@ -1,5 +1,4 @@
-
-<h2> Редактирование Статей {$smcountry} </h2>
+<h1> Редактирование Статей - {$smcountry} </h1>
 <table >
     <tr>
         <th>ID</th>
@@ -8,7 +7,7 @@
         <th>Изображение</th>
         <th>Изменить</th>
     </tr>
-                     {foreach $rsArticles as $item name=articles}
+                     {foreach $rsHeadArticles as $item name=articles}
      <tr>
           <td>{$item['id']}</td>
           <td>{$item['name']}</td> 

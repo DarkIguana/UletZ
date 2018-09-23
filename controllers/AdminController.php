@@ -87,7 +87,7 @@ function excursionsAction($smarty, $id, $country){
     $countries =getMainCutMenu();
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
-    $rsExcursions = getExcursionsByCat($countryId);
+    $rsExcursionsHead = getHeadExcursionsByCat($countryId);
 
         $rsSubMenu = getMenuChildrenForCat($countryId);  
         $smarty->assign('smSubMenu', $rsSubMenu);
@@ -96,7 +96,7 @@ function excursionsAction($smarty, $id, $country){
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-    $smarty->assign('rsExcursions', $rsExcursions);
+    $smarty->assign('rsExcursionsHead', $rsExcursionsHead);  /** d($smarty); **/
     
     $smarty->assign('pageTitle', 'Admin Page');
     
@@ -262,7 +262,7 @@ function articlesAction($smarty, $id, $country){
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
     
-    $rsArticles = getArticlesByCat($countryId);
+    $rsHeadArticles = getHeadArticlesByCat($countryId);
    
     $rsSubMenu = getMenuChildrenForCat($countryId);  
         $smarty->assign('smSubMenu', $rsSubMenu);
@@ -272,10 +272,10 @@ function articlesAction($smarty, $id, $country){
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-    $smarty->assign('rsArticles', $rsArticles);
+    $smarty->assign('rsHeadArticles', $rsHeadArticles);
     
     $smarty->assign('pageTitle', 'Admin Page');
-    
+  
      loadTemplate($smarty, 'adminHeader');
      loadTemplate($smarty, 'adminArticles');
      loadTemplate($smarty, 'adminFooter');
@@ -299,13 +299,14 @@ function addarticleAction($smarty, $id, $country){
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-    $smarty->assign('rsArticles', $rsArticles);
+   /** $smarty->assign('rsArticles', $rsArticles);  **/
        
     $smarty->assign('pageTitle', 'Admin Page');
-    
+       
      loadTemplate($smarty, 'adminHeader');
      loadTemplate($smarty, 'adminAddArticle');
      loadTemplate($smarty, 'adminFooter');
+
 }
 
 /**

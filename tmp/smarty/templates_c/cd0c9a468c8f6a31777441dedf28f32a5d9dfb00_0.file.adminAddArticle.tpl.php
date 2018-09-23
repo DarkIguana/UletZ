@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-08 10:45:57
+/* Smarty version 3.1.32, created on 2018-09-23 17:28:14
   from '/home/lizard/www/site.local/views/admin/adminAddArticle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b6aadc5cc9470_90395165',
+  'unifunc' => 'content_5ba7b10e91aa13_72181573',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd0c9a468c8f6a31777441dedf28f32a5d9dfb00' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminAddArticle.tpl',
-      1 => 1533717955,
+      1 => 1537716292,
       2 => 'file',
     ),
   ),
@@ -20,59 +20,48 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b6aadc5cc9470_90395165 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba7b10e91aa13_72181573 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2> Добавить Статью</h2>
-
 <h2>Не отображать</h2>
-        <div>
-            <input type="checkbox" id="newItemStatus" />
-        </div>
-        
+<div>
+    <input type="checkbox" id="newItemStatus" />
+</div>
 <h2>Страна</h2>
-         <div>
-                <select id="newItemCatId">
-                                    
-                                             <?php
+<div>
+
+    <select id="newItemCatId">
+        <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['countries']->value, 'itemCat');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['itemCat']->value) {
 ?>
-                                                 <option value="<?php echo $_smarty_tpl->tpl_vars['itemCat']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['itemCat']->value['cat_name'];?>
+            <option value="<?php echo $_smarty_tpl->tpl_vars['itemCat']->value['id'];?>
+" <?php if ($_smarty_tpl->tpl_vars['smcountry']->value == $_smarty_tpl->tpl_vars['itemCat']->value['url_cat_name']) {?> selected<?php }?>><?php echo $_smarty_tpl->tpl_vars['itemCat']->value['cat_name'];?>
 
-                                             <?php
+        <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                 </select>
-         </div>
-
+    </select>
+</div>
 <h2>Название</h2>
-    <div>
-              <input type="edit" id="newItemName" value=" " />   
-    </div>
-
+<div>
+    <input type="edit" id="newItemName" value=" " />   
+</div>
 <h2>Краткое Описание</h2>
-         <div>
-               <input type="edit" id="newItemTeaser" value=" " /> 
-         </div>
-
+<div>
+    <input type="edit" id="newItemTeaser" value=" " /> 
+</div>
 <h2>Текст</h2>
-         <div>
-                    <textarea id="newItemText"></textarea>
-         </div>
-
+<div>
+    <textarea id="newItemText"></textarea>
+</div>
 <h2>Тег</h2>
-         <div>
-                    <textarea id="newItemTeg"></textarea>
-          </div>
-
+<div>
+    <textarea id="newItemTeg"></textarea>
+</div>
 <h2>Сохранить</h2>
-        <div>
-                <input type="button" value="Сохранить" onclick="addArticleJs();"/>
-        </div>
-        
-
-       
- <?php }
+<div>
+    <input type="button" value="Сохранить" onclick="addArticleJs();"/>
+</div><?php }
 }

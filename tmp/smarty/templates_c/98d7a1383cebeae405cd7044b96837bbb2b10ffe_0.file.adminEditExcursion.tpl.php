@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-20 11:09:06
+/* Smarty version 3.1.32, created on 2018-09-23 19:03:19
   from '/home/lizard/www/site.local/views/admin/adminEditExcursion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba363b2d024d7_12500255',
+  'unifunc' => 'content_5ba7c757d0e119_44617650',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '98d7a1383cebeae405cd7044b96837bbb2b10ffe' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminEditExcursion.tpl',
-      1 => 1537434541,
+      1 => 1537722197,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba363b2d024d7_12500255 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba7c757d0e119_44617650 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<h1>edit Экскурсии <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+<h1><?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 </h1>
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsExcursion']->value, 'item', false, NULL, 'excursion', array (

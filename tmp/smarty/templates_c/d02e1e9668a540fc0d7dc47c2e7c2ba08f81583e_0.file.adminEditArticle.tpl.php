@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-23 18:37:22
+/* Smarty version 3.1.32, created on 2018-09-23 19:02:25
   from '/home/lizard/www/site.local/views/admin/adminEditArticle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b7ee2c29af608_64868149',
+  'unifunc' => 'content_5ba7c72104a519_05895106',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd02e1e9668a540fc0d7dc47c2e7c2ba08f81583e' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminEditArticle.tpl',
-      1 => 1535042239,
+      1 => 1537722143,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b7ee2c29af608_64868149 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba7c72104a519_05895106 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<h1>edit статьи <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+<h1><?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 </h1>
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsArticle']->value, 'item', false, NULL, 'article', array (

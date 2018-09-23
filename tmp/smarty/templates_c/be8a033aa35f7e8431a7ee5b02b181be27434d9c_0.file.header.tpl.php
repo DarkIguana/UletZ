@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-19 05:28:37
+/* Smarty version 3.1.32, created on 2018-09-23 20:03:58
   from '/home/lizard/www/site.local/views/old/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba1c2655f8df2_40572334',
+  'unifunc' => 'content_5ba7d58e10c139_39956162',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'be8a033aa35f7e8431a7ee5b02b181be27434d9c' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/header.tpl',
-      1 => 1537327573,
+      1 => 1537723459,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menuBlock.tpl' => 1,
   ),
 ),false)) {
-function content_5ba1c2655f8df2_40572334 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba7d58e10c139_39956162 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
     <head>
         <title><?php echo $_smarty_tpl->tpl_vars['pageTitle']->value;?>
