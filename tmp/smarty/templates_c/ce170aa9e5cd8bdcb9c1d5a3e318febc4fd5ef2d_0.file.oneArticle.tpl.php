@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-22 18:11:48
+/* Smarty version 3.1.32, created on 2018-10-03 10:22:59
   from '/home/lizard/www/site.local/views/old/oneArticle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba669c4e45c61_48315805',
+  'unifunc' => 'content_5bb47c636aaf17_64451985',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ce170aa9e5cd8bdcb9c1d5a3e318febc4fd5ef2d' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/oneArticle.tpl',
-      1 => 1537632683,
+      1 => 1538554976,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba669c4e45c61_48315805 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bb47c636aaf17_64451985 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="wrapperArticle">
 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsArticle']->value, 'item', false, NULL, 'article', array (
@@ -29,7 +29,7 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
     <div>
-        <h1><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+        <h1 class="articleHeader"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </h1>
         <p><?php echo $_smarty_tpl->tpl_vars['item']->value['text'];?>
 </p>

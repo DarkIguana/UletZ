@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-03 19:05:53
-  from '/home/lizard/www/site.local/views/old/index.tpl' */
+/* Smarty version 3.1.32, created on 2018-10-03 19:09:18
+  from '/home/lizard/www/site.local/views/old/points.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bb4f6f1510c84_92946958',
+  'unifunc' => 'content_5bb4f7bec88f03_67890049',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'eb6a563a67f1c61a339a2b52add99a6bfad3b40b' => 
+    '24c97273384e8cf62a3f95cad25a01ac1125e011' => 
     array (
-      0 => '/home/lizard/www/site.local/views/old/index.tpl',
-      1 => 1538586351,
+      0 => '/home/lizard/www/site.local/views/old/points.tpl',
+      1 => 1538586555,
       2 => 'file',
     ),
   ),
@@ -20,37 +20,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bb4f6f1510c84_92946958 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bb4f7bec88f03_67890049 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<div class="subHead">    
-    <div class="introBox collomnMinWidh collomnWidh">
-        <h1><?php echo $_smarty_tpl->tpl_vars['smIntro']->value[1]['name'];?>
-</h1>
-        <p><?php echo $_smarty_tpl->tpl_vars['smIntro']->value[1]['description'];?>
-</p>
-    </div>
-        <div class="phoneBox collomnWidh">
-            <div class="phoneBoxImgPhone collomnMinWidh">
-                <div><img src="/images/global/messengers-icons.png" class="iconmessengers"/></div>
-                <div class="phoneNum"><h2> <?php echo $_smarty_tpl->tpl_vars['smIntro']->value[0]['description'];?>
- </h2></div>
-            </div>
-         </div>
-</div>
-
 <div class="excursionsTwoList">
     <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsExcursions']->value, 'item', false, NULL, 'excursion', array (
-  'iteration' => true,
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsPoints']->value, 'item', false, NULL, 'points', array (
 ));
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
-$_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration']++;
 ?>
         <div class="excursionsListItemBox collomnMinWidh collomnWidh">
             <div>
             <h2 ><a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-/excursions/item/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+/points/item/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 /"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </a> </h2>
             </div>
@@ -65,8 +47,7 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration']++;
                         <td class="button_podrobno_price" >
                             <table class="button_podrobno_price_inner">
                                 <tr>
-                                    <td style="padding: 10px 05px;"> <strong>Цена:</strong> <?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
-&nbsp;бат</td>
+                                    <td style="padding: 10px 05px;"> </td>
                                 </tr>
                             </table>
                         </td>
@@ -97,7 +78,5 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration']++;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 </div>
-    <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-/points/" class="toPoints"> <h3>Другие экскурсии и список достопримечателтностей...</h3></a>
-<?php }
+   <?php }
 }

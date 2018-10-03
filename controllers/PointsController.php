@@ -1,14 +1,14 @@
 <?php
 
 /**
- *  контроллер главной страницы
+ *  контроллер  страницы Points
  */
 // подключаем модели
 
-include_once '../models/ExcursionsModel.php';
+include_once '../models/PointsModel.php';
 
 
-/* * формирование главной страницы сайта
+/* * формирование страницы points
  * 
  * @param object $smarty шаблонизатор
  */
@@ -17,25 +17,22 @@ function indexAction($smarty, $id, $country) {
     $countries = getMainCutMenu();
     $countryId = getCountryId($country);
     $rsMenu = getMenuByCounry($countryId);
-    $rsExcursions = getActiveExcursionsByCat($countryId);
+    $rsPoints = getActivePointsByCat($countryId);
 
     $rsSubMenu = getMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
-
-    $rsIntro = getIntro($countryId);
-    $smarty->assign('smIntro', $rsIntro);
 
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
 
-    $smarty->assign('rsExcursions', $rsExcursions);
+    $smarty->assign('rsPoints', $rsPoints);
 
-    $smarty->assign('pageTitle', 'Экскурсии');
+    $smarty->assign('pageTitle', 'Точки');
 
     loadTemplate($smarty, 'header');
-    loadTemplate($smarty, 'index');
+    loadTemplate($smarty, 'points');
     loadTemplate($smarty, 'footer');
 }
 
@@ -45,14 +42,14 @@ function indexAction($smarty, $id, $country) {
  * @param object $smarty шаблонизатор
  */
 function itemAction($smarty) {
-    $idExcursion = isset($_GET['id']) ? $_GET['id'] : "2";
+    $pointId = isset($_GET['id']) ? $_GET['id'] : "2";
     $country = isset($_GET['country']) ? $_GET['country'] : "thailand";
 
     $countries = getMainCutMenu();
     $countryId = getCountryId($country);
     $rsMenu = getMenuByCounry($countryId);
 
-    $rsExcursion = getExcursionById($idExcursion);
+    $rsPoint = getPointById($pointId);
 
     $rsSubMenu = getMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
@@ -62,12 +59,12 @@ function itemAction($smarty) {
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
 
-    $smarty->assign('rsExcursion', $rsExcursion);
+    $smarty->assign('rsPoint', $rsPoint);
 
-    $smarty->assign('pageTitle', 'Экскурсии');
+    $smarty->assign('pageTitle', 'Point');
 
 
     loadTemplate($smarty, 'header');
-    loadTemplate($smarty, 'oneExcursion');
+    loadTemplate($smarty, 'onePoint');
     loadTemplate($smarty, 'footer');
 }

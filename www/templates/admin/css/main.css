@@ -45,19 +45,16 @@ h3 {
     font-weight: normal;
     color: #51c9c8;
 }
-.hideme{
-    display: none;
-}
-
-#logo{
-    height: 70px;
-    text-align: center;
-}
 .logo{
     text-align: center;
 }
 .logoImg {
     width: 80%;
+}
+.menuBlock{
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 .menuBlock li {
     display: inline-block;
@@ -66,13 +63,7 @@ h3 {
 }
 .menuBlock li a{
     color: inherit;
-
     padding: 5px;
-}
-.menuBlock{
-    display: block;
-    width: 100%;
-    text-align: center;
 }
 .countryMenu{
     margin-top: 17px;
@@ -107,31 +98,16 @@ h3 {
 .subMenu a:nth-child(3) {
     background: #a5c929;
 }
+.subMenuTwo{
+     background: #a5c929;
+     width: 30%;
+     margin: 0 auto;
+      padding: 10px 30px;
+}
 #unSelectMenu{
     text-decoration: none;
     color: black; 
     padding: 10px 10px;
-}
-#menuBlock{
-    display: block;
-    width: 100%;
-}
-
-#selectMenu{
-    color: red;
-}
-
-#countryMenu{
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-    padding-bottom: 20px;
-}
-
-#subMenu{
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 20px;
 }
 .addButton{
     margin: 30px 10%;
@@ -143,21 +119,19 @@ h3 {
     min-width: 200px;
     background: #5ad2a9;
 }
-
 #contentBlock{
     width: 600px;
     float: left;
     padding-left: 90px;
 }
 table { 
-    border: 0px; /* Рамка вокруг таблицы */
+    border: 0px; 
     border-collapse: collapse; /* Отображать только одинарные линии */
     padding: 0px;
     border-spacing: 0px;
     width: 100%;
     text-align: center;
 }
-
 #footer {
     display: flex;
     flex-wrap: wrap;
@@ -168,3 +142,31 @@ table {
     padding: 0 20px 0 20px;
     margin-top: 10px;
 }
+/* 
+.hideme{
+    display: none;
+}
+#logo{
+    height: 70px;
+    text-align: center;
+}
+#menuBlock{
+    display: block;
+    width: 100%;
+}
+
+#selectMenu{
+    color: red;
+}
+#countryMenu{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+#subMenu{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+*/
