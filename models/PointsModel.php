@@ -1,16 +1,16 @@
 <?php
 
 /**
- * модель для таблицы экскурсий (Excursions)
+ * модель для таблицы Points
  * 
  **/
 
  /**
- * получить список всех экскурсий по категории
+ * получить список всех Points по категории
  * 
  **/
 
-function getExcursions (){
+function getPoints (){
      global $db;
     $sql = 'SELECT * 
                               FROM excursions 
@@ -20,43 +20,29 @@ function getExcursions (){
  }
 
   /**
- * получить список всех экскурсий по категории (стране)
+ * получить список всех Points по категории (стране)
  * 
  **/
-function getHeadExcursionsByCat($countryId){
+function getHeadPointsByCat($countryId){
      global $db;
     $sql = "SELECT id, name, status, image
-                              FROM excursions 
+                              FROM points 
                               WHERE category_id='{$countryId}'
                               ORDER BY id ASC"; 
   $rs = mysqli_query($db, $sql);
   return createSmartyRsArray($rs);
  }
  
- /**
- * получить список заголовков всех экскурсий по сране
- * 
- **/
-
-function getExcursionsByCat($countryId){
-     global $db;
-    $sql = "SELECT * 
-                              FROM excursions 
-                              WHERE category_id='{$countryId}'
-                              ORDER BY id ASC"; 
-  $rs = mysqli_query($db, $sql);
-  return createSmartyRsArray($rs);
- }
  
   /**
- * получить список всех активных экскурсий по категории (стране)
+ * получить список заголовков всех активных points по категории (стране)
  * 
  **/
 
-function getActiveExcursionsByCat($countryId){
+function getActivePointsByCat($countryId){
      global $db;
-    $sql = " SELECT id, name, description_short, price, image
-                FROM `excursions` 
+    $sql = " SELECT id, name, description_short, image
+                FROM `points` 
                 WHERE `category_id`='{$countryId}' 
                 AND `status`='1'
                 ORDER BY `id` ASC"; 
@@ -161,27 +147,15 @@ function updateProductImage($itemId, $newFileName){
  * получить экскурсию с именем категории по ID
  **/
 
-function getExcursionById($excursionId){
+function getPointById($pointId){
     global $db;
-    $excursionId = intval($excursionId);
+    $pointId = intval($pointId);
             $sql = "SELECT exc.*, m.cat_name 
-                FROM `excursions`AS `exc` 
+                FROM `points`AS `exc` 
                 LEFT JOIN `menu`AS `m` ON exc.category_id=m.id 
-                WHERE exc.id='{$excursionId}' ";
+                WHERE exc.id='{$pointId}' ";
         $rs= mysqli_query($db, $sql);
           return createSmartyRsArray($rs);
                 
        
 }
-/**
- * получить intro (по стране)
- * 
- **/
-function getIntro($countryId){
-     global $db;
-    $sql = "SELECT * 
-                              FROM general 
-                              WHERE category_id='{$countryId}'"; 
-  $rs = mysqli_query($db, $sql);
-  return createSmartyRsArray($rs);
- }

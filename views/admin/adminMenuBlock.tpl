@@ -18,5 +18,6 @@
             </a>
         {/foreach} 
     </div>  
+     <a href="/{$smcountry}/admin/"> <div class="subMenuTwo">Points</div>  </a>
     <a href="/{$smcountry}/admin/"> <div class="addButton">  Добавить</div>  </a>
 </div>

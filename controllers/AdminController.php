@@ -435,3 +435,176 @@ function addarticletodbAction(){
     return;
         
     }
+    
+   /**  -----------------------------Points----------------------------------------  **/  
+
+    /**
+ * страница управления Points
+ **/
+
+function pointsAction($smarty, $id, $country){
+    
+    $countries =getMainCutMenu();
+    $countryId = getCountryId($country); 
+    $rsMenu = getMenuByCounry($countryId);
+    $rsPointsHead = getHeadPointsByCat($countryId);
+
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+        
+    $smarty->assign('countries', $countries);
+    $smarty->assign('smcountry', $country);
+    $smarty->assign('countryId', $countryId);
+    $smarty->assign('rsMenu', $rsMenu);
+    $smarty->assign('rsPointsHead', $rsPointsHead);  /** d($smarty); **/
+    
+    $smarty->assign('pageTitle', 'Admin Page Points');
+    
+     loadTemplate($smarty, 'adminHeader');
+     loadTemplate($smarty, 'adminPoints');
+     loadTemplate($smarty, 'adminFooter');
+}
+
+/**
+ * страница добавления Point
+ **/
+
+function addpointAction($smarty, $id, $country){
+   
+    
+    $countries =getMainCutMenu();
+    $countryId = getCountryId($country); 
+    $rsMenu = getMenuByCounry($countryId);
+    //$rsExcursions = getExcursionsAndCatName();
+
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+    
+    $smarty->assign('countries', $countries);
+    $smarty->assign('smcountry', $country);
+    $smarty->assign('countryId', $countryId);
+    $smarty->assign('rsMenu', $rsMenu);
+    
+    $smarty->assign('pageTitle', 'Admin Page');
+    
+     loadTemplate($smarty, 'adminHeader');
+     loadTemplate($smarty, 'adminAddPoint');
+     loadTemplate($smarty, 'adminFooter');
+}
+
+/**
+ * страница изменения одной Point
+ **/
+
+function editPointAction($smarty,$idPoint, $country){
+    
+    $countries =getMainCutMenu();
+    $countryId = getCountryId($country); 
+    $rsMenu = getMenuByCounry($countryId);
+    $idPoint= isset($_GET['id']) ? $_GET['id'] : "2";
+    $rsPoint = getPointById($idPoint);
+    
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+    
+    $smarty->assign('countries', $countries);
+    $smarty->assign('smcountry', $country);
+    $smarty->assign('countryId', $countryId);
+    $smarty->assign('rsMenu', $rsMenu);
+    
+    
+    $smarty->assign('rsPoint', $rsPoint);
+    
+    $smarty->assign('pageTitle', 'Admin Page Point');
+    
+     loadTemplate($smarty, 'adminHeader');
+     loadTemplate($smarty, 'adminEditPoint');
+     loadTemplate($smarty, 'adminFooter');
+}
+
+/** 
+ *  добавлениe Point в БД
+ **/
+
+function addPointToDbAction(){
+    $itemName           = $_POST['itemName'];
+    $itemDesc             = $_POST['itemDesc'];
+    $itemDescShort     = $_POST['itemDescShort'];
+    $itemCat               = $_POST['itemCatId'];
+    $itemStatus          = $_POST['itemStatus'];                         
+    $res=insertPoint($itemName, $itemDescShort, $itemDesc, $itemCat, $itemStatus);
+ 
+    if($res){
+        $resData['success'] = 1;
+        $resData['message']= ' Изменения успншно внесены';
+    } else {
+        $resData['success'] = 0;
+        $resData['message']= ' Ошика изменения данных';
+    }
+    echo json_encode($resData);
+    return;
+        
+    }
+ 
+  /**
+  * получаем данные об Point из формы и посылаем в БД
+  * 
+  * @return type
+  */     
+function updatePointAction(){
+    $itemId                 = $_POST['itemId'];
+    $itemName           = $_POST['itemName'];
+    $itemStatus          = $_POST['itemStatus'];
+    $itemDescShort    = $_POST['itemDescShort'];
+    $itemDesc           = $_POST['itemDesc'];
+    $itemCat             = $_POST['itemCatId']; 
+    //  $newFileName      = $_POST['newFileName'];   
+    
+     $res=updateProduct($itemId, $itemName,
+                                    $itemStatus, $itemDescShort, $itemDesc, $itemCat);
+     
+     if($res){
+        $resData['success'] = 1;
+        $resData['message']= ' Изменения успншно внесены';
+    } else {
+        $resData['success'] = 0;
+        $resData['message']= ' Ошика изменения данных';
+    }
+    echo json_encode($resData);
+    return;
+    }
+ 
+ /**
+ * загрузка файлов Point на сервер с изменением имени
+ **/
+    
+function uploadPointImgAction(){
+     $country = isset($_GET['country']) ? $_GET['country'] : null;
+    
+    $maxSize=2*1024*1024;
+    $itemId =$_POST['itemId'];
+   
+     // получаем расширение файла
+        $ext= pathinfo($_FILES['filename']['name'], PATHINFO_EXTENSION );
+    
+    // создаем имя файлу
+         $newFileName =$itemId.'.'.$ext;
+         
+         if($_FILES['filename']['size']>$maxSize){
+             echo ('файл слишком большой');
+             return;
+         }
+         
+         // проверка загружен ли файл
+         if(is_uploaded_file($_FILES['filename']['tmp_name'])){
+             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/images/points/'.$country.'/'.$newFileName);                             
+                if($res){
+                     $res=updateProductImage($itemId, $newFileName);
+                         if($res){
+                             header ("Location: /$country/admin/editpoint/$itemId/");
+                         }
+ 
+         }
+         }
+}
+    

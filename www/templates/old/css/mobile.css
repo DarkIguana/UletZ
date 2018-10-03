@@ -5,6 +5,7 @@ and (max-device-width : 480px)  */
 @media screen and (max-width: 600px){	
     body {
         font-size: 150%;
+        background-position-y: -175px;
     }
     /*-------------------------- menu ----------------------*/ 
     .headBlock{
@@ -20,7 +21,8 @@ and (max-device-width : 480px)  */
     }
     .countryMenu{
         margin-top: 0px;
-    }
+        font-size: 70%;
+}
     .menu-icon {
         height: 20px;
         width: 25px;
@@ -83,7 +85,14 @@ and (max-device-width : 480px)  */
     }
 
     .menuBlock{
-               background-color:  #00ccc6;
+        /*  background-color:  #00ccc6; */
+        background-color: #3b5252;
+    }
+    .menuBlock li a{
+        color: #fff;
+    }
+    #unSelectMenu{
+        color:  #fff;
     }
     .menu{
         display: none;
@@ -103,9 +112,9 @@ and (max-device-width : 480px)  */
         color: #fff;
         font-weight: bold;
     }
-    .subMenu a:hover {
-        color: #f1829c;   
-    }
+    /* .subMenu a:hover {
+         color: #f1829c;   
+     } */
     .subMenu a{
         display: block;
         text-align:center;
@@ -116,7 +125,9 @@ and (max-device-width : 480px)  */
         width: 100%;
     }
     .subMenu a:nth-child(n+1){
-        background:  #00ccc6;
+
+        /*  background-color:  #00ccc6; */
+        background-color: #3b5252;
     }
     .subMenu a:last-child{
         padding-bottom: 600px;
