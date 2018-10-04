@@ -12,7 +12,7 @@
                     {if $item['image']}
                       <img src="/images/points/{$smcountry}/{$item['image']}" width="400"/>
                     {/if}
-                          <form action="/{$smcountry}/admin/uploadPointImg/"  method="post" 
+                          <form action="/{$smcountry}/admin/uploadpointimg/"  method="post" 
                                                             enctype="multipart/form-data">
                                 <input type="file" name="filename"></br>
                                 <input type="hidden" name="itemId" value="{$item['id']}"></br>
@@ -51,5 +51,5 @@
 
      {/foreach} 
  <div>
-                     <input type="button" value="Сохранить" onclick="updatePointJs('{$item['id']}');"/>
+                     <input type="button" value="Сохранить" onclick="updatepointJs('{$item['id']}');"/>
 </div>

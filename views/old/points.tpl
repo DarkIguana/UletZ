@@ -8,8 +8,8 @@
             </div>
             <p>{$item['description_short']}</p>
 
-            <a href="/{$smcountry}/excursions/item/{$item['id']}/" class="buttonAndImage">
-                <table class="button_podrobno" >
+            <a href="/{$smcountry}/points/item/{$item['id']}/" class="buttonAndImage">
+                <table class="button_podrobno">
                     <tr>
                         <td class="button_podrobno_price" >
                             <table class="button_podrobno_price_inner">
@@ -24,7 +24,7 @@
                         <td colspan="2">
 
                             <div class="fpimg">
-                                <img src="/images/excursions/{$smcountry}/{$item['image']}" width="100%"/>
+                                <img src="/images/points/{$smcountry}/{$item['image']}" width="100%"/>
                             </div>
                         </td>
                     </tr>

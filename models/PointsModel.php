@@ -52,13 +52,13 @@ function getActivePointsByCat($countryId){
 
  
  /**
- * список экскурсий с именем категории
+ * список Points с именем категории
  **/
 
-function getExcursionsAndCatName(){
+function getPointsAndCatName(){
     global $db;
     $sql = 'SELECT exc.*, cat.cat_name 
-                    FROM `excursions`AS `exc` 
+                    FROM `points`AS `exc` 
                     LEFT JOIN `menu`AS `cat` 
                     ON exc.category_id=cat.id 
                     ORDER BY id';
@@ -71,13 +71,12 @@ function getExcursionsAndCatName(){
   * 
  **/
  
- function insertExcursion($itemName, $itemPrice,$itemDescShort, $itemDesc, $itemCat, $itemStatus){
+ function insertPoint($itemName, $itemDescShort, $itemDesc, $itemCat, $itemStatus){
      global $db;
      
-   $sql = "INSERT INTO `excursions`
+   $sql = "INSERT INTO `points`
                   SET
                        `name`='{$itemName}',    
-                        `price`='{$itemPrice}',  
      `description_short` ='{$itemDescShort}',
                `description`='{$itemDesc}',   
                       `status`='{$itemStatus}',
@@ -88,12 +87,13 @@ function getExcursionsAndCatName(){
  }
  
  /**
- * обновление данных экскурсий
+ * обновление данных Point
  * 
  **/
  
- function updateProduct ($itemId, $itemName, $itemPrice, $itemStatus, 
+ function updatePoint ($itemId, $itemName, $itemStatus, 
          $itemDescShort, $itemDesc, $itemCat, $newFileName = null){
+                
      global $db;                                                                                    
      $set = array();
      
@@ -101,10 +101,7 @@ function getExcursionsAndCatName(){
          $set[]="`name`='{$itemName}'";
           }
      
-    if ($itemPrice >0 ){
-         $set[]="`price`='{$itemPrice}'";
-          }
-    if ($itemStatus !==null){
+     if ($itemStatus !==null){
          $set[]="`status`='{$itemStatus}'";
           }
      if ($itemDescShort){
@@ -122,7 +119,7 @@ function getExcursionsAndCatName(){
           
    $setStr = implode($set, ",");
    
-   $sql = "UPDATE `excursions` 
+   $sql = "UPDATE `points` 
                     SET {$setStr}
                     WHERE id = '{$itemId}' ";
                     
@@ -131,20 +128,20 @@ function getExcursionsAndCatName(){
 }
  
 /**
- * обновление фотографии экскурсий
+ * обновление фотографии point
  * 
  **/
 
-function updateProductImage($itemId, $newFileName){
+function updatePointImage($itemId, $newFileName){
     
-    $rs = updateProduct($itemId, NULL, NULL, NULL, NULL, NULL, NULL, $newFileName);
+    $rs = updatePoint($itemId, NULL, NULL, NULL, NULL, NULL, $newFileName);
     
     return $rs;
     
 }
 
 /**
- * получить экскурсию с именем категории по ID
+ * получить Point с именем категории по ID
  **/
 
 function getPointById($pointId){

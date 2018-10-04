@@ -8,6 +8,7 @@
 include_once '../models/MenuModel.php';
 include_once '../models/ExcursionsModel.php';
 include_once '../models/ArticlesModel.php';
+include_once '../models/PointsModel.php';
 
 $smarty ->setTemplateDir(TemplateAdminPrefix);
 $smarty->assign('templateWebPath', TemplateAdminWebPath);
@@ -448,7 +449,7 @@ function pointsAction($smarty, $id, $country){
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
     $rsPointsHead = getHeadPointsByCat($countryId);
-
+                             
         $rsSubMenu = getMenuChildrenForCat($countryId);  
         $smarty->assign('smSubMenu', $rsSubMenu);
         
@@ -456,7 +457,7 @@ function pointsAction($smarty, $id, $country){
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-    $smarty->assign('rsPointsHead', $rsPointsHead);  /** d($smarty); **/
+    $smarty->assign('rsPointsHead', $rsPointsHead);    /* d($smarty); */
     
     $smarty->assign('pageTitle', 'Admin Page Points');
     
@@ -470,22 +471,21 @@ function pointsAction($smarty, $id, $country){
  **/
 
 function addpointAction($smarty, $id, $country){
-   
-    
+      
     $countries =getMainCutMenu();
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
     //$rsExcursions = getExcursionsAndCatName();
 
-        $rsSubMenu = getMenuChildrenForCat($countryId);  
-        $smarty->assign('smSubMenu', $rsSubMenu);
+    $rsSubMenu = getMenuChildrenForCat($countryId);  
+    $smarty->assign('smSubMenu', $rsSubMenu);
     
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
     
-    $smarty->assign('pageTitle', 'Admin Page');
+    $smarty->assign('pageTitle', 'Admin Page Point');
     
      loadTemplate($smarty, 'adminHeader');
      loadTemplate($smarty, 'adminAddPoint');
@@ -496,12 +496,12 @@ function addpointAction($smarty, $id, $country){
  * страница изменения одной Point
  **/
 
-function editPointAction($smarty,$idPoint, $country){
+function editpointAction($smarty,$idPoint, $country){
     
     $countries =getMainCutMenu();
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
-    $idPoint= isset($_GET['id']) ? $_GET['id'] : "2";
+    $idPoint= isset($_GET['id']) ? $_GET['id'] : "1";
     $rsPoint = getPointById($idPoint);
     
         $rsSubMenu = getMenuChildrenForCat($countryId);  
@@ -551,7 +551,7 @@ function addPointToDbAction(){
   * 
   * @return type
   */     
-function updatePointAction(){
+function updatepointAction(){
     $itemId                 = $_POST['itemId'];
     $itemName           = $_POST['itemName'];
     $itemStatus          = $_POST['itemStatus'];
@@ -560,7 +560,7 @@ function updatePointAction(){
     $itemCat             = $_POST['itemCatId']; 
     //  $newFileName      = $_POST['newFileName'];   
     
-     $res=updateProduct($itemId, $itemName,
+     $res=updatePoint($itemId, $itemName,
                                     $itemStatus, $itemDescShort, $itemDesc, $itemCat);
      
      if($res){
@@ -577,19 +577,18 @@ function updatePointAction(){
  /**
  * загрузка файлов Point на сервер с изменением имени
  **/
-    
-function uploadPointImgAction(){
+function uploadpointimgAction(){
      $country = isset($_GET['country']) ? $_GET['country'] : null;
-    
+   
     $maxSize=2*1024*1024;
     $itemId =$_POST['itemId'];
    
      // получаем расширение файла
         $ext= pathinfo($_FILES['filename']['name'], PATHINFO_EXTENSION );
-    
+  
     // создаем имя файлу
          $newFileName =$itemId.'.'.$ext;
-         
+           
          if($_FILES['filename']['size']>$maxSize){
              echo ('файл слишком большой');
              return;
@@ -599,7 +598,7 @@ function uploadPointImgAction(){
          if(is_uploaded_file($_FILES['filename']['tmp_name'])){
              $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/images/points/'.$country.'/'.$newFileName);                             
                 if($res){
-                     $res=updateProductImage($itemId, $newFileName);
+                     $res=updatePointImage($itemId, $newFileName);
                          if($res){
                              header ("Location: /$country/admin/editpoint/$itemId/");
                          }
