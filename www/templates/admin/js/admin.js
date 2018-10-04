@@ -268,8 +268,7 @@ function addPointJs() {
  * вызывает updateproductAction
  */
 
-function updatePointJs(itemId) {
-
+function updatepointJs(itemId) {
     var itemName = $('#itemName_' + itemId).val();
     var itemCatId = $('#itemCatId_' + itemId).val();
     var itemDescShort = $('#itemDescShort_' + itemId).val();
@@ -282,13 +281,13 @@ function updatePointJs(itemId) {
         itemStatus = 0
     }
 
-    var postData = {itemId: itemId, itemName: itemName,
-        itemCatId: itemCatId, itemDescShort: itemDescShort, itemDesc: itemDesc, itemStatus: itemStatus};
+    var postData = {itemId: itemId, itemName: itemName, itemCatId: itemCatId,
+        itemDescShort: itemDescShort, itemDesc: itemDesc, itemStatus: itemStatus};
 
     $.ajax({
         type: 'POST',
         async: false,
-        url: "/?controller=admin&action=updatePoint",
+        url: "/?controller=admin&action=updatepoint",
         data: postData,
         dataType: 'json',
         success: function (data) {
