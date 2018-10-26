@@ -1,45 +1,57 @@
 /*  ---------------стиль для узкого экрана iphone------------------------------------------
 @media only screen 
+and (max-width: 600px)
+
+and (min-device-width : 280px) 
+
 and (min-device-width : 520px) 
 and (max-device-width : 480px)  */
-@media screen and (max-width: 600px){	
+@media screen
+
+and (max-device-width : 600px)
+{	
     body {
         font-size: 150%;
         background-position-y: -175px;
+    }
+    table {
+        font-size: 150%;
     }
     /*-------------------------- menu ----------------------*/ 
     .headBlock{
     }
     .mobLogoImg {
         display: block;
-        width: 200px;
+        width: 450px;
         /*  position: relative;   
         vertical-align: middle;*/
         position: absolute;
-        top: 14px;
+        top: 25px;
         right: 20px 
     }
     .countryMenu{
         margin-top: 0px;
-        font-size: 70%;
+        font-size: 250%;
+     /*    font-size: 70%; */
 }
     .menu-icon {
-        height: 20px;
-        width: 25px;
+        height: 50px;
+        width: 50px;
         position: relative;
         float: left;
-        padding-top: 10px;
+        padding-top: 50px;
 
     }
     .mobileMenuHeader{
-        display: inline;
+      display: inline; 
+      color: #fff;
         padding-left: 9px;
 
     }
     .menu-icon__bar {
         position: absolute;
         top: 50%;
-        height: 2px;
+        height: 5px;
         width: 100%;
         background-color: #fff;
         display: block;
@@ -47,7 +59,7 @@ and (max-device-width : 480px)  */
         transition: opacity 0.3s ease;
     }
     .menu-icon__bar::before, .menu-icon__bar::after {
-        height: 2px;
+        height: 5px;
         width: 100%;
         content: "";
         background-color: #fff;
@@ -59,10 +71,10 @@ and (max-device-width : 480px)  */
         transition: transform 0.5s ease, -webkit-transform 0.5s ease;
     }
     .menu-icon__bar::before {
-        top: -10px;
+        top: -20px;
     }
     .menu-icon__bar::after {
-        bottom: -10px;
+        bottom: -20px;
     }
     .menu-icon--open .menu-icon {
         position: relative;
@@ -84,9 +96,11 @@ and (max-device-width : 480px)  */
         transform: rotate(-135deg);
     }
 
-    .menuBlock{
+    .menuBlockMob{
         /*  background-color:  #00ccc6; */
         background-color: #3b5252;
+        display: block;
+       
     }
     .menuBlock li a{
         color: #fff;
@@ -94,7 +108,7 @@ and (max-device-width : 480px)  */
     #unSelectMenu{
         color:  #fff;
     }
-    .menu{
+    .menu, .menuBlock {
         display: none;
     }
     .logo{
@@ -123,22 +137,31 @@ and (max-device-width : 480px)  */
         margin: 0;
         font-weight: bold;
         width: 100%;
+        
     }
     .subMenu a:nth-child(n+1){
 
         /*  background-color:  #00ccc6; */
         background-color: #3b5252;
     }
-    .subMenu a:last-child{
+   .menuBlockMob ul:last-child{
         padding-bottom: 600px;
-    }
+    } 
+   /* 
+   .subMenu a:last-child{
+        padding-bottom: 600px;
+    } 
+   */
     /*-------------------------- menu end----------------------*/ 
+    .phoneBox {
+         background-position: 0 10%, 0 100%;	
+   }
     .collomnWidh{
         width: 100%;  
     }
     .wrapper {
         max-width: 960px;
-        margin: 0 ;
+        margin: 0;
         padding-left: 0;
         padding-right: 0;
         height: inherit;
@@ -150,14 +173,15 @@ and (max-device-width : 480px)  */
         margin: 10px 0;
     }
     p{
-        margin: 0 10px 0 10px;
+        margin: 0 40px 0 40px;
     }
     h2, h1 {
-        margin: 10px 10px 0 10px;
+        margin: 10px 10px 0 25px;
+        font-size: 2em;
     }
 
     #content_Block{
-        padding-top: 60px;  
+        padding-top: 160px;  
     }
     #imgHeaderArticles{
         float: none;
@@ -180,5 +204,10 @@ and (max-device-width : 480px)  */
         float: none;
         width: 100%;
         margin: 5px 0px;
+    }
+    #button_back{
+        padding-top: 20;
+        padding-bottom: 55;
+        font-size: 150%;
     }
 }

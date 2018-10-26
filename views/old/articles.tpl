@@ -1,5 +1,5 @@
 {* щаблон  странцы статей *}
-
+<h1>Статьи</h1>
 {foreach $rsArticles as $item name=articles}
     <div class="clearfix">
         <div id="imgHeaderArticles" >        

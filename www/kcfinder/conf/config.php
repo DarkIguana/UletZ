@@ -14,7 +14,7 @@
 
 /* IMPORTANT!!! Do not comment or remove uncommented settings in this file
    even if you are using session configuration.
-   See http://kcfinder.sunhater.com/install for setting descriptions */
+   See http://kcfinder.sunhater.com/install for setting descriptions 'uploadURL' => "../upload",*/
 
 $_CONFIG = array(
 
@@ -22,7 +22,7 @@ $_CONFIG = array(
 // GENERAL SETTINGS
 
     'disabled' => false,
-    'uploadURL' => "../upload",
+    'uploadURL' => "../upload" ,
     'uploadDir' => "",
     'theme' => "default",
 

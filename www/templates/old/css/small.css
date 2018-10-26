@@ -1,5 +1,7 @@
 
-@media screen and (max-width: 700px){
+@media screen
+and (max-width: 700px), (min-device-width : 601px) and (max-device-width : 900px)
+{
     .collomnWidh{
         width: 100%;  
     }
