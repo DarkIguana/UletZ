@@ -2,17 +2,12 @@
 
 /* 
 * инициализация подключения к БД
+ */
+
 $dblocation = "u487921.mysql.masterhost.ru";
 $dbname = "u487921";
 $dbuser = "u487921";
 $dbpassword = "mIsHO.iNaN5Tra";
- * 
- *  */
-
-$dblocation = "localhost";
-$dbname = "Uletaem";
-$dbuser = "root";
-$dbpassword = "";
 
 // соединяемся с БД
 $db = mysqli_connect ($dblocation, $dbuser, $dbpassword);

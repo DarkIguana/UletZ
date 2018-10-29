@@ -1,4 +1,4 @@
 AuthName "Protected Area" 
 AuthType Basic 
-AuthUserFile /etc/.pasuletaem 
+AuthUserFile /home/u487921/.pasuletaem 	
 require valid-user 
