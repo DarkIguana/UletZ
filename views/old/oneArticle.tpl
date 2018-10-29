@@ -2,7 +2,7 @@
 <div class="wrapperArticle">
 {foreach $rsArticle as $item name=article}
     <div>
-        <h1>{$item['name']}</h1>
+        <h1 class="articleHeader">{$item['name']}</h1>
         <p>{$item['text']}</p>
     </div>
 

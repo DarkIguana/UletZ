@@ -1,17 +1,155 @@
-body{
-	padding: 0 ;
-	display: block;
+body {
+    font-family: Arial, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    text-align:left;
+    line-height: 1.5;
+    background: url(/images/global/background-sea-short.jpg) repeat-x, #fdfaf2;   /* топ картинка */
 }
-
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: inherit;
+    min-width: 465px;
+    overflow: hidden;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+p {
+    text-align: left;
+    padding: 15px 0px;
+}
+h1 {
+    color: #6A8E11;
+    text-align: left;
+    font-weight: normal;
+}
+h2 {
+    line-height: 1.2;
+    font-weight: normal;
+}
+h3 {
+    font-weight: normal;
+    color: #51c9c8;
+}
+.logo{
+    text-align: center;
+}
+.logoImg {
+    width: 80%;
+}
+.menuBlock{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.menuBlock li {
+    display: inline-block;
+    height: 20px;
+    margin: 10px 0;
+}
+.menuBlock li a{
+    color: inherit;
+    padding: 5px;
+}
+.countryMenu{
+    margin-top: 17px;
+}
+#countryMenuActive{
+    background: #f1829c;
+    border-radius: 5px;
+    padding: 10px;
+}
+.subMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+.subMenu a{
+    text-align:center;
+    color: #fff;
+    padding: 10px 30px;
+    margin: 5px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    border-left: none;
+    min-width: 200px;
+}
+.subMenu a:nth-child(1) {
+    background: #5ad2a9;
+}
+.subMenu a:nth-child(2) {
+    background: #91cc9d;
+}
+.subMenu a:nth-child(3) {
+    background: #a5c929;
+}
+.subMenuTwo{
+     background: #a5c929;
+     width: 30%;
+     margin: 0 auto;
+      padding: 10px 30px;
+}
+#unSelectMenu{
+    text-decoration: none;
+    color: black; 
+    padding: 10px 10px;
+}
+.addButton{
+    margin: 30px 10%;
+     text-align:center;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    border-left: none;
+    min-width: 200px;
+    background: #5ad2a9;
+}
+#contentBlock{
+    width: 600px;
+    float: left;
+    padding-left: 90px;
+}
+table { 
+    border: 0px; 
+    border-collapse: collapse; /* Отображать только одинарные линии */
+    padding: 0px;
+    border-spacing: 0px;
+    width: 100%;
+    text-align: center;
+}
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #51c9c8;
+    color: #fff;
+    padding: 0 20px 0 20px;
+    margin-top: 10px;
+}
+/* 
 .hideme{
     display: none;
 }
-
 #logo{
-	height: 70px;
-	text-align: center;
+    height: 70px;
+    text-align: center;
 }
-
 #menuBlock{
     display: block;
     width: 100%;
@@ -20,36 +158,15 @@ body{
 #selectMenu{
     color: red;
 }
-
 #countryMenu{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
     padding-bottom: 20px;
 }
-
 #subMenu{
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 20px;
 }
-
-#contentBlock{
-	width: 600px;
-	float: left;
-    padding-left: 90px;
-}
-
-#adminMainSL{
-	float: left;
-                padding-left: 90px;
-}
-
-#adminMainSR{
-	float: left;
-                padding-left: 90px;
-}
-
-#footer{
-	clear: both;
-}
+*/

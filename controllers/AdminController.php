@@ -8,11 +8,10 @@
 include_once '../models/MenuModel.php';
 include_once '../models/ExcursionsModel.php';
 include_once '../models/ArticlesModel.php';
+include_once '../models/PointsModel.php';
 
 $smarty ->setTemplateDir(TemplateAdminPrefix);
 $smarty->assign('templateWebPath', TemplateAdminWebPath);
-
-
 
 function indexAction($smarty, $id, $country){
     
@@ -87,7 +86,7 @@ function excursionsAction($smarty, $id, $country){
     $countries =getMainCutMenu();
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
-    $rsExcursions = getExcursionsByCat($countryId);
+    $rsExcursionsHead = getHeadExcursionsByCat($countryId);
 
         $rsSubMenu = getMenuChildrenForCat($countryId);  
         $smarty->assign('smSubMenu', $rsSubMenu);
@@ -96,7 +95,7 @@ function excursionsAction($smarty, $id, $country){
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-    $smarty->assign('rsExcursions', $rsExcursions);
+    $smarty->assign('rsExcursionsHead', $rsExcursionsHead);  /** d($smarty); **/
     
     $smarty->assign('pageTitle', 'Admin Page');
     
@@ -249,6 +248,32 @@ function uploadexcAction(){
          }
          }
 }
+  /**
+ * загрузка изображений для Экскурсий  на сервер
+ **/
+function uploadexcdescriptionimgAction(){
+     $country = isset($_GET['country']) ? $_GET['country'] : null;
+   
+    $maxSize=2*1024*1024;
+    $itemId =$_POST['itemId'];
+              
+         if($_FILES['filename']['size']>$maxSize){
+             echo ('файл слишком большой');
+             return;
+         }
+         
+         // проверка загружен ли файл
+         if(is_uploaded_file($_FILES['filename']['tmp_name'])){
+             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/images/excursions/'.$country.'/'.$_FILES['filename']['name']);                             
+              // if($res){
+                 //    $res=updatePointImage($itemId, $newFileName);
+                         if($res){
+                             header ("Location: /$country/admin/editexcursion/$itemId/");
+                         }
+ 
+        // }
+         }
+} 
     
   /**  -----------------------------Статьи----------------------------------------  **/  
 
@@ -262,7 +287,7 @@ function articlesAction($smarty, $id, $country){
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
     
-    $rsArticles = getArticlesByCat($countryId);
+    $rsHeadArticles = getHeadArticlesByCat($countryId);
    
     $rsSubMenu = getMenuChildrenForCat($countryId);  
         $smarty->assign('smSubMenu', $rsSubMenu);
@@ -272,10 +297,10 @@ function articlesAction($smarty, $id, $country){
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-    $smarty->assign('rsArticles', $rsArticles);
+    $smarty->assign('rsHeadArticles', $rsHeadArticles);
     
     $smarty->assign('pageTitle', 'Admin Page');
-    
+  
      loadTemplate($smarty, 'adminHeader');
      loadTemplate($smarty, 'adminArticles');
      loadTemplate($smarty, 'adminFooter');
@@ -299,13 +324,14 @@ function addarticleAction($smarty, $id, $country){
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-    $smarty->assign('rsArticles', $rsArticles);
+   /** $smarty->assign('rsArticles', $rsArticles);  **/
        
     $smarty->assign('pageTitle', 'Admin Page');
-    
+       
      loadTemplate($smarty, 'adminHeader');
      loadTemplate($smarty, 'adminAddArticle');
      loadTemplate($smarty, 'adminFooter');
+
 }
 
 /**
@@ -374,7 +400,32 @@ function uploadartAction(){
          }
          }
 }
-    
+    /**
+ * загрузка изображений для статей  на сервер
+ **/
+function uploadarticlesdescriptionimgAction(){
+     $country = isset($_GET['country']) ? $_GET['country'] : null;
+   
+    $maxSize=2*1024*1024;
+    $itemId =$_POST['itemId'];
+              
+         if($_FILES['filename']['size']>$maxSize){
+             echo ('файл слишком большой');
+             return;
+         }
+         
+         // проверка загружен ли файл
+         if(is_uploaded_file($_FILES['filename']['tmp_name'])){
+             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/images/articles/'.$country.'/'.$_FILES['filename']['name']);                             
+              // if($res){
+                 //    $res=updatePointImage($itemId, $newFileName);
+                         if($res){
+                             header ("Location: /$country/admin/editarticle/$itemId/");
+                         }
+ 
+        }
+}
+           
 
   /**
   * получаем данные об экскурсии из формы и посылаем в БД
@@ -434,3 +485,196 @@ function addarticletodbAction(){
     return;
         
     }
+    
+   /**  -----------------------------Points----------------------------------------  **/  
+
+    /**
+ * страница управления Points
+ **/
+
+function pointsAction($smarty, $id, $country){
+    
+    $countries =getMainCutMenu();
+    $countryId = getCountryId($country); 
+    $rsMenu = getMenuByCounry($countryId);
+    $rsPointsHead = getHeadPointsByCat($countryId);
+                             
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+        
+    $smarty->assign('countries', $countries);
+    $smarty->assign('smcountry', $country);
+    $smarty->assign('countryId', $countryId);
+    $smarty->assign('rsMenu', $rsMenu);
+    $smarty->assign('rsPointsHead', $rsPointsHead);    /* d($smarty); */
+    
+    $smarty->assign('pageTitle', 'Admin Page Points');
+    
+     loadTemplate($smarty, 'adminHeader');
+     loadTemplate($smarty, 'adminPoints');
+     loadTemplate($smarty, 'adminFooter');
+}
+
+/**
+ * страница добавления Point
+ **/
+
+function addpointAction($smarty, $id, $country){
+      
+    $countries =getMainCutMenu();
+    $countryId = getCountryId($country); 
+    $rsMenu = getMenuByCounry($countryId);
+    //$rsExcursions = getExcursionsAndCatName();
+
+    $rsSubMenu = getMenuChildrenForCat($countryId);  
+    $smarty->assign('smSubMenu', $rsSubMenu);
+    
+    $smarty->assign('countries', $countries);
+    $smarty->assign('smcountry', $country);
+    $smarty->assign('countryId', $countryId);
+    $smarty->assign('rsMenu', $rsMenu);
+    
+    $smarty->assign('pageTitle', 'Admin Page Point');
+    
+     loadTemplate($smarty, 'adminHeader');
+     loadTemplate($smarty, 'adminAddPoint');
+     loadTemplate($smarty, 'adminFooter');
+}
+
+/**
+ * страница изменения одной Point
+ **/
+
+function editpointAction($smarty,$idPoint, $country){
+    
+    $countries =getMainCutMenu();
+    $countryId = getCountryId($country); 
+    $rsMenu = getMenuByCounry($countryId);
+    $idPoint= isset($_GET['id']) ? $_GET['id'] : "1";
+    $rsPoint = getPointById($idPoint);
+    
+        $rsSubMenu = getMenuChildrenForCat($countryId);  
+        $smarty->assign('smSubMenu', $rsSubMenu);
+    
+    $smarty->assign('countries', $countries);
+    $smarty->assign('smcountry', $country);
+    $smarty->assign('countryId', $countryId);
+    $smarty->assign('rsMenu', $rsMenu);
+    
+    
+    $smarty->assign('rsPoint', $rsPoint);
+    
+    $smarty->assign('pageTitle', 'Admin Page Point');
+    
+     loadTemplate($smarty, 'adminHeader');
+     loadTemplate($smarty, 'adminEditPoint');
+     loadTemplate($smarty, 'adminFooter');
+}
+
+/** 
+ *  добавлениe Point в БД
+ **/
+
+function addPointToDbAction(){
+    $itemName           = $_POST['itemName'];
+    $itemDesc             = $_POST['itemDesc'];
+    $itemDescShort     = $_POST['itemDescShort'];
+    $itemCat               = $_POST['itemCatId'];
+    $itemStatus          = $_POST['itemStatus'];                         
+    $res=insertPoint($itemName, $itemDescShort, $itemDesc, $itemCat, $itemStatus);
+ 
+    if($res){
+        $resData['success'] = 1;
+        $resData['message']= ' Изменения успншно внесены';
+    } else {
+        $resData['success'] = 0;
+        $resData['message']= ' Ошика изменения данных';
+    }
+    echo json_encode($resData);
+    return;
+        
+    }
+ 
+  /**
+  * получаем данные об Point из формы и посылаем в БД
+  * 
+  * @return type
+  */     
+function updatepointAction(){
+    $itemId                 = $_POST['itemId'];
+    $itemName           = $_POST['itemName'];
+    $itemStatus          = $_POST['itemStatus'];
+    $itemDescShort    = $_POST['itemDescShort'];
+    $itemDesc           = $_POST['itemDesc'];
+    $itemCat             = $_POST['itemCatId']; 
+    //  $newFileName      = $_POST['newFileName'];   
+    
+     $res=updatePoint($itemId, $itemName,
+                                    $itemStatus, $itemDescShort, $itemDesc, $itemCat);
+     
+     if($res){
+        $resData['success'] = 1;
+        $resData['message']= ' Изменения успншно внесены';
+    } else {
+        $resData['success'] = 0;
+        $resData['message']= ' Ошика изменения данных';
+    }
+    echo json_encode($resData);
+    return;
+    }
+ 
+ /**
+ * загрузка файлов Point на сервер с изменением имени
+ **/
+function uploadpointimgAction(){
+     $country = isset($_GET['country']) ? $_GET['country'] : null;
+   
+    $maxSize=2*1024*1024;
+    $itemId =$_POST['itemId'];
+   
+     // получаем расширение файла
+        $ext= pathinfo($_FILES['filename']['name'], PATHINFO_EXTENSION );
+  
+    // создаем имя файлу
+         $newFileName =$itemId.'.'.$ext;
+           
+         if($_FILES['filename']['size']>$maxSize){
+             echo ('файл слишком большой');
+             return;
+         }
+         
+         // проверка загружен ли файл
+         if(is_uploaded_file($_FILES['filename']['tmp_name'])){
+             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/images/points/'.$country.'/'.$newFileName);                             
+                if($res){
+                     $res=updatePointImage($itemId, $newFileName);
+                         if($res){
+                             header ("Location: /$country/admin/editpoint/$itemId/");
+                         }
+ 
+         }
+         }
+}
+
+    /**
+ * загрузка изображений для статей Point на сервер
+ **/
+function uploadpointdescriptionimgAction(){
+     $country = isset($_GET['country']) ? $_GET['country'] : null;
+   
+    $maxSize=2*1024*1024;
+    $itemId =$_POST['itemId'];
+              
+         if($_FILES['filename']['size']>$maxSize){
+             echo ('файл слишком большой');
+             return;
+         }
+         
+         // проверка загружен ли файл
+         if(is_uploaded_file($_FILES['filename']['tmp_name'])){
+             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/images/points/'.$country.'/'.$_FILES['filename']['name']);                             
+                        if($res){
+                             header ("Location: /$country/admin/editpoint/$itemId/");
+                         } 
+         }
+}

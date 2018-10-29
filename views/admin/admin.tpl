@@ -1,8 +1,10 @@
-<div id="mainAdmin">
-    <div id="adminMainSL">
-        <a href="/{$smcountry}/admin/addexcursion/"> Добавить Экскурсию</a> </br>
-    </div>
-    <div id="adminMainSR"> 
-        <a href="/{$smcountry}/admin/addarticle/"> Добавить Статью</a> </br>
-    </div>
-</div>
+<div class="subMenu menu">
+    <a href="/{$smcountry}/admin/addexcursion/"> Добавить Экскурсию</a>         
+</div>  
+<div class="subMenu menu">
+    <a href="/{$smcountry}/admin/addarticle/"> Добавить Статью</a>   
+</div>  
+<div class="subMenu menu">
+    <a href="/{$smcountry}/admin/addpoint/"> Добавить Point</a>   
+</div>  
+

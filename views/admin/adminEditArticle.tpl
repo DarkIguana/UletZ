@@ -1,6 +1,6 @@
 {* щаблон Редактирования одной экскурсии*}
 
-<h1>edit статьи {$smcountry}</h1>
+<h1>{$smcountry}</h1>
         {foreach $rsArticle as $item name=article}
         <h3>ID = {$item['id']}  </h3>
         <h2>Не отображать</h2>
@@ -55,11 +55,21 @@
                  </textarea>
             </div>   
      {/foreach} 
-    
+      </br>
+      <h2>Загрузка изображений</h2>
+                <div>
+                    
+                          <form action="/{$smcountry}/admin/uploadarticlesdescriptionimg/"  method="post" 
+                                                            enctype="multipart/form-data">
+                                <input type="file" name="filename"></br>
+                                <input type="hidden" name="itemId" value="{$item['id']}"></br>
+                                <input type="submit" value="загрузить"></br>
+                       
+                        </form>
+             </div>
  <div>
+     </br></br>
                      <input type="button" value="Сохранить" onclick="updateArticleJs('{$item['id']}');"/>
                   
                      
 </div>
-   
-            

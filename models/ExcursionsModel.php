@@ -23,6 +23,20 @@ function getExcursions (){
  * получить список всех экскурсий по категории (стране)
  * 
  **/
+function getHeadExcursionsByCat($countryId){
+     global $db;
+    $sql = "SELECT id, name, status, image
+                              FROM excursions 
+                              WHERE category_id='{$countryId}'
+                              ORDER BY id ASC"; 
+  $rs = mysqli_query($db, $sql);
+  return createSmartyRsArray($rs);
+ }
+ 
+ /**
+ * получить список заголовков всех экскурсий по сране
+ * 
+ **/
 
 function getExcursionsByCat($countryId){
      global $db;
@@ -41,7 +55,7 @@ function getExcursionsByCat($countryId){
 
 function getActiveExcursionsByCat($countryId){
      global $db;
-    $sql = " SELECT * 
+    $sql = " SELECT id, name, description_short, price, image
                 FROM `excursions` 
                 WHERE `category_id`='{$countryId}' 
                 AND `status`='1'

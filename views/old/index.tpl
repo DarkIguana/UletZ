@@ -1,18 +1,16 @@
 {* щаблон главной странцы*}
 
-<div class="subHead">
-    
+<div class="subHead">    
     <div class="introBox collomnMinWidh collomnWidh">
         <h1>{$smIntro[1].name}</h1>
         <p>{$smIntro[1].description}</p>
     </div>
-        <div class="phoneBox">
+        <div class="phoneBox collomnWidh">
             <div class="phoneBoxImgPhone collomnMinWidh">
                 <div><img src="/images/global/messengers-icons.png" class="iconmessengers"/></div>
                 <div class="phoneNum"><h2> {$smIntro[0].description} </h2></div>
             </div>
          </div>
-
 </div>
 
 <div class="excursionsTwoList">
@@ -55,4 +53,4 @@
     {/foreach}
 
 </div>
-
+    <a href="/{$smcountry}/points/" class="toPoints"> <h3>Другие экскурсии и список достопримечателтностей...</h3></a>
