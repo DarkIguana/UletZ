@@ -53,6 +53,19 @@
    
 
      {/foreach} 
+  </br>
+      <h2>Загрузка изображений</h2>
+                <div>
+                    
+                          <form action="/{$smcountry}/admin/uploadexcdescriptionimg/"  method="post" 
+                                                            enctype="multipart/form-data">
+                                <input type="file" name="filename"></br>
+                                <input type="hidden" name="itemId" value="{$item['id']}"></br>
+                                <input type="submit" value="загрузить"></br>
+                       
+                        </form>
+             </div>
  <div>
+     </br></br>
                      <input type="button" value="Сохранить" onclick="updateExcursionJs('{$item['id']}');"/>
 </div>

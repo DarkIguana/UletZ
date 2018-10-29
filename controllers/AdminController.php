@@ -13,8 +13,6 @@ include_once '../models/PointsModel.php';
 $smarty ->setTemplateDir(TemplateAdminPrefix);
 $smarty->assign('templateWebPath', TemplateAdminWebPath);
 
-
-
 function indexAction($smarty, $id, $country){
     
     $countries =getMainCutMenu();
@@ -250,6 +248,32 @@ function uploadexcAction(){
          }
          }
 }
+  /**
+ * загрузка изображений для Экскурсий  на сервер
+ **/
+function uploadexcdescriptionimgAction(){
+     $country = isset($_GET['country']) ? $_GET['country'] : null;
+   
+    $maxSize=2*1024*1024;
+    $itemId =$_POST['itemId'];
+              
+         if($_FILES['filename']['size']>$maxSize){
+             echo ('файл слишком большой');
+             return;
+         }
+         
+         // проверка загружен ли файл
+         if(is_uploaded_file($_FILES['filename']['tmp_name'])){
+             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/images/excursions/'.$country.'/'.$_FILES['filename']['name']);                             
+              // if($res){
+                 //    $res=updatePointImage($itemId, $newFileName);
+                         if($res){
+                             header ("Location: /$country/admin/editexcursion/$itemId/");
+                         }
+ 
+        // }
+         }
+} 
     
   /**  -----------------------------Статьи----------------------------------------  **/  
 
@@ -376,7 +400,32 @@ function uploadartAction(){
          }
          }
 }
-    
+    /**
+ * загрузка изображений для статей  на сервер
+ **/
+function uploadarticlesdescriptionimgAction(){
+     $country = isset($_GET['country']) ? $_GET['country'] : null;
+   
+    $maxSize=2*1024*1024;
+    $itemId =$_POST['itemId'];
+              
+         if($_FILES['filename']['size']>$maxSize){
+             echo ('файл слишком большой');
+             return;
+         }
+         
+         // проверка загружен ли файл
+         if(is_uploaded_file($_FILES['filename']['tmp_name'])){
+             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/images/articles/'.$country.'/'.$_FILES['filename']['name']);                             
+              // if($res){
+                 //    $res=updatePointImage($itemId, $newFileName);
+                         if($res){
+                             header ("Location: /$country/admin/editarticle/$itemId/");
+                         }
+ 
+        }
+}
+           
 
   /**
   * получаем данные об экскурсии из формы и посылаем в БД
@@ -606,4 +655,26 @@ function uploadpointimgAction(){
          }
          }
 }
-    
+
+    /**
+ * загрузка изображений для статей Point на сервер
+ **/
+function uploadpointdescriptionimgAction(){
+     $country = isset($_GET['country']) ? $_GET['country'] : null;
+   
+    $maxSize=2*1024*1024;
+    $itemId =$_POST['itemId'];
+              
+         if($_FILES['filename']['size']>$maxSize){
+             echo ('файл слишком большой');
+             return;
+         }
+         
+         // проверка загружен ли файл
+         if(is_uploaded_file($_FILES['filename']['tmp_name'])){
+             $res= move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '/images/points/'.$country.'/'.$_FILES['filename']['name']);                             
+                        if($res){
+                             header ("Location: /$country/admin/editpoint/$itemId/");
+                         } 
+         }
+}

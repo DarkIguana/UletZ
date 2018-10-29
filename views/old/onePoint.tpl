@@ -1,5 +1,5 @@
 {* щаблон странцы одного point*}
-test
+
  {foreach $rsPoint as $item name=point}
     <div >
            <div class="contentBlock">{$item['description']}</div><br/>
