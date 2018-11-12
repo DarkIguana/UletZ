@@ -194,6 +194,7 @@ function addexcursiontodbAction(){
 function updateexcursionAction(){
     $itemId                 = $_POST['itemId'];
     $itemName           = $_POST['itemName'];
+    $itemNameUrl      = $_POST['itemNameUrl'];
     $itemPrice            = $_POST['itemPrice'];
     $itemStatus          = $_POST['itemStatus'];
     $itemDescShort    = $_POST['itemDescShort'];
@@ -201,7 +202,7 @@ function updateexcursionAction(){
     $itemCat             = $_POST['itemCatId']; 
     //  $newFileName      = $_POST['newFileName'];   
     
-     $res=updateProduct($itemId, $itemName, $itemPrice, 
+     $res=updateProduct($itemId, $itemName, $itemNameUrl, $itemPrice, 
                                     $itemStatus, $itemDescShort, $itemDesc, $itemCat);
      
      if($res){

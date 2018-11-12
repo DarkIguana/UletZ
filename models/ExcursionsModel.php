@@ -55,7 +55,7 @@ function getExcursionsByCat($countryId){
 
 function getActiveExcursionsByCat($countryId){
      global $db;
-    $sql = " SELECT id, name, description_short, price, image
+    $sql = " SELECT id, name, name_url, description_short, price, image
                 FROM `excursions` 
                 WHERE `category_id`='{$countryId}' 
                 AND `status`='1'
@@ -106,13 +106,17 @@ function getExcursionsAndCatName(){
  * 
  **/
  
- function updateProduct ($itemId, $itemName, $itemPrice, $itemStatus, 
+ function updateProduct ($itemId, $itemName, $itemNameUrl, $itemPrice, $itemStatus, 
          $itemDescShort, $itemDesc, $itemCat, $newFileName = null){
      global $db;                                                                                    
      $set = array();
      
      if ($itemName){
          $set[]="`name`='{$itemName}'";
+          }
+      
+     if ($itemNameUrl){
+         $set[]="`name_url`='{$itemNameUrl}'";
           }
      
     if ($itemPrice >0 ){
@@ -169,9 +173,22 @@ function getExcursionById($excursionId){
                 LEFT JOIN `menu`AS `m` ON exc.category_id=m.id 
                 WHERE exc.id='{$excursionId}' ";
         $rs= mysqli_query($db, $sql);
-          return createSmartyRsArray($rs);
-                
-       
+          return createSmartyRsArray($rs);     
+}
+
+/**
+ * получить экскурсию с именем категории по name_url
+ **/
+
+function getExcursionByName($excursionName){
+    global $db;
+           //$excursionName = string($excursionName);
+            $sql = "SELECT exc.*, m.cat_name 
+                FROM `excursions`AS `exc` 
+                LEFT JOIN `menu`AS `m` ON exc.category_id=m.id 
+                WHERE exc.name_url='{$excursionName}' ";
+        $rs= mysqli_query($db, $sql);
+          return createSmartyRsArray($rs);   
 }
 /**
  * получить intro (по стране)

@@ -1,14 +1,13 @@
 {* шаблон главной странцы*}
-
 <div class="excursionsTwoList">
     {foreach $rsExcursions as $item name=excursion}
         <div class="excursionsListItemBox">
 
-            <h2 ><a href="/{$smcountry}/excursions/item/{$item['id']}/">{$item['name']}</a> </h2>
+            <h2 ><a href="/{$smcountry}/excursions/item/{$item['name_url']}/">{$item['name']}</a> </h2>
 
             <p>{$item['description_short']}</p>
 
-            <a href="/{$smcountry}/excursions/item/{$item['id']}/" class="buttonAndImage">
+            <a href="/{$smcountry}/excursions/item/{$item['name_url']}/" class="buttonAndImage">
                 <table class="button_podrobno" >
                     <tr>
                         <td class="button_podrobno_price" >

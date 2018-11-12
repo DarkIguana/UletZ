@@ -37,7 +37,7 @@ function indexAction($smarty, $id, $country) {
 }
 
 /**
- * формирование  страницы 1 экскурсии
+ * формирование  страницы 1 point
  * 
  * @param object $smarty шаблонизатор
  */
@@ -63,7 +63,10 @@ function itemAction($smarty) {
 
     $smarty->assign('pageTitle', 'Point');
 
-
+    $dir     = "../www/images/points/$country";
+    $files1 = scandir($dir);
+    $smarty->assign('files1', $files1);
+    
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'onePoint');
     loadTemplate($smarty, 'footer');

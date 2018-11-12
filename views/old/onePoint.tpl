@@ -16,5 +16,14 @@
 <div id="button_back"> Вернутьcя в раздел Points</div>													<!-- button back -->
 </a>
 </div>
+<div>
+    
+    {foreach $files1 as $file}
+    <div >
+           <div class="contentBlock">{$file[]}</div><br/>
+    </div>
+    
+    {/foreach}
+</div>
      
         

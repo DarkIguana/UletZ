@@ -40,11 +40,11 @@ function indexAction($smarty, $id, $country) {
 }
 
 /**
- * формирование  страницы 1 экскурсии
+ * формирование  страницы 1 экскурсии по Id
  * 
  * @param object $smarty шаблонизатор
  */
-function itemAction($smarty) {
+function itemAction111($smarty) {
     $idExcursion = isset($_GET['id']) ? $_GET['id'] : "2";
     $country = isset($_GET['country']) ? $_GET['country'] : "thailand";
 
@@ -53,6 +53,34 @@ function itemAction($smarty) {
     $rsMenu = getMenuByCounry($countryId);
 
     $rsExcursion = getExcursionById($idExcursion);
+
+    $rsSubMenu = getMenuChildrenForCat($countryId);
+    $smarty->assign('smSubMenu', $rsSubMenu);
+
+    $smarty->assign('countries', $countries);
+    $smarty->assign('smcountry', $country);
+    $smarty->assign('countryId', $countryId);
+    $smarty->assign('rsMenu', $rsMenu);
+
+    $smarty->assign('rsExcursion', $rsExcursion);
+
+    $smarty->assign('pageTitle', 'Экскурсии');
+}
+
+/**
+ * формирование  страницы 1 экскурсии по name_url
+ * 
+ * @param object $smarty шаблонизатор
+ */
+function toAction($smarty) {
+    $nameExcursion = isset($_GET['name_url']) ? $_GET['name_url'] : "KoTalu";
+    $country = isset($_GET['country']) ? $_GET['country'] : "thailand";
+
+    $countries = getMainCutMenu();
+    $countryId = getCountryId($country);
+    $rsMenu = getMenuByCounry($countryId);
+
+    $rsExcursion = getExcursionByName($nameExcursion);
 
     $rsSubMenu = getMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
