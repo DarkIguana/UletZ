@@ -7,7 +7,9 @@
     </div>
 
 {/foreach}
+</div>
+  <div class="bottom_article">
       <a href="/{$smcountry}/articles/">
         <div id="button_back"> Вернутьcя в раздел Статьи</div>													<!-- button back -->
-    </a>   
-</div>
+    </a> 
+   </div>

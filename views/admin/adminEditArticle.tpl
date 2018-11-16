@@ -35,7 +35,13 @@
              
 <h1>Название</h1>
         <div><input type="edit" id="itemName_{$item['id']}" value="{$item['name']}" />  </div>
-
+<h1>URL name</h1>
+        <div><input type="edit" id="itemNameUrl_{$item['id']}" value="{$item['name_url']}" />  </div>
+<h1>Descriptoin Tag</h1>
+        <div><input type="edit" id="itemDescriptionTag_{$item['id']}" value="{$item['description_tag']}" />  </div>
+<h1>Keyword</h1>
+        <div><input type="edit" id="itemKeywordTag_{$item['id']}" value="{$item['keyword_tag']}" />  </div>
+            
 <h1>Teg</h1>
          <div>
         <input type="edit" id="itemTeg_{$item['id']}" value="{$item['teaser']}" /> 

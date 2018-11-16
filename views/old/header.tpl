@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="{$templateWebPath}css/main.css" type="text/css" />
         <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
         <script type="text/javascript" src="/js/main.js" ></script>
+        <meta name="description" content="{$smPageDescription}" />
      {include file= 'analyticstracking.tpl'} 
   
     </head>

@@ -217,7 +217,7 @@ align-self: center;
     margin: 14px 0; 
 }
 .imgConteinerArticleHead {
-    width: 300;
+    width: 300px;
 }
    figure img{
         width: 100%;
@@ -323,3 +323,10 @@ align-self: center;
     color: #fff;
     padding: 0 20px 0 20px;
 }
+ .bottom_article{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 100%;     
+    }

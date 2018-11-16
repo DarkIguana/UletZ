@@ -12,6 +12,8 @@
         {/foreach}
     </select>
 </div>
+<h1>URL name</h1>
+        <div><input type="edit" id="itemNameUrl_{$item['id']}" value="{$item['name_url']}" />  </div>
 <h2>Название</h2>
 <div>
     <input type="edit" id="newItemName" value=" " />   

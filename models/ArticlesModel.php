@@ -87,7 +87,18 @@ function getArticleById($articleId){
                 WHERE art.id='{$articleId}' ";
         $rs= mysqli_query($db, $sql);
           return createSmartyRsArray($rs);
-                
+}
+/*
+ * получить статю с именем категории по Name
+ */
+
+function getArticleByName($nameArticle){
+    global $db;
+              $sql = "SELECT *
+                FROM `articles`
+                WHERE name_url='{$nameArticle}' ";
+        $rs= mysqli_query($db, $sql);
+          return createSmartyRsArray($rs);                
        
 }
 
@@ -173,3 +184,27 @@ function updateArticleImage($itemId, $newFileName){
   return $rs;
  }
  
+ /**
+ * получить Description (по стране)
+ * 
+ **/
+function getDescription($countryId){
+     global $db;
+    $sql = "SELECT description 
+                              FROM menu 
+                              WHERE parent_id='{$countryId}'
+                              AND  url_cat_name IN ('articles')"; 
+  $rs = mysqli_query($db, $sql);
+   return createSmartyRsArray($rs);
+ }
+ /**
+ * получить Description Tag по статье
+   **/
+function getDescriptionTag($nameArticle){
+     global $db;
+    $sql = "SELECT description_tag 
+                              FROM  articles
+                              WHERE name_url='{$nameArticle}'"; 
+  $rs = mysqli_query($db, $sql);
+   return createSmartyRsArray($rs);
+ }
