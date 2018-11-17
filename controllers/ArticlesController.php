@@ -7,6 +7,7 @@
 include_once '../models/MenuModel.php';
 // include_once '../models/CountriesModel.php';
 include_once '../models/ArticlesModel.php';
+include_once '../models/TagModel.php'; // функции формрования метатегов
 
 /**формирование главной страницы статей
  * 
@@ -18,7 +19,7 @@ function indexAction($smarty, $id, $country){
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
     
-    $pageDescriptionArray = getDescription($countryId);
+    $pageDescriptionArray = getDescription($countryId, 'articles');
     $pageDescriptionTmp = array_shift($pageDescriptionArray);  
     $pageDescription = array_shift($pageDescriptionTmp);  
     
@@ -88,7 +89,7 @@ function aboutAction($smarty) {
     $countryId = getCountryId($country);
     $rsMenu = getMenuByCounry($countryId);
 
-    $pageDescriptionArray = getDescriptionTag($nameArticle);
+    $pageDescriptionArray = getDescriptionTag($nameArticle,  'articles');
     $pageDescriptionTmp = array_shift($pageDescriptionArray);  
     $pageDescription = array_shift($pageDescriptionTmp);  
     

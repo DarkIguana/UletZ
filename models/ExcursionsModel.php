@@ -202,28 +202,3 @@ function getIntro($countryId){
   $rs = mysqli_query($db, $sql);
   return createSmartyRsArray($rs);
  }
-/**
- * получить Description (по стране)
- * 
- **/
-function getDescription($countryId){
-     global $db;
-    $sql = "SELECT description 
-                              FROM menu 
-                              WHERE parent_id='{$countryId}'
-                              AND  url_cat_name IN ('excursions')"; 
-  $rs = mysqli_query($db, $sql);
-   return createSmartyRsArray($rs);
- }
- /**
- * получить Description Tag по экскурсии
-   **/
-function getDescriptionTag($nameExcursion){
-     global $db;
-    $sql = "SELECT description_tag 
-                              FROM  excursions
-                              WHERE name_url='{$nameExcursion}'"; 
-  $rs = mysqli_query($db, $sql);
-   return createSmartyRsArray($rs);
- }
- 

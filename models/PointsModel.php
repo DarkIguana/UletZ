@@ -152,7 +152,17 @@ function getPointById($pointId){
                 LEFT JOIN `menu`AS `m` ON exc.category_id=m.id 
                 WHERE exc.id='{$pointId}' ";
         $rs= mysqli_query($db, $sql);
+          return createSmartyRsArray($rs);             
+}
+/**
+ * получить Point по name
+ **/
+
+function getPointByName($namePoint){
+    global $db;
+        $sql = "SELECT *
+                FROM `points` 
+                WHERE name_url='{$namePoint}' ";
+        $rs= mysqli_query($db, $sql);
           return createSmartyRsArray($rs);
-                
-       
 }

@@ -5,7 +5,7 @@
  */
 // подключаем модели
 include_once '../models/ExcursionsModel.php';
-
+include_once '../models/TagModel.php'; // функции формрования метатегов
 /* * формирование главной страницы сайта
  * 
  * @param object $smarty шаблонизатор
@@ -16,7 +16,7 @@ function indexAction($smarty, $id, $country) {
     $rsMenu = getMenuByCounry($countryId);
     $rsExcursions = getActiveExcursionsByCat($countryId);
     
-    $pageDescriptionArray = getDescription($countryId);
+    $pageDescriptionArray = getDescription($countryId, 'excursions');
     $pageDescriptionTmp = array_shift($pageDescriptionArray);  
     $pageDescription = array_shift($pageDescriptionTmp);  
  
@@ -53,7 +53,7 @@ function toAction($smarty) {
     $countryId = getCountryId($country);
     $rsMenu = getMenuByCounry($countryId);
 
-    $pageDescriptionArray = getDescriptionTag($nameExcursion);
+    $pageDescriptionArray = getDescriptionTag($nameExcursion, 'excursions');
     $pageDescriptionTmp = array_shift($pageDescriptionArray);  
     $pageDescription = array_shift($pageDescriptionTmp);  
     

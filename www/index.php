@@ -3,6 +3,7 @@ include_once '../config/config.php';
 include_once '../config/db.php';  // инициализация БД
 include_once '../library/mainFunctions.php';
 include_once '../models/MenuModel.php'; // функции формрования меню
+include_once '../models/TagModel.php'; // функции формрования метатегов
 
 
 // определяем (с какой страной работаем) какой крнтроллер-файл использовать 

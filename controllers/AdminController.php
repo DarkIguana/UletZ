@@ -18,14 +18,12 @@ function indexAction($smarty, $id, $country){
     $countries =getMainCutMenu();
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
-        $rsSubMenu = getMenuChildrenForCat($countryId);  
-        $smarty->assign('smSubMenu', $rsSubMenu);
+    $rsSubMenu = getMenuChildrenForCat($countryId);  
+    $smarty->assign('smSubMenu', $rsSubMenu);
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-       
-      
     $smarty->assign('pageTitle', 'Admin Page');
     
     loadTemplate($smarty, 'adminHeader');
