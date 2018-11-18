@@ -1,13 +1,13 @@
 {* шаблон главной странцы*}
 <div class="excursionsTwoList">
     {foreach $rsExcursions as $item name=excursion}
-        <div class="excursionsListItemBox">
-
-            <h2 ><a href="/{$smcountry}/excursions/item/{$item['name_url']}/">{$item['name']}</a> </h2>
-
+        <div class="excursionsListItemBox collomnMinWidh collomnWidh">
+            <div>
+            <h2 ><a href="/{$smcountry}/excursions/to/{$item['name_url']}/">{$item['name']}</a> </h2>
+            </div>
             <p>{$item['description_short']}</p>
 
-            <a href="/{$smcountry}/excursions/item/{$item['name_url']}/" class="buttonAndImage">
+            <a href="/{$smcountry}/excursions/to/{$item['name_url']}/" class="buttonAndImage">
                 <table class="button_podrobno" >
                     <tr>
                         <td class="button_podrobno_price" >
@@ -32,11 +32,13 @@
         </div>
         {if $smarty.foreach.excursion.iteration mod 2==0}
         </div>
-        <div style="clear:both;">   </div>
+      
 
         <div class="excursionsTwoList">
         {/if} 
     {/foreach}
 
 </div>
+{* <a href="/{$smcountry}/points/" class="toPoints"> <h3>Другие экскурсии и список достопримечателтностей...</h3></a> *}
+
 

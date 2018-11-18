@@ -162,6 +162,9 @@ and (max-device-width : 600px)
     #content_Block{
         padding-top: 160px;  
     }
+    .iconmessengers {
+   padding-top: 20px;
+}
     #imgHeaderArticles{
         float: none;
         padding: 3px 0px;
@@ -203,3 +206,5 @@ and (max-device-width : 600px)
         font-size: 190%;     
     }
 }
+
+    

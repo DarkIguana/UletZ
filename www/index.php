@@ -8,7 +8,7 @@ include_once '../models/TagModel.php'; // функции формрования 
 
 // определяем (с какой страной работаем) какой крнтроллер-файл использовать 
 
-$controllerName = isset($_GET['controller']) ? ucfirst($_GET['controller']) : 'Excursions';
+$controllerName = isset($_GET['controller']) ? ucfirst($_GET['controller']) : 'Start';
 
 // определяем какой (раздел сайта) Action выполнять 
 $actionName = isset($_GET['action']) ? $_GET['action'] : 'index';
