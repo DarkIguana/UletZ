@@ -26,11 +26,17 @@ function indexAction($smarty, $id, $country) {
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
- 
+    $rsFooter = getFooter();
+    $smarty->assign('smFooter', $rsFooter);
     $pageDescriptionArray = getDescription($countryId, 'points');
     $pageDescriptionTmp = array_shift($pageDescriptionArray);  
     $pageDescription = array_shift($pageDescriptionTmp);  
     $smarty->assign('smPageDescription', $pageDescription);
+    
+    $keywordsArray = getKeywordsTagPrime($countryId,  'points');
+    $keywordsTmp = array_shift($keywordsArray);  
+    $keywords = array_shift($keywordsTmp);
+    $smarty->assign('smKeywords', $keywords);
     
     $smarty->assign('rsPoints', $rsPoints);
 
@@ -68,6 +74,12 @@ function itemAction($smarty) {
     $pageDescriptionTmp = array_shift($pageDescriptionArray);  
     $pageDescription = array_shift($pageDescriptionTmp);  
     $smarty->assign('smPageDescription', $pageDescription);
+    
+    $keywordsArray = getKeywordsTag($namePoint, 'points');
+    $keywordsTmp = array_shift($keywordsArray);  
+    $keywords = array_shift($keywordsTmp);
+    $smarty->assign('smKeywords', $keywords);
+    
     $smarty->assign('rsPoint', $rsPoint);
 
     $smarty->assign('pageTitle', 'Point');

@@ -165,3 +165,20 @@ function updateCategoryData($itemId, $parentId=-1, $newName=' '){
     $rs = mysqli_query($db, $sql);
      return $rs;
 }
+/** 
+ *  
+ * получить Footer
+ **/
+
+function getFooter(){
+    global $db;
+ 
+    $sql = "SELECT `description`
+                              FROM general 
+                              WHERE name='Footer contact'"; 
+    $array = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($array);
+    $rs = $row['description'];
+   
+    return $rs;
+}

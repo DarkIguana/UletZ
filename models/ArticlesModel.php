@@ -183,4 +183,23 @@ function updateArticleImage($itemId, $newFileName){
   $rs = mysqli_query($db, $sql);
   return $rs;
  }
- 
+ /**
+ * получить pageTitle (по стране)
+ * 
+ **/
+ function getPageTitle($countryId){
+     global $db;
+    $sql = "SELECT description
+                              FROM menu
+                              WHERE parent_id='{$countryId}' AND url_cat_name='articles'"; 
+  $rs = mysqli_query($db, $sql);
+   return createSmartyRsArray($rs);
+   /** 
+   $array = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($array);
+    $rs = $row['id'];
+   
+    return $rs;
+    * 
+    */
+ }

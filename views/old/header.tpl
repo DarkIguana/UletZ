@@ -1,11 +1,12 @@
     <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">
     <head>
-        <title>{$pageTitle}</title>  
+        <title>{$rsPageTitle}</title>  
         <link rel="stylesheet" href="{$templateWebPath}css/main.css" type="text/css" />
         <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
         <script type="text/javascript" src="/js/main.js" ></script>
         <meta name="description" content="{$smPageDescription}" />
+        <meta name="keywords" content="{$smKeywords}" />
      {include file= 'analyticstracking.tpl'} 
   
     </head>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-12 09:59:59
+/* Smarty version 3.1.32, created on 2018-11-22 03:47:35
   from '/home/lizard/www/site.local/views/old/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5be9410f6df320_17667138',
+  'unifunc' => 'content_5bf618c7bf3dd2_06846238',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eb6a563a67f1c61a339a2b52add99a6bfad3b40b' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/index.tpl',
-      1 => 1542013194,
+      1 => 1542854822,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5be9410f6df320_17667138 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf618c7bf3dd2_06846238 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="subHead">    
     <div class="introBox collomnMinWidh collomnWidh">
@@ -50,7 +50,7 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration']++;
         <div class="excursionsListItemBox collomnMinWidh collomnWidh">
             <div>
             <h2 ><a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-/excursions/to/<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
+/excursions/to-<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
 /"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </a> </h2>
             </div>
@@ -58,7 +58,7 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration']++;
 </p>
 
             <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-/excursions/to/<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
+/excursions/to-<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
 /" class="buttonAndImage">
                 <table class="button_podrobno" >
                     <tr>

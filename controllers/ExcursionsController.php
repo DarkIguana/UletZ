@@ -6,7 +6,8 @@
 // подключаем модели
 include_once '../models/ExcursionsModel.php';
 include_once '../models/TagModel.php'; // функции формрования метатегов
-/* * формирование главной страницы сайта
+/* *
+ *  формирование страницы со всеми экскурсиями
  * 
  * @param object $smarty шаблонизатор
  */
@@ -20,12 +21,20 @@ function indexAction($smarty, $id, $country) {
     $pageDescriptionTmp = array_shift($pageDescriptionArray);  
     $pageDescription = array_shift($pageDescriptionTmp);  
  
+    $keywordsArray = getKeywordsTagPrime($countryId,  'excursions');
+    $keywordsTmp = array_shift($keywordsArray);  
+    $keywords = array_shift($keywordsTmp);
+    $smarty->assign('smKeywords', $keywords);
+    
     $rsSubMenu = getMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
 
     $rsIntro = getIntro($countryId);
     $smarty->assign('smIntro', $rsIntro);
-
+    $rsIntrotemp=$rsIntro[1];
+    $pageTitle=$rsIntrotemp['name'] ;
+    $rsFooter = getFooter();
+    $smarty->assign('smFooter', $rsFooter);
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -33,7 +42,7 @@ function indexAction($smarty, $id, $country) {
 
     $smarty->assign('rsExcursions', $rsExcursions);
 
-    $smarty->assign('pageTitle', 'Экскурсии');
+    $smarty->assign('rsPageTitle', $pageTitle);
     $smarty->assign('smPageDescription', $pageDescription);
    
     loadTemplate($smarty, 'header');
@@ -57,6 +66,11 @@ function toAction($smarty) {
     $pageDescriptionTmp = array_shift($pageDescriptionArray);  
     $pageDescription = array_shift($pageDescriptionTmp);  
     
+    $keywordsArray = getKeywordsTag($nameExcursion, 'excursions');
+    $keywordsTmp = array_shift($keywordsArray);  
+    $keywords = array_shift($keywordsTmp);
+    $smarty->assign('smKeywords', $keywords);
+    
     $rsExcursion = getExcursionByName($nameExcursion);
 
     $rsSubMenu = getMenuChildrenForCat($countryId);
@@ -66,10 +80,11 @@ function toAction($smarty) {
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-
+    $rsFooter = getFooter();
+    $smarty->assign('smFooter', $rsFooter);
     $smarty->assign('rsExcursion', $rsExcursion);
 
-    $smarty->assign('pageTitle', 'Экскурсии');
+    $smarty->assign('rsPageTitle', 'Экскурсии');
     $smarty->assign('smPageDescription', $pageDescription);
 
 

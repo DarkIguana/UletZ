@@ -17,11 +17,11 @@
     {foreach $rsExcursions as $item name=excursion}
         <div class="excursionsListItemBox collomnMinWidh collomnWidh">
             <div>
-            <h2 ><a href="/{$smcountry}/excursions/to/{$item['name_url']}/">{$item['name']}</a> </h2>
+            <h2 ><a href="/{$smcountry}/excursions/to-{$item['name_url']}/">{$item['name']}</a> </h2>
             </div>
             <p>{$item['description_short']}</p>
 
-            <a href="/{$smcountry}/excursions/to/{$item['name_url']}/" class="buttonAndImage">
+            <a href="/{$smcountry}/excursions/to-{$item['name_url']}/" class="buttonAndImage">
                 <table class="button_podrobno" >
                     <tr>
                         <td class="button_podrobno_price" >

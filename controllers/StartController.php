@@ -19,6 +19,11 @@ function indexAction($smarty, $id, $country) {
     $pageDescriptionArray = getDescription($countryId, 'excursions');
     $pageDescriptionTmp = array_shift($pageDescriptionArray);  
     $pageDescription = array_shift($pageDescriptionTmp);  
+    
+    $keywordsArray = getKeywordsTagPrime($countryId,  'excursions');
+    $keywordsTmp = array_shift($keywordsArray);  
+    $keywords = array_shift($keywordsTmp);
+    $smarty->assign('smKeywords', $keywords);
  
     $rsSubMenu = getMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
@@ -26,6 +31,9 @@ function indexAction($smarty, $id, $country) {
     $rsIntro = getIntro($countryId);
     $smarty->assign('smIntro', $rsIntro);
 
+    $rsIntrotemp=$rsIntro[1];
+    $pageTitle=$rsIntrotemp['name'] ;
+    
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -33,8 +41,10 @@ function indexAction($smarty, $id, $country) {
 
     $smarty->assign('rsExcursions', $rsExcursions);
 
-    $smarty->assign('pageTitle', 'Экскурсии');
+    $smarty->assign('rsPageTitle', $pageTitle);
     $smarty->assign('smPageDescription', $pageDescription);
+    $rsFooter = getFooter();
+    $smarty->assign('smFooter', $rsFooter);
    
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'index');

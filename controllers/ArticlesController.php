@@ -23,9 +23,20 @@ function indexAction($smarty, $id, $country){
     $pageDescriptionTmp = array_shift($pageDescriptionArray);  
     $pageDescription = array_shift($pageDescriptionTmp);  
     
+    $keywordsArray = getKeywordsTagPrime($countryId,  'articles');
+    $keywordsTmp = array_shift($keywordsArray);  
+    $keywords = array_shift($keywordsTmp);
+    $smarty->assign('smKeywords', $keywords);
+    
     $rsSubMenu = getMenuChildrenForCat($countryId);  
     $smarty->assign('smSubMenu', $rsSubMenu);
-    
+     
+    $pageTitleTemp=getPageTitle($countryId) ;
+    $pageTitleTemp= $pageTitleTemp[0];
+    $pageTitle= $pageTitleTemp['description'] ; 
+      
+    $rsFooter = getFooter();
+    $smarty->assign('smFooter', $rsFooter);
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -33,9 +44,9 @@ function indexAction($smarty, $id, $country){
    
     $rsArticles = getActiveArticlesByCat($countryId);
    
-    $smarty->assign('pageTitle', 'Статьи');
+    $smarty->assign('rsPageTitle', $pageTitle);
     $smarty->assign('smPageDescription', $pageDescription);
-   
+ 
     $smarty->assign('rsArticles', $rsArticles);
     
     loadTemplate($smarty, 'header');
@@ -57,8 +68,8 @@ function itemAction($smarty){
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
    
-        $rsSubMenu = getMenuChildrenForCat($countryId);  
-        $smarty->assign('smSubMenu', $rsSubMenu);
+    $rsSubMenu = getMenuChildrenForCat($countryId);  
+    $smarty->assign('smSubMenu', $rsSubMenu);
     
     $rsArticle = getArticleById($idArticle);
 
@@ -66,7 +77,8 @@ function itemAction($smarty){
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-    
+    $rsFooter = getFooter();
+    $smarty->assign('smFooter', $rsFooter);
     $smarty->assign('rsArticle', $rsArticle);
   
     $smarty->assign('pageTitle', 'Статьи');
@@ -93,6 +105,11 @@ function aboutAction($smarty) {
     $pageDescriptionTmp = array_shift($pageDescriptionArray);  
     $pageDescription = array_shift($pageDescriptionTmp);  
     
+    $keywordsArray = getKeywordsTag($nameArticle,  'articles');
+    $keywordsTmp = array_shift($keywordsArray);  
+    $keywords = array_shift($keywordsTmp);
+    $smarty->assign('smKeywords', $keywords);
+   
     $rsArticle = getArticleByName($nameArticle);
   
     $rsSubMenu = getMenuChildrenForCat($countryId);
@@ -102,11 +119,12 @@ function aboutAction($smarty) {
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-
+    $rsFooter = getFooter();
+    $smarty->assign('smFooter', $rsFooter);
     $smarty->assign('rsArticle', $rsArticle);
-    $smarty->assign('pageTitle', 'Статьи');
+    $smarty->assign('rsPageTitle', 'Статьи');
     $smarty->assign('smPageDescription', $pageDescription);
-   
+      
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'oneArticle');
     loadTemplate($smarty, 'footer');

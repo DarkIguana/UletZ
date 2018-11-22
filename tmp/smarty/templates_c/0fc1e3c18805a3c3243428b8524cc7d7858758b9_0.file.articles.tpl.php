@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-16 11:08:38
+/* Smarty version 3.1.32, created on 2018-11-22 03:50:03
   from '/home/lizard/www/site.local/views/old/articles.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bee9726bec365_49287006',
+  'unifunc' => 'content_5bf6195b309201_53025234',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0fc1e3c18805a3c3243428b8524cc7d7858758b9' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/articles.tpl',
-      1 => 1542362910,
+      1 => 1542854994,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bee9726bec365_49287006 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf6195b309201_53025234 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h1>Статьи</h1>
 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsArticles']->value, 'item', false, NULL, 'articles', array (
@@ -31,7 +31,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
     <div class="clearfix">
         <div id="imgHeaderArticles" >        
             <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-/articles/about/<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
+/articles/about-<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
 /">
                 <img src="/images/articles/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
@@ -40,7 +40,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
         </div>
         <div id="descriptionHeaderArticles" >  
             <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-/articles/about/<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
+/articles/about-<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
 /">
                 <h2><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
  </h2>
