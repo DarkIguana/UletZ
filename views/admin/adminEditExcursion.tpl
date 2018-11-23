@@ -34,27 +34,27 @@
         </div>
              
 <h1>Название</h1>
-        <div><input type="edit" id="itemName_{$item['id']}" value="{$item['name']}" />  </div>
+        <div><input type="edit" class="longText" id="itemName_{$item['id']}" value="{$item['name']}" />  </div>
         
 <h1>URL name</h1>
-        <div><input type="edit" id="itemNameUrl_{$item['id']}" value="{$item['name_url']}" />  </div>
+        <div><input type="edit" class="longText" id="itemNameUrl_{$item['id']}" value="{$item['name_url']}" />  </div>
 
 <h1>Descriptoin Tag</h1>
-        <div><input type="edit" id="itemDescriptionTag_{$item['id']}" value="{$item['description_tag']}" />  </div>
+        <div><input type="edit" class="longText" id="itemDescriptionTag_{$item['id']}" value="{$item['description_tag']}" />  </div>
 <h1>Keyword</h1>
-        <div><input type="edit" id="itemKeywordTag_{$item['id']}" value="{$item['keyword_tag']}" />  </div>
+        <div><input type="edit" class="longText" id="itemKeywordTag_{$item['id']}" value="{$item['keywords_tag']}" />  </div>
                 
 <h1>Цена</h1>
-        <div><input type="edit" id="itemPrice_{$item['id']}" value="{$item['price']}" />           </div>
+        <div><input type="edit" id="itemPrice_{$item['id']}" value="{$item['price']}" /></div>
         
 <h1>Описание короткое</h1>
-         <div>
-        <input type="edit" id="itemDescShort_{$item['id']}" value="{$item['description_short']}" /> 
+        <div>
+             <textarea rows="5"  class="longText" type="edit" id="itemDescShort_{$item['id']}" />{$item['description_short']}
+         </textarea>
          </div>
          
 <h1>Описание</h1>
-          <div><textarea class="ckeditor" id="itemDesc_{$item['id']}">
-                     {$item['description']}
+          <div><textarea class="ckeditor" id="itemDesc_{$item['id']}">{$item['description']}
                  </textarea>
             </div>
           

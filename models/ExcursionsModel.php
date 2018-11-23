@@ -106,8 +106,9 @@ function getExcursionsAndCatName(){
  * 
  **/
  
- function updateProduct ($itemId, $itemName, $itemNameUrl, $itemPrice, $itemStatus, 
-         $itemDescShort, $itemDesc, $itemCat, $newFileName = null){
+ function updateProduct ($itemId, $itemName, $itemNameUrl, $itemDescriptionTag, 
+         $itemKeywordTag, $itemPrice, $itemStatus, $itemDescShort, $itemDesc, $itemCat, 
+         $newFileName = null){
      global $db;                                                                                    
      $set = array();
      
@@ -118,7 +119,12 @@ function getExcursionsAndCatName(){
      if ($itemNameUrl){
          $set[]="`name_url`='{$itemNameUrl}'";
           }
-     
+     if ($itemDescriptionTag){
+         $set[]="`description_tag`='{$itemDescriptionTag}'";
+          }
+     if ($itemKeywordTag){
+         $set[]="`keywords_tag`='{$itemKeywordTag}'";
+          }
     if ($itemPrice >0 ){
          $set[]="`price`='{$itemPrice}'";
           }

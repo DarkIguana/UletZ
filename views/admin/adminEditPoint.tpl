@@ -35,11 +35,18 @@
              
 <h1>Название</h1>
         <div><input type="edit" id="itemName_{$item['id']}" value="{$item['name']}" />  </div>
-            
+<h1>URL name</h1>
+        <div><input type="edit" id="itemNameUrl_{$item['id']}" value="{$item['name_url']}" />  </div>
+<h1>Descriptoin Tag</h1>
+        <div><input type="edit" class="longText" id="itemDescriptionTag_{$item['id']}" value="{$item['description_tag']}" />  </div>
+<h1>Keyword</h1>
+        <div><input type="edit" class="longText"  id="itemKeywordTag_{$item['id']}" value="{$item['keywords_tag']}" />  </div>
+                    
 <h1>Описание короткое</h1>
-         <div>
-        <input type="edit" id="itemDescShort_{$item['id']}" value="{$item['description_short']}" /> 
-         </div>
+        <div>
+             <textarea rows="5"  class="longText" type="edit" id="itemDescShort_{$item['id']}" />{$item['description_short']}
+         </textarea>
+       </div>
          
 <h1>Описание</h1>
           <div><textarea class="ckeditor" id="itemDesc_{$item['id']}">

@@ -193,6 +193,8 @@ function updateexcursionAction(){
     $itemId                 = $_POST['itemId'];
     $itemName           = $_POST['itemName'];
     $itemNameUrl      = $_POST['itemNameUrl'];
+    $itemDescriptionTag      = $_POST['itemDescriptionTag'];
+    $itemKeywordTag      = $_POST['itemKeywordTag'];
     $itemPrice            = $_POST['itemPrice'];
     $itemStatus          = $_POST['itemStatus'];
     $itemDescShort    = $_POST['itemDescShort'];
@@ -200,7 +202,7 @@ function updateexcursionAction(){
     $itemCat             = $_POST['itemCatId']; 
     //  $newFileName      = $_POST['newFileName'];   
     
-     $res=updateProduct($itemId, $itemName, $itemNameUrl, $itemPrice, 
+     $res=updateProduct($itemId, $itemName, $itemNameUrl, $itemDescriptionTag, $itemKeywordTag, $itemPrice, 
                                     $itemStatus, $itemDescShort, $itemDesc, $itemCat);
      
      if($res){
@@ -434,6 +436,11 @@ function uploadarticlesdescriptionimgAction(){
 function updatearticleAction(){
     $itemId                 = $_POST['itemId'];
     $itemName           = $_POST['itemName'];
+    
+    $itemNameUrl      = $_POST['itemNameUrl'];
+    $itemDescriptionTag      = $_POST['itemDescriptionTag'];
+    $itemKeywordTag      = $_POST['itemKeywordTag'];
+    
     $itemDate           = $_POST['itemDate'];
     $itemStatus          = $_POST['itemStatus'];
     $itemTeaser    = $_POST['itemTeaser'];
@@ -443,8 +450,8 @@ function updatearticleAction(){
     //  $newFileName      = $_POST['newFileName'];  
     
     
-     $res=updateArticleInDb($itemId, $itemName, $itemDate, 
-                                    $itemStatus, $itemTeaser, $itemText, $itemCat, $itemTeg);
+     $res=updateArticleInDb($itemId, $itemName, $itemNameUrl, $itemDescriptionTag, 
+             $itemKeywordTag, $itemDate, $itemStatus, $itemTeaser, $itemText, $itemCat, $itemTeg);
      
    if($res){
         $resData['success'] = 1;
@@ -602,14 +609,19 @@ function addPointToDbAction(){
 function updatepointAction(){
     $itemId                 = $_POST['itemId'];
     $itemName           = $_POST['itemName'];
+    
+    $itemNameUrl      = $_POST['itemNameUrl'];
+    $itemDescriptionTag      = $_POST['itemDescriptionTag'];
+    $itemKeywordTag      = $_POST['itemKeywordTag'];
+    
     $itemStatus          = $_POST['itemStatus'];
     $itemDescShort    = $_POST['itemDescShort'];
     $itemDesc           = $_POST['itemDesc'];
     $itemCat             = $_POST['itemCatId']; 
     //  $newFileName      = $_POST['newFileName'];   
     
-     $res=updatePoint($itemId, $itemName,
-                                    $itemStatus, $itemDescShort, $itemDesc, $itemCat);
+     $res=updatePoint($itemId, $itemName, $itemNameUrl, $itemDescriptionTag, 
+             $itemKeywordTag, $itemStatus, $itemDescShort, $itemDesc, $itemCat);
      
      if($res){
         $resData['success'] = 1;

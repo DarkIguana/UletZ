@@ -91,8 +91,9 @@ function getPointsAndCatName(){
  * 
  **/
  
- function updatePoint ($itemId, $itemName, $itemStatus, 
-         $itemDescShort, $itemDesc, $itemCat, $newFileName = null){
+ function updatePoint ($itemId, $itemName, $itemNameUrl, $itemDescriptionTag, 
+             $itemKeywordTag, $itemStatus, $itemDescShort, $itemDesc, $itemCat, 
+         $newFileName = null){
                 
      global $db;                                                                                    
      $set = array();
@@ -100,7 +101,15 @@ function getPointsAndCatName(){
      if ($itemName){
          $set[]="`name`='{$itemName}'";
           }
-     
+      if ($itemNameUrl){
+         $set[]="`name_url`='{$itemNameUrl}'";
+          }
+     if ($itemDescriptionTag){
+         $set[]="`description_tag`='{$itemDescriptionTag}'";
+          }
+     if ($itemKeywordTag){
+         $set[]="`keywords_tag`='{$itemKeywordTag}'";
+          }
      if ($itemStatus !==null){
          $set[]="`status`='{$itemStatus}'";
           }

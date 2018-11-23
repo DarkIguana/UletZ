@@ -116,6 +116,10 @@ function updateExcursionJs(itemId) {
     var itemName = $('#itemName_' + itemId).val();
     var itemNameUrl = $('#itemNameUrl_' + itemId).val();
     var itemPrice = $('#itemPrice_' + itemId).val();
+    
+    var itemDescriptionTag = $('#itemDescriptionTag_' + itemId).val();
+    var itemKeywordTag = $('#itemKeywordTag_' + itemId).val();
+    
     var itemCatId = $('#itemCatId_' + itemId).val();
     var itemDescShort = $('#itemDescShort_' + itemId).val();
     var itemDesc = CKEDITOR.instances['itemDesc_' + itemId].getData();
@@ -127,8 +131,10 @@ function updateExcursionJs(itemId) {
         itemStatus = 0
     }
 
-    var postData = {itemId: itemId, itemName: itemName, itemNameUrl: itemNameUrl, itemPrice: itemPrice,
-        itemCatId: itemCatId, itemDescShort: itemDescShort, itemDesc: itemDesc, itemStatus: itemStatus};
+    var postData = {itemId: itemId, itemName: itemName, itemNameUrl: itemNameUrl,
+        itemDescriptionTag: itemDescriptionTag, itemKeywordTag:itemKeywordTag, 
+        itemPrice: itemPrice, itemCatId: itemCatId, itemDescShort: itemDescShort, 
+        itemDesc: itemDesc, itemStatus: itemStatus};
 
     $.ajax({
         type: 'POST',
@@ -153,6 +159,11 @@ function updateExcursionJs(itemId) {
 function updateArticleJs(itemId) {
 
     var itemName = $('#itemName_' + itemId).val();
+    
+    var itemNameUrl = $('#itemNameUrl_' + itemId).val();
+    var itemDescriptionTag = $('#itemDescriptionTag_' + itemId).val();
+    var itemKeywordTag = $('#itemKeywordTag_' + itemId).val();
+    
     var itemDate = $('#itemDate_' + itemId).val();
     var itemCatId = $('#itemCatId_' + itemId).val();
     var itemTeaser = $('#itemTeaser_' + itemId).val();
@@ -167,8 +178,10 @@ function updateArticleJs(itemId) {
         itemStatus = 0
     }
 
-    var postData = {itemId: itemId, itemName: itemName, itemDate: itemDate,
-        itemCatId: itemCatId, itemTeaser: itemTeaser, itemText: itemText, itemStatus: itemStatus, itemTeg: itemTeg};
+    var postData = {itemId: itemId, itemName: itemName, itemNameUrl: itemNameUrl,
+        itemDescriptionTag: itemDescriptionTag, itemKeywordTag:itemKeywordTag, 
+        itemDate: itemDate, itemCatId: itemCatId, itemTeaser: itemTeaser, itemText: itemText, 
+        itemStatus: itemStatus, itemTeg: itemTeg};
 
     $.ajax({
         type: 'POST',
@@ -242,8 +255,8 @@ function addPointJs() {
         itemStatus = 0
     }
 
-    var postData = {itemName: itemName, itemCatId: itemCatId,
-        itemDescShort: itemDescShort, itemDesc: itemDesc, itemStatus: itemStatus};
+    var postData = {itemName: itemName, itemCatId: itemCatId, itemDescShort: itemDescShort, 
+        itemDesc: itemDesc, itemStatus: itemStatus};
 
     $.ajax({
         type: 'POST',
@@ -271,6 +284,9 @@ function addPointJs() {
 
 function updatepointJs(itemId) {
     var itemName = $('#itemName_' + itemId).val();
+    var itemNameUrl = $('#itemNameUrl_' + itemId).val();
+    var itemDescriptionTag = $('#itemDescriptionTag_' + itemId).val();
+    var itemKeywordTag = $('#itemKeywordTag_' + itemId).val();
     var itemCatId = $('#itemCatId_' + itemId).val();
     var itemDescShort = $('#itemDescShort_' + itemId).val();
     var itemDesc = CKEDITOR.instances['itemDesc_' + itemId].getData();
@@ -282,8 +298,10 @@ function updatepointJs(itemId) {
         itemStatus = 0
     }
 
-    var postData = {itemId: itemId, itemName: itemName, itemCatId: itemCatId,
-        itemDescShort: itemDescShort, itemDesc: itemDesc, itemStatus: itemStatus};
+    var postData = {itemId: itemId, itemName: itemName,  itemNameUrl: itemNameUrl,
+        itemDescriptionTag: itemDescriptionTag, itemKeywordTag:itemKeywordTag, 
+        itemCatId: itemCatId, itemDescShort: itemDescShort, itemDesc: itemDesc,
+        itemStatus: itemStatus};
 
     $.ajax({
         type: 'POST',
