@@ -10,14 +10,8 @@
                 </a></li>
             {/foreach} 
     </ul>
-            <h2 > <a href="/{$smcountry}/admin/" class="editButtonActive"> Редактировать</a> &nbsp; &nbsp; &nbsp; &nbsp;<a class="addButtonPassive" href="/{$smcountry}/admin/add/">  Добавить </a></h2>
-    <div class="subMenu menu">
-        {foreach from=$smSubMenu item=item name=subMenu}
-            <a href="/{$smcountry}/admin/{$item.url_cat_name}/"   > 
-                {$item.cat_name}
-            </a>
-        {/foreach} 
-    </div>  
+            <h2 > <a href="/{$smcountry}/admin/" class="editButtonPassive"> Редактировать</a> &nbsp; &nbsp; &nbsp; &nbsp;<a class="addButtonActive" href="/{$smcountry}/admin/add/">  Добавить </a></h2>
+  
     {* <a href="/{$smcountry}/admin/points/"> <div class="subMenuTwo">Points</div>  </a> *}
     
 </div>

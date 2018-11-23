@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-23 06:22:39
-  from '/home/lizard/www/site.local/views/admin/adminMenuBlock.tpl' */
+/* Smarty version 3.1.32, created on 2018-11-23 06:40:07
+  from '/home/lizard/www/site.local/views/admin/adminMenuBlock_1.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bf78e9f0e48a0_62477594',
+  'unifunc' => 'content_5bf792b7dbd283_13638369',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '0b758842023cf2d8267a72125b706f68d088ed2d' => 
+    'e6435aa169cd12147e4734fdac80996c2ebdc87d' => 
     array (
-      0 => '/home/lizard/www/site.local/views/admin/adminMenuBlock.tpl',
-      1 => 1542950555,
+      0 => '/home/lizard/www/site.local/views/admin/adminMenuBlock_1.tpl',
+      1 => 1542951604,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf78e9f0e48a0_62477594 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf792b7dbd283_13638369 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="menuBlock">
     <ul class="countryMenu menu"> 
         <?php
@@ -44,24 +44,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <h2 > <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /admin/" class="editButtonActive"> Редактировать</a> &nbsp; &nbsp; &nbsp; &nbsp;<a class="addButtonPassive" href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /admin/add/">  Добавить </a></h2>
-    <div class="subMenu menu">
-        <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['smSubMenu']->value, 'item', false, NULL, 'subMenu', array (
-));
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
-?>
-            <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-/admin/<?php echo $_smarty_tpl->tpl_vars['item']->value['url_cat_name'];?>
-/"   > 
-                <?php echo $_smarty_tpl->tpl_vars['item']->value['cat_name'];?>
-
-            </a>
-        <?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?> 
-    </div>  
+  
         
 </div>
 <?php }

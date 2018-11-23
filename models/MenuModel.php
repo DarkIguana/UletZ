@@ -13,13 +13,25 @@ function getMenuChildrenForCat($catId){
     global $db;
     $sql = "SELECT * 
                               FROM menu 
-                              WHERE 
-                              parent_id= '{$catId}' ";
+                              WHERE parent_id= '{$catId}' 
+                              AND `status`='1' ";
                               
         $rs = mysqli_query($db, $sql);
         return createSmartyRsArray($rs);
 }
+/**
+ * получить активные подкатегории заданной категории 
+ **/
 
+function getAllMenuChildrenForCat($catId){
+    global $db;
+    $sql = "SELECT * 
+                              FROM menu 
+                              WHERE parent_id= '{$catId}' ";
+                              
+        $rs = mysqli_query($db, $sql);
+        return createSmartyRsArray($rs);
+}
 /** 
  *  получить все категории и подкатегории
  * 
@@ -125,7 +137,24 @@ function getAllMenu(){
  
   return createSmartyRsArray($rs);
 }
+/** 
+ *  
+ * получить Footer
+ **/
 
+function getFooter(){
+    global $db;
+ 
+    $sql = "SELECT `description`
+                              FROM general 
+                              WHERE name='Footer contact'"; 
+    $array = mysqli_query($db, $sql);
+    $row = mysqli_fetch_assoc($array);
+    $rs = $row['description'];
+   
+    return $rs;
+}
+/** ------------- запись в БД ------------ **/
 /**
  * добавить новую категорию 
  * 
@@ -164,21 +193,4 @@ function updateCategoryData($itemId, $parentId=-1, $newName=' '){
                     
     $rs = mysqli_query($db, $sql);
      return $rs;
-}
-/** 
- *  
- * получить Footer
- **/
-
-function getFooter(){
-    global $db;
- 
-    $sql = "SELECT `description`
-                              FROM general 
-                              WHERE name='Footer contact'"; 
-    $array = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($array);
-    $rs = $row['description'];
-   
-    return $rs;
 }
