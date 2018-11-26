@@ -205,6 +205,13 @@ and (max-device-width : 600px)
      .bottom_article{
         font-size: 190%;     
     }
+    .priceBlock{
+        display: inline;
+        width: 8%;
+    }
+.priceBlockWrapper{
+margin: 0 40px 0 40px;
+}
 }
 
     

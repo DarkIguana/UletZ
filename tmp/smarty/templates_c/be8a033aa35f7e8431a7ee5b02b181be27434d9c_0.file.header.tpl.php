@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-22 07:12:44
+/* Smarty version 3.1.32, created on 2018-11-25 11:46:08
   from '/home/lizard/www/site.local/views/old/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bf648dc862728_44494545',
+  'unifunc' => 'content_5bfa7d702bb0a3_18905746',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'be8a033aa35f7e8431a7ee5b02b181be27434d9c' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/header.tpl',
-      1 => 1542860490,
+      1 => 1543142728,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menuBlock.tpl' => 1,
   ),
 ),false)) {
-function content_5bf648dc862728_44494545 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfa7d702bb0a3_18905746 (Smarty_Internal_Template $_smarty_tpl) {
 ?>    <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">
     <head>
@@ -30,6 +30,7 @@ function content_5bf648dc862728_44494545 (Smarty_Internal_Template $_smarty_tpl)
 </title>  
         <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
 css/main.css" type="text/css" />
+        <link rel="alternate" type="application/rss+xml" title="Улетаем зимовать" href="http://uletaemzimovat.ru/rss/rss.php" />
         <?php echo '<script'; ?>
  type="text/javascript" src="/js/jquery-3.3.1.js"><?php echo '</script'; ?>
 >

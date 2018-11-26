@@ -299,6 +299,20 @@ align-self: center;
     float: left;
     padding: 3px 0px;
 }
+.priceBlock{
+    display: inline;
+    width: 3%;
+}
+.priceBlockWrapper{
+   background: url(/images/global/bluedot.png) repeat-y;
+   background-size: 0.5%;
+   padding-left: 2%; 
+   margin-top: 10px;
+}
+div.priceBlockWrapper p{
+    padding-top: 0;
+    padding-bottom: 0;
+}
 /* --------------footer--------------- */
 #button_back {
     position:relative; 

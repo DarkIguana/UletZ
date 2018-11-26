@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-23 07:06:14
+/* Smarty version 3.1.32, created on 2018-11-25 11:54:25
   from '/home/lizard/www/site.local/views/admin/adminAddArticle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bf798d6d56cc4_85203806',
+  'unifunc' => 'content_5bfa7f61863b22_54452864',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd0c9a468c8f6a31777441dedf28f32a5d9dfb00' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminAddArticle.tpl',
-      1 => 1542383619,
+      1 => 1542966569,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf798d6d56cc4_85203806 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfa7f61863b22_54452864 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2> Добавить Статью</h2>
 <h2>Не отображать</h2>
 <div>

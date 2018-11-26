@@ -104,8 +104,7 @@ function getExcursionsAndCatName(){
  /**
  * обновление данных экскурсий
  * 
- **/
- 
+ **/ 
  function updateProduct ($itemId, $itemName, $itemNameUrl, $itemDescriptionTag, 
          $itemKeywordTag, $itemPrice, $itemStatus, $itemDescShort, $itemDesc, $itemCat, 
          $newFileName = null){
