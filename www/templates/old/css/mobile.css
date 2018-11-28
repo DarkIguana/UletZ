@@ -149,6 +149,10 @@ and (max-device-width : 600px)
     .excursionsTwoList{
         margin: 10px 0;
     }
+    .button_podrobno_price {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
     p{
         margin: 0 40px 0 40px;
     }

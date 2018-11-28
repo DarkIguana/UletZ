@@ -14,11 +14,7 @@
                     </tr>
                     <tr>
                         <td class="button_podrobno_price" >
-                            <table class="button_podrobno_price_inner">
-                                <tr>
-                                    <td style="padding: 10px 05px;"> <strong>Цена:</strong> от {$item['price']}&nbsp;бат</td>
-                                </tr>
-                            </table>
+                             <strong>Цена:</strong> от {$item['price']}&nbsp;бат
                         </td>
                         <td class="button_podrobno_podrobno_inner"><strong>Подрoбнee</strong></td> 					
                     </tr>

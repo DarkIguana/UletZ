@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-28 16:33:42
+/* Smarty version 3.1.32, created on 2018-11-28 19:32:32
   from '/home/lizard/www/site.local/views/old/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bfeb5560f7935_04618171',
+  'unifunc' => 'content_5bfedf400738b6_90526497',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eb6a563a67f1c61a339a2b52add99a6bfad3b40b' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/index.tpl',
-      1 => 1543419217,
+      1 => 1543429949,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bfeb5560f7935_04618171 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfedf400738b6_90526497 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="subHead">    
     <div class="introBox collomnMinWidh collomnWidh">
@@ -70,12 +70,9 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration']++;
                     </tr>
                     <tr>
                         <td class="button_podrobno_price" >
-                            <table class="button_podrobno_price_inner">
-                                <tr>
-                                    <td style="padding: 10px 05px;"> <strong>Цена:</strong> от <?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
-&nbsp;бат</td>
-                                </tr>
-                            </table>
+                            <strong>Цена:</strong> от <?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
+&nbsp;бат
+                               
                         </td>
                         <td class="button_podrobno_podrobno_inner"><strong>Подрoбнee</strong></td> 					
                     </tr>
