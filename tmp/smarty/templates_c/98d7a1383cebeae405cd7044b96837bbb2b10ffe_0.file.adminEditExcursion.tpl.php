@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-22 08:27:49
+/* Smarty version 3.1.32, created on 2018-11-28 10:02:22
   from '/home/lizard/www/site.local/views/admin/adminEditExcursion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bf65a75c77d22_40991765',
+  'unifunc' => 'content_5bfe599e1ceb33_31793477',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '98d7a1383cebeae405cd7044b96837bbb2b10ffe' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminEditExcursion.tpl',
-      1 => 1542871584,
+      1 => 1543395299,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf65a75c77d22_40991765 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfe599e1ceb33_31793477 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1><?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 </h1>
@@ -124,7 +124,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?> 
   </br>
       <h2>Загрузка изображений</h2>
-                <div>
+                <div class="uploadimg">
                     
                           <form action="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /admin/uploadexcdescriptionimg/"  method="post" 

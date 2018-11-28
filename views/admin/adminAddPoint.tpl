@@ -12,11 +12,12 @@
     </select>
 </div>
 <h1>URL name</h1>
-        <div><input type="edit" id="itemNameUrl_{$item['id']}" value="{$item['name_url']}" />  </div>
-<h1>Descriptoin Tag</h1>
-        <div><input type="edit" id="itemDescriptionTag_{$item['id']}" value="{$item['description_tag']}" />  </div>
+        <div><input type="edit" id="newItemNameUrl"/>  </div>
+<small>только маленькие буквы, английские, без пробелов, можно исрользовать "-"</small>
+        <h1>Descriptoin Tag</h1>
+        <div><input type="edit" id="newItemDescriptionTag"/>  </div>
 <h1>Keyword</h1>
-        <div><input type="edit" id="itemKeywordTag_{$item['id']}" value="{$item['keyword_tag']}" />  </div>
+        <div><input type="edit" id="newItemKeywordTag"/>  </div>
 <h2>Название</h2>
 <div>
     <input type="edit" id="newItemName" value=" " />   

@@ -163,7 +163,9 @@ table {
 .longText {
     width: 100%;
 }
-
+.uploadimg{
+    border: 4px double black;
+}
 /* 
 .hideme{
     display: none;

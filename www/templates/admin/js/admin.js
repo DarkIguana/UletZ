@@ -75,6 +75,9 @@ function addExcursionJs() {
     var itemCatId = $('#newItemCatId').val();
     var itemDescShort = $('#newItemDescShort').val();
     var itemDesc = $('#newItemDesc').val();
+    var itemNameUrl = $('#newItemNameUrl').val();
+    var itemDescriptionTag = $('#newItemDescriptionTag').val();
+    var itemKeywordTag = $('#newItemKeywordTag').val();
     var itemStatus = $('#newitemStatus').prop('checked');
     // var newFileName        = $('#newFileName_'+itemId).val(); 
     if (!itemStatus) {
@@ -83,7 +86,8 @@ function addExcursionJs() {
         itemStatus = 0
     }
 
-    var postData = {itemName: itemName, itemPrice: itemPrice, itemCatId: itemCatId,
+    var postData = {itemNameUrl:itemNameUrl, itemDescriptionTag:itemDescriptionTag, 
+        itemKeywordTag: itemKeywordTag, itemName: itemName, itemPrice: itemPrice, itemCatId: itemCatId,
         itemDescShort: itemDescShort, itemDesc: itemDesc, itemStatus: itemStatus};
 
     $.ajax({
@@ -100,6 +104,9 @@ function addExcursionJs() {
                 $('#newItemCatId').val('');
                 $('#newItemDescShort').val('');
                 $('#newItemDesc').val('');
+                $('#newItemNameUrl').val('');
+                $('#newItemDescriptionTag').val('');
+                $('#newItemKeywordTag').val('');
             }
         }
     });
@@ -207,6 +214,9 @@ function addArticleJs() {
     var itemTeaser = $('#newItemTeaser').val();
     var itemText = $('#newItemText').val();
     var itemTeg = $('#newItemTeg').val();
+    var itemNameUrl = $('#newItemNameUrl').val();
+    var itemDescriptionTag = $('#newItemDescriptionTag').val();
+    var itemKeywordTag = $('#newItemKeywordTag').val();
     var itemStatus = $('#newItemStatus').prop('checked');
     if (!itemStatus) {
         itemStatus = 1
@@ -214,7 +224,8 @@ function addArticleJs() {
         itemStatus = 0
     }
 
-    var postData = {itemName: itemName, itemCatId: itemCatId,
+    var postData = {itemNameUrl:itemNameUrl, itemDescriptionTag:itemDescriptionTag, 
+        itemKeywordTag: itemKeywordTag, itemName: itemName, itemCatId: itemCatId,
         itemTeaser: itemTeaser, itemText: itemText, itemTeg: itemTeg, itemStatus: itemStatus};
 
     $.ajax({
@@ -231,6 +242,10 @@ function addArticleJs() {
                 $('#newItemTeaser').val('');
                 $('#newItemText').val('');
                 $('#newItemTeg').val('');
+                
+                $('#newItemNameUrl').val('');
+                $('#newItemDescriptionTag').val('');
+                $('#newItemKeywordTag').val('');
             }
         }
     });
@@ -248,6 +263,11 @@ function addPointJs() {
     var itemDescShort = $('#newItemDescShort').val();
     var itemDesc = $('#newItemDesc').val();
     var itemStatus = $('#newitemStatus').prop('checked');
+    
+    var itemNameUrl = $('#newItemNameUrl').val();
+    var itemDescriptionTag = $('#newItemDescriptionTag').val();
+    var itemKeywordTag = $('#newItemKeywordTag').val();
+       
     // var newFileName        = $('#newFileName_'+itemId).val(); 
     if (!itemStatus) {
         itemStatus = 1
@@ -255,8 +275,9 @@ function addPointJs() {
         itemStatus = 0
     }
 
-    var postData = {itemName: itemName, itemCatId: itemCatId, itemDescShort: itemDescShort, 
-        itemDesc: itemDesc, itemStatus: itemStatus};
+    var postData = {itemNameUrl:itemNameUrl, itemDescriptionTag:itemDescriptionTag, 
+        itemKeywordTag: itemKeywordTag, itemName: itemName, itemCatId: itemCatId,
+        itemDescShort: itemDescShort, itemDesc: itemDesc, itemStatus: itemStatus};
 
     $.ajax({
         type: 'POST',
@@ -271,6 +292,9 @@ function addPointJs() {
                 $('#newItemCatId').val('');
                 $('#newItemDescShort').val('');
                 $('#newItemDesc').val('');
+                $('#newItemNameUrl').val('');
+                $('#newItemDescriptionTag').val('');
+                $('#newItemKeywordTag').val('');
             }
         }
     });

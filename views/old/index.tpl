@@ -23,24 +23,22 @@
 
             <a href="/{$smcountry}/excursions/to-{$item['name_url']}/" class="buttonAndImage">
                 <table class="button_podrobno" >
+                  <tr>
+                        <td colspan="2">
+                                <img src="/images/excursions/{$smcountry}/{$item['image']}" width="100%"/>
+                         </td>
+                    </tr>
                     <tr>
                         <td class="button_podrobno_price" >
                             <table class="button_podrobno_price_inner">
                                 <tr>
-                                    <td style="padding: 10px 05px;"> <strong>Цена:</strong> {$item['price']}&nbsp;бат</td>
+                                    <td style="padding: 10px 05px;"> <strong>Цена:</strong> от {$item['price']}&nbsp;бат</td>
                                 </tr>
                             </table>
                         </td>
-                        <td class="button_podrobno_podrobno_inner">Подрoбнee</td> 					
+                        <td class="button_podrobno_podrobno_inner"><strong>Подрoбнee</strong></td> 					
                     </tr>
-                    <tr>
-                        <td colspan="2">
-
-                            <div class="fpimg">
-                                <img src="/images/excursions/{$smcountry}/{$item['image']}" width="100%"/>
-                            </div>
-                        </td>
-                    </tr>
+                    
                 </table>
             </a>
         </div>
@@ -53,4 +51,4 @@
     {/foreach}
 
 </div>
-{* <a href="/{$smcountry}/points/" class="toPoints"> <h3>Другие экскурсии и список достопримечателтностей...</h3></a> *}
+<a href="/{$smcountry}/points/" class="toPoints"> <h3>Другие экскурсии и список достопримечателтностей...</h3></a> 

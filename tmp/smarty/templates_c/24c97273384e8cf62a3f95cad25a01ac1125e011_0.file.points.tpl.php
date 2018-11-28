@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-30 08:24:14
+/* Smarty version 3.1.32, created on 2018-11-28 13:45:34
   from '/home/lizard/www/site.local/views/old/points.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bd8071e7dc1a4_45843769',
+  'unifunc' => 'content_5bfe8dee4ae564_17742125',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '24c97273384e8cf62a3f95cad25a01ac1125e011' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/points.tpl',
-      1 => 1540806518,
+      1 => 1543409131,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd8071e7dc1a4_45843769 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfe8dee4ae564_17742125 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="excursionsTwoList">
     <?php
@@ -32,38 +32,25 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
         <div class="excursionsListItemBox collomnMinWidh collomnWidh">
             <div>
             <h2 ><a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-/points/item/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+/points/the-<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
 /"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </a> </h2>
             </div>
             <p><?php echo $_smarty_tpl->tpl_vars['item']->value['description_short'];?>
-</p>
+ <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+/points/the-<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
+/" class="hrefstandart">подробнее...</a> </p>
 
             <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-/points/item/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+/points/the-<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
 /" class="buttonAndImage">
-                <table class="button_podrobno">
-                    <tr>
-                        <td class="button_podrobno_price" >
-                            <table class="button_podrobno_price_inner">
-                                <tr>
-                                    <td style="padding: 10px 05px;"> </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <td class="button_podrobno_podrobno_inner">Подрoбнee</td> 					
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-
+                
                             <div class="fpimg">
                                 <img src="/images/points/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
 " width="100%"/>
                             </div>
-                        </td>
-                    </tr>
-                </table>
+                        
             </a>
         </div>
         <?php if ((isset($_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration'] : null) % 2 == 0) {?>

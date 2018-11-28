@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-23 07:06:08
+/* Smarty version 3.1.32, created on 2018-11-28 10:48:30
   from '/home/lizard/www/site.local/views/admin/adminAddExcursion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bf798d0b68ed3_78292954',
+  'unifunc' => 'content_5bfe646e169839_42659917',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41b7a73516719afaa8cd4f1bece5bb7e2d7a071a' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminAddExcursion.tpl',
-      1 => 1542383619,
+      1 => 1543398505,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf798d0b68ed3_78292954 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfe646e169839_42659917 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h1> Добавить новую Экскурсию</h1>
 <h2>Не отображать</h2>
 <div>
@@ -44,9 +44,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </select>
 </div>
 <h1>URL name</h1>
-        <div><input type="edit" id="itemNameUrl_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
-" />  </div>
+        <div><input type="edit" id="newItemNameUrl"/>  </div>
+<small>только маленькие буквы, английские, без пробелов, можно исрользовать "-"</small>
+        <h1>Descriptoin Tag</h1>
+        <div><input type="edit" id="newItemDescriptionTag"/>  </div>
+<h1>Keyword</h1>
+        <div><input type="edit" id="newItemKeywordTag"/>  </div>
 <h2>Название</h2>
 <div>
     <input type="edit" id="newItemName" value=" " />   

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-22 03:47:29
+/* Smarty version 3.1.32, created on 2018-11-28 19:03:50
   from '/home/lizard/www/site.local/views/old/excursions.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bf618c17e3fd6_12884765',
+  'unifunc' => 'content_5bfed886bedef9_46676335',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '137ee7ce6d803580ff76edcce785aee2cce4dbf4' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/excursions.tpl',
-      1 => 1542854783,
+      1 => 1543427904,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf618c17e3fd6_12884765 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfed886bedef9_46676335 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="excursionsTwoList">
     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsExcursions']->value, 'item', false, NULL, 'excursion', array (
@@ -44,27 +44,23 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration']++;
 /excursions/to-<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
 /" class="buttonAndImage">
                 <table class="button_podrobno" >
+                    <tr valign="bottom">
+                        <td colspan="2" ><img src="/images/excursions/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
+" width="100%"/></td>
+                    </tr>
                     <tr>
                         <td class="button_podrobno_price" >
                             <table class="button_podrobno_price_inner">
                                 <tr>
-                                    <td style="padding: 10px 05px;"> <strong>Цена:</strong> <?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
+                                    <td style="padding: 10px 05px;"> <strong>Цена:</strong> от <?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
 &nbsp;бат</td>
                                 </tr>
                             </table>
                         </td>
-                        <td class="button_podrobno_podrobno_inner">Подрoбнee</td> 					
+                        <td class="button_podrobno_podrobno_inner"><strong>Подрoбнee</strong></td> 					
                     </tr>
-                    <tr>
-                        <td colspan="2">
-
-                            <div class="fpimg">
-                                <img src="/images/excursions/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
-" width="100%"/>
-                            </div>
-                        </td>
-                    </tr>
+                    
                 </table>
             </a>
         </div>
@@ -80,6 +76,8 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration']++;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 </div>
+<a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+/points/" class="toPoints"> <h3>Другие экскурсии и список достопримечателтностей...</h3></a> 
 
 
 <?php }

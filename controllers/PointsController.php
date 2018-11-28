@@ -40,7 +40,7 @@ function indexAction($smarty, $id, $country) {
     
     $smarty->assign('rsPoints', $rsPoints);
 
-    $smarty->assign('pageTitle', 'Точки');
+    $smarty->assign('rsPageTitle', 'Точки');
 
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'points');
@@ -52,8 +52,8 @@ function indexAction($smarty, $id, $country) {
  * 
  * @param object $smarty шаблонизатор
  */
-function itemAction($smarty) {
-    $namePoint = isset($_GET['name_url']) ? $_GET['name_url'] : "KoTalu";
+function theAction($smarty) {
+    $namePoint = isset($_GET['name_url']) ? $_GET['name_url'] : "kuybury";
     $country = isset($_GET['country']) ? $_GET['country'] : "thailand";
 
     $countries = getMainCutMenu();
@@ -64,7 +64,8 @@ function itemAction($smarty) {
 
     $rsSubMenu = getMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
-
+    $rsFooter = getFooter();
+    $smarty->assign('smFooter', $rsFooter);
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -82,12 +83,8 @@ function itemAction($smarty) {
     
     $smarty->assign('rsPoint', $rsPoint);
 
-    $smarty->assign('pageTitle', 'Point');
-/**
-    $dir     = "../www/images/points/$country";
-    $files1 = scandir($dir);
-    $smarty->assign('files1', $files1);
-     */
+    $smarty->assign('rsPageTitle', 'Достопримечательности');
+  
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'onePoint');
     loadTemplate($smarty, 'footer');

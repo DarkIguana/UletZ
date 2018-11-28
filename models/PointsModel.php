@@ -41,7 +41,7 @@ function getHeadPointsByCat($countryId){
 
 function getActivePointsByCat($countryId){
      global $db;
-    $sql = " SELECT id, name, description_short, image
+    $sql = " SELECT id, name, name_url, description_short, image
                 FROM `points` 
                 WHERE `category_id`='{$countryId}' 
                 AND `status`='1'
@@ -71,7 +71,7 @@ function getPointsAndCatName(){
   * 
  **/
  
- function insertPoint($itemName, $itemDescShort, $itemDesc, $itemCat, $itemStatus){
+ function insertPoint($itemNameUrl, $itemDescriptionTag, $itemitemKeywordTag, $itemName, $itemDescShort, $itemDesc, $itemCat, $itemStatus){
      global $db;
      
    $sql = "INSERT INTO `points`
@@ -80,8 +80,11 @@ function getPointsAndCatName(){
      `description_short` ='{$itemDescShort}',
                `description`='{$itemDesc}',   
                       `status`='{$itemStatus}',
-              `category_id`='{$itemCat}'   " ; 
-   
+              `category_id`='{$itemCat}',  
+                 `name_url`= '{$itemNameUrl}',
+        `description_tag`= '{$itemDescriptionTag}',
+          `keywords_tag`=  '{$itemitemKeywordTag}' " ; 
+
   $rs = mysqli_query($db, $sql);
   return $rs;
  }
@@ -143,8 +146,8 @@ function getPointsAndCatName(){
 
 function updatePointImage($itemId, $newFileName){
     
-    $rs = updatePoint($itemId, NULL, NULL, NULL, NULL, NULL, $newFileName);
-    
+    $rs = updatePoint($itemId, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, $newFileName);
+       
     return $rs;
     
 }

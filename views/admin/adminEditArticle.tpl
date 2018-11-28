@@ -1,7 +1,7 @@
-{* щаблон Редактирования одной экскурсии*}
+{* щаблон Редактирования одной Статьи*}
 
-<h1>{$smcountry}</h1>
         {foreach $rsArticle as $item name=article}
+<h1>Редактирование  статьи {$item['name']} - {$smcountry} </h1>
         <h3>ID = {$item['id']}  </h3>
         <h2>Не отображать</h2>
                 <div>                                   
@@ -63,7 +63,7 @@
      {/foreach} 
       </br>
       <h2>Загрузка изображений</h2>
-                <div>
+                <div class="uploadimg">
                     
                           <form action="/{$smcountry}/admin/uploadarticlesdescriptionimg/"  method="post" 
                                                             enctype="multipart/form-data">
