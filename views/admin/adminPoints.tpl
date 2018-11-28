@@ -1,4 +1,4 @@
-<h1>  Редактирование Points  - {$smcountry} </h1>
+<h1>  Редактирование Points  - {$smupCountry} </h1>
 <table >
      <tr>
         <th>ID</th>

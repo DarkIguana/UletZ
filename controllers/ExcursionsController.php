@@ -72,7 +72,11 @@ function toAction($smarty) {
     $smarty->assign('smKeywords', $keywords);
     
     $rsExcursion = getExcursionByName($nameExcursion);
-
+    $rspagetitle=$rsExcursion[0]['page_title'];
+if (!$rspagetitle){
+    $rspagetitle='Экскурсии';            
+};
+  $smarty->assign('rsPageTitle', $rspagetitle);
     $rsSubMenu = getMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
 
@@ -84,7 +88,7 @@ function toAction($smarty) {
     $smarty->assign('smFooter', $rsFooter);
     $smarty->assign('rsExcursion', $rsExcursion);
 
-    $smarty->assign('rsPageTitle', 'Экскурсии');
+    
     $smarty->assign('smPageDescription', $pageDescription);
 
 

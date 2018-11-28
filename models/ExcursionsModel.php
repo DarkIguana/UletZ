@@ -108,7 +108,7 @@ function getExcursionsAndCatName(){
  * обновление данных экскурсий
  * 
  **/ 
- function updateProduct ($itemId, $itemName, $itemNameUrl, $itemDescriptionTag, 
+ function updateProduct ($itemId, $itemName, $itemNameUrl, $itemPageTitle, $itemDescriptionTag, 
          $itemKeywordTag, $itemPrice, $itemStatus, $itemDescShort, $itemDesc, $itemCat, 
          $newFileName = null){
      global $db;                                                                                    
@@ -120,6 +120,9 @@ function getExcursionsAndCatName(){
       
      if ($itemNameUrl){
          $set[]="`name_url`='{$itemNameUrl}'";
+          }
+     if ($itemPageTitle){
+         $set[]="`page_title`='{$itemPageTitle}'";
           }
      if ($itemDescriptionTag){
          $set[]="`description_tag`='{$itemDescriptionTag}'";

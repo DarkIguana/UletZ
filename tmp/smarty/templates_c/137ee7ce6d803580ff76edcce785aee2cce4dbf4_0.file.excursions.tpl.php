@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-28 19:11:14
+/* Smarty version 3.1.32, created on 2018-11-28 19:54:23
   from '/home/lizard/www/site.local/views/old/excursions.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bfeda42055886_00247972',
+  'unifunc' => 'content_5bfee45f55ba83_78366296',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '137ee7ce6d803580ff76edcce785aee2cce4dbf4' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/excursions.tpl',
-      1 => 1543428671,
+      1 => 1543431259,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bfeda42055886_00247972 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfee45f55ba83_78366296 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="excursionsTwoList">
     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsExcursions']->value, 'item', false, NULL, 'excursion', array (
@@ -38,7 +38,9 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration']++;
 </a> </h2>
             </div>
             <p><?php echo $_smarty_tpl->tpl_vars['item']->value['description_short'];?>
-</p>
+ <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+/excursions/to-<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
+/" class="hrefstandart">Узнать подробнее...</a></p>
 
             <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /excursions/to-<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
@@ -72,8 +74,8 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_excursion']->value['iteration']++;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 </div>
-<a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-/points/" class="toPoints"> <h3>Другие экскурсии и список достопримечателтностей...</h3></a> 
+    <p class="toPoints"><a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+/points/" class="hrefstandart"> Другие экскурсии и список достопримечателтностей...</a> </p>
 
 
 <?php }

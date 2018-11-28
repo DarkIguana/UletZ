@@ -1,7 +1,7 @@
 {* щаблон Редактирования одной экскурсии*}
 
         {foreach $rsExcursion as $item name=excursion}
-<h1>Редактирование  экскурсии {$item['name']} - {$smcountry} </h1>
+<h1>Редактирование  экскурсии {$item['name']} - {$smupCountry} </h1>
             <h3>ID = {$item['id']}  </h3>
             <h2>Не отображать</h2>
                     <div>
@@ -38,6 +38,8 @@
         
 <h1>URL name</h1>
         <div><input type="edit" class="longText" id="itemNameUrl_{$item['id']}" value="{$item['name_url']}" />  </div>
+<h1>Page title</h1>
+        <div><input type="edit" class="longText" id="itemPageTitle_{$item['id']}" value="{$item['page_title']}" />  </div>
 
 <h1>Descriptoin Tag</h1>
         <div><input type="edit" class="longText" id="itemDescriptionTag_{$item['id']}" value="{$item['description_tag']}" />  </div>

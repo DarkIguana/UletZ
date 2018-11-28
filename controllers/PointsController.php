@@ -61,7 +61,11 @@ function theAction($smarty) {
     $rsMenu = getMenuByCounry($countryId);
 
     $rsPoint  = getPointByName($namePoint);
-
+ $rspagetitle=$rsPoint[0]['page_title'];
+if (!$rspagetitle){
+    $rspagetitle='Достопримечательности';            
+};
+  $smarty->assign('rsPageTitle', $rspagetitle);
     $rsSubMenu = getMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
     $rsFooter = getFooter();
@@ -83,7 +87,7 @@ function theAction($smarty) {
     
     $smarty->assign('rsPoint', $rsPoint);
 
-    $smarty->assign('rsPageTitle', 'Достопримечательности');
+   
   
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'onePoint');

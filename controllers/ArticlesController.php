@@ -111,7 +111,11 @@ function aboutAction($smarty) {
     $smarty->assign('smKeywords', $keywords);
    
     $rsArticle = getArticleByName($nameArticle);
-  
+  $rspagetitle=$rsArticle[0]['page_title'];
+if (!$rspagetitle){
+    $rspagetitle='Статьи';            
+};
+  $smarty->assign('rsPageTitle', $rspagetitle);
     $rsSubMenu = getMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
 
@@ -122,8 +126,7 @@ function aboutAction($smarty) {
     $rsFooter = getFooter();
     $smarty->assign('smFooter', $rsFooter);
     $smarty->assign('rsArticle', $rsArticle);
-    $smarty->assign('rsPageTitle', 'Статьи');
-    $smarty->assign('smPageDescription', $pageDescription);
+        $smarty->assign('smPageDescription', $pageDescription);
       
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'oneArticle');

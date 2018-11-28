@@ -1,7 +1,7 @@
 {* щаблон Редактирования одной Point*}
 
         {foreach $rsPoint as $item name=excursion}
-<h1>Редактирование  Point {$item['name']} - {$smcountry} </h1>
+<h1>Редактирование  Point {$item['name']} - {$smupCountry} </h1>
             <h3>ID = {$item['id']}  </h3>
             <h2>Не отображать</h2>
                     <div>

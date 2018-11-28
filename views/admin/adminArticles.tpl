@@ -1,4 +1,4 @@
-<h1> Редактирование Статей - {$smcountry} </h1>
+<h1> Редактирование Статей - {$smupCountry} </h1>
 <table >
     <tr>
         <th>ID</th>

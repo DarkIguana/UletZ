@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-22 15:33:52
+/* Smarty version 3.1.32, created on 2018-11-28 22:06:14
   from '/home/lizard/www/site.local/views/admin/adminPoints.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bf6be50040943_61575821',
+  'unifunc' => 'content_5bff0346012b47_58483897',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '46338573de73a10f13405e566eca3bea0e1b8908' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminPoints.tpl',
-      1 => 1540806534,
+      1 => 1543439098,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf6be50040943_61575821 (Smarty_Internal_Template $_smarty_tpl) {
-?><h1>  Редактирование Points  - <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+function content_5bff0346012b47_58483897 (Smarty_Internal_Template $_smarty_tpl) {
+?><h1>  Редактирование Points  - <?php echo $_smarty_tpl->tpl_vars['smupCountry']->value;?>
  </h1>
 <table >
      <tr>

@@ -123,7 +123,7 @@ function updateExcursionJs(itemId) {
     var itemName = $('#itemName_' + itemId).val();
     var itemNameUrl = $('#itemNameUrl_' + itemId).val();
     var itemPrice = $('#itemPrice_' + itemId).val();
-    
+    var itemPageTitle = $('#itemPageTitle_' + itemId).val();
     var itemDescriptionTag = $('#itemDescriptionTag_' + itemId).val();
     var itemKeywordTag = $('#itemKeywordTag_' + itemId).val();
     
@@ -138,7 +138,7 @@ function updateExcursionJs(itemId) {
         itemStatus = 0
     }
 
-    var postData = {itemId: itemId, itemName: itemName, itemNameUrl: itemNameUrl,
+    var postData = {itemId: itemId, itemName: itemName, itemNameUrl: itemNameUrl, itemPageTitle: itemPageTitle,
         itemDescriptionTag: itemDescriptionTag, itemKeywordTag:itemKeywordTag, 
         itemPrice: itemPrice, itemCatId: itemCatId, itemDescShort: itemDescShort, 
         itemDesc: itemDesc, itemStatus: itemStatus};

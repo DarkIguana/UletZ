@@ -88,7 +88,8 @@ function excursionsAction($smarty, $id, $country){
 
     $rsSubMenu = getAllMenuChildrenForCat($countryId);  
     $smarty->assign('smSubMenu', $rsSubMenu);
-        
+     $upCountry = ucfirst($country); 
+    $smarty->assign('smupCountry', $upCountry);   
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -134,7 +135,6 @@ function addexcursionAction($smarty, $id, $country){
  **/
 
 function editexcursionAction($smarty,$idExcursion, $country){
-    
     $countries =getMainCutMenu();
     $countryId = getCountryId($country); 
     $rsMenu = getMenuByCounry($countryId);
@@ -143,6 +143,9 @@ function editexcursionAction($smarty,$idExcursion, $country){
     
     $rsSubMenu = getAllMenuChildrenForCat($countryId);  
     $smarty->assign('smSubMenu', $rsSubMenu);
+    
+    $upCountry = ucfirst($country); 
+    $smarty->assign('smupCountry', $upCountry);
     
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
@@ -197,6 +200,7 @@ function updateexcursionAction(){
     $itemId                 = $_POST['itemId'];
     $itemName           = $_POST['itemName'];
     $itemNameUrl      = $_POST['itemNameUrl'];
+    $itemPageTitle      = $_POST['itemPageTitle'];
     $itemDescriptionTag      = $_POST['itemDescriptionTag'];
     $itemKeywordTag      = $_POST['itemKeywordTag'];
     $itemPrice            = $_POST['itemPrice'];
@@ -206,7 +210,7 @@ function updateexcursionAction(){
     $itemCat             = $_POST['itemCatId']; 
     //  $newFileName      = $_POST['newFileName'];   
     
-     $res=updateProduct($itemId, $itemName, $itemNameUrl, $itemDescriptionTag, $itemKeywordTag, $itemPrice, 
+     $res=updateProduct($itemId, $itemName, $itemNameUrl, $itemPageTitle, $itemDescriptionTag, $itemKeywordTag, $itemPrice, 
                                     $itemStatus, $itemDescShort, $itemDesc, $itemCat);
      
      if($res){
@@ -296,7 +300,8 @@ function articlesAction($smarty, $id, $country){
    
     $rsSubMenu = getAllMenuChildrenForCat($countryId);  
     $smarty->assign('smSubMenu', $rsSubMenu);
-    
+   $upCountry = ucfirst($country); 
+    $smarty->assign('smupCountry', $upCountry); 
     
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
@@ -357,6 +362,8 @@ function editarticleAction($smarty, $idArticle, $country){
     $rsSubMenu = getAllMenuChildrenForCat($countryId);  
     $smarty->assign('smSubMenu', $rsSubMenu);
     
+    $upCountry = ucfirst($country); 
+    $smarty->assign('smupCountry', $upCountry);
     
     $idArticle= isset($_GET['id']) ? $_GET['id'] : "2";
     $rsArticle = getArticleById($idArticle);
@@ -513,7 +520,8 @@ function pointsAction($smarty, $id, $country){
                              
     $rsSubMenu = getAllMenuChildrenForCat($countryId);  
     $smarty->assign('smSubMenu', $rsSubMenu);
-        
+     $upCountry = ucfirst($country); 
+    $smarty->assign('smupCountry', $upCountry);   
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -573,7 +581,8 @@ function editpointAction($smarty,$idPoint, $country){
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
     
-    
+    $upCountry = ucfirst($country); 
+    $smarty->assign('smupCountry', $upCountry);
     $smarty->assign('rsPoint', $rsPoint);
     
     $smarty->assign('pageTitle', 'Admin Page Point');

@@ -46,4 +46,4 @@
     {/foreach}
 
 </div>
-<a href="/{$smcountry}/points/" class="toPoints"> <h3>Другие экскурсии и список достопримечателтностей...</h3></a> 
+   <p class="toPoints"><a href="/{$smcountry}/points/" class="hrefstandart"> Другие экскурсии и список достопримечателтностей...</a> </p>

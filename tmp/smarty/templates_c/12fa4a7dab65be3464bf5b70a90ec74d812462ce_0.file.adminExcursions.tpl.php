@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-17 20:33:17
+/* Smarty version 3.1.32, created on 2018-11-28 22:06:11
   from '/home/lizard/www/site.local/views/admin/adminExcursions.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bf06cfd02ade3_23068367',
+  'unifunc' => 'content_5bff0343339ab0_23533045',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12fa4a7dab65be3464bf5b70a90ec74d812462ce' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminExcursions.tpl',
-      1 => 1540806525,
+      1 => 1543439098,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf06cfd02ade3_23068367 (Smarty_Internal_Template $_smarty_tpl) {
-?><h1>  Редактирование Экскурсий  - <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+function content_5bff0343339ab0_23533045 (Smarty_Internal_Template $_smarty_tpl) {
+?><h1>  Редактирование Экскурсий  - <?php echo $_smarty_tpl->tpl_vars['smupCountry']->value;?>
  </h1>
 <table >
      <tr>

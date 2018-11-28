@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-23 04:46:26
+/* Smarty version 3.1.32, created on 2018-11-28 22:06:06
   from '/home/lizard/www/site.local/views/admin/adminArticles.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bf77812248325_71468346',
+  'unifunc' => 'content_5bff033e5682d0_17838302',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'df58bf68ce98b281bb968dbf813782edfa764734' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminArticles.tpl',
-      1 => 1542944781,
+      1 => 1543439098,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf77812248325_71468346 (Smarty_Internal_Template $_smarty_tpl) {
-?><h1> Редактирование Статей - <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+function content_5bff033e5682d0_17838302 (Smarty_Internal_Template $_smarty_tpl) {
+?><h1> Редактирование Статей - <?php echo $_smarty_tpl->tpl_vars['smupCountry']->value;?>
  </h1>
 <table >
     <tr>
