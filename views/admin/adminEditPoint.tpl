@@ -1,7 +1,7 @@
-{* щаблон Редактирования одной экскурсии*}
+{* щаблон Редактирования одной Point*}
 
-<h1>{$smcountry}</h1>
         {foreach $rsPoint as $item name=excursion}
+<h1>Редактирование  Point {$item['name']} - {$smcountry} </h1>
             <h3>ID = {$item['id']}  </h3>
             <h2>Не отображать</h2>
                     <div>
@@ -59,7 +59,7 @@
      {/foreach} 
      </br>
       <h2>Загрузка изображений</h2>
-                <div>
+      <div class="uploadimg">
                     
                           <form action="/{$smcountry}/admin/uploadpointdescriptionimg/"  method="post" 
                                                             enctype="multipart/form-data">

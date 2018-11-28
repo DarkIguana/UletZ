@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-22 15:45:02
+/* Smarty version 3.1.32, created on 2018-11-28 11:48:36
   from '/home/lizard/www/site.local/views/admin/adminEditPoint.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bf6c0ee1b9ce3_48769103',
+  'unifunc' => 'content_5bfe7284c9d9b6_60811886',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a881ba0218404aa3938e684a9eaee494ada87e17' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminEditPoint.tpl',
-      1 => 1542897898,
+      1 => 1543401550,
       2 => 'file',
     ),
   ),
@@ -20,16 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf6c0ee1b9ce3_48769103 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfe7284c9d9b6_60811886 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<h1><?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-</h1>
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsPoint']->value, 'item', false, NULL, 'excursion', array (
 ));
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
+<h1>Редактирование  Point <?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+ - <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+ </h1>
             <h3>ID = <?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
   </h3>
             <h2>Не отображать</h2>
@@ -118,7 +119,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?> 
      </br>
       <h2>Загрузка изображений</h2>
-                <div>
+      <div class="uploadimg">
                     
                           <form action="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /admin/uploadpointdescriptionimg/"  method="post" 

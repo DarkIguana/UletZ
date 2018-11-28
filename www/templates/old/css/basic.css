@@ -67,6 +67,10 @@ h3 {
 .mobLogoImg {
     display: none; 
 }
+.hrefstandart{
+    color:  #1f618d;
+        text-decoration: underline;
+}
 /* --------------menu--------------- */
 .menuToggle{
     display: none;
@@ -270,9 +274,9 @@ align-self: center;
     background: #f1829c;
     width: 45%;
     text-decoration: underline;
-    font-size: 150%;
+   
 }
-/* end podrobno button */
+/* end podrobno button   font-size: 150%; */
 .toPoints{
      text-align:center;
      padding: 20px;

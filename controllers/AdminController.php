@@ -164,13 +164,17 @@ function editexcursionAction($smarty,$idExcursion, $country){
  **/
 
 function addexcursiontodbAction(){
+   $itemNameUrl            = $_POST['itemNameUrl'];  
+    $itemDescriptionTag  = $_POST['itemDescriptionTag'];  
+    $itemitemKeywordTag= $_POST['itemKeywordTag']; 
+    
     $itemName           = $_POST['itemName'];
     $itemPrice             = $_POST['itemPrice'];
     $itemDesc             = $_POST['itemDesc'];
     $itemDescShort     = $_POST['itemDescShort'];
     $itemCat               = $_POST['itemCatId'];
     $itemStatus          = $_POST['itemStatus'];                         
-    $res=insertExcursion($itemName, $itemPrice,$itemDescShort, $itemDesc, $itemCat, $itemStatus);
+    $res=insertExcursion($itemNameUrl, $itemDescriptionTag, $itemitemKeywordTag, $itemName, $itemPrice,$itemDescShort, $itemDesc, $itemCat, $itemStatus);
  
     if($res){
         $resData['success'] = 1;
@@ -475,10 +479,12 @@ function addarticletodbAction(){
     $itemText            = $_POST['itemText'];
     $itemTeg     = $_POST['itemTeg'];
     $itemCat               = $_POST['itemCatId'];
-  
+    $itemNameUrl            = $_POST['itemNameUrl'];  
+    $itemDescriptionTag   = $_POST['itemDescriptionTag'];  
+    $itemitemKeywordTag= $_POST['itemKeywordTag'];
     $itemStatus              = $_POST['itemStatus'];    
     
-    $res=insertArticleToDb($itemName, $itemTeaser,$itemText, $itemTeg, $itemCat, $itemStatus);
+    $res=insertArticleToDb($itemNameUrl, $itemDescriptionTag, $itemitemKeywordTag, $itemName, $itemTeaser,$itemText, $itemTeg, $itemCat, $itemStatus);
  
     if($res){
         $resData['success'] = 1;
@@ -582,12 +588,17 @@ function editpointAction($smarty,$idPoint, $country){
  **/
 
 function addPointToDbAction(){
+    $itemNameUrl            = $_POST['itemNameUrl'];  
+    $itemDescriptionTag   = $_POST['itemDescriptionTag'];  
+    $itemitemKeywordTag= $_POST['itemKeywordTag'];  
+              
     $itemName           = $_POST['itemName'];
     $itemDesc             = $_POST['itemDesc'];
     $itemDescShort     = $_POST['itemDescShort'];
     $itemCat               = $_POST['itemCatId'];
-    $itemStatus          = $_POST['itemStatus'];                         
-    $res=insertPoint($itemName, $itemDescShort, $itemDesc, $itemCat, $itemStatus);
+    $itemStatus          = $_POST['itemStatus'];    
+    
+    $res=insertPoint($itemNameUrl, $itemDescriptionTag, $itemitemKeywordTag, $itemName, $itemDescShort, $itemDesc, $itemCat, $itemStatus);
  
     if($res){
         $resData['success'] = 1;

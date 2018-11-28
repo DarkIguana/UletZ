@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-22 13:47:33
+/* Smarty version 3.1.32, created on 2018-11-28 11:36:10
   from '/home/lizard/www/site.local/views/admin/adminEditArticle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bf6a565cf04b7_26108970',
+  'unifunc' => 'content_5bfe6f9ad54ca1_53591661',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd02e1e9668a540fc0d7dc47c2e7c2ba08f81583e' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminEditArticle.tpl',
-      1 => 1542890842,
+      1 => 1543401361,
       2 => 'file',
     ),
   ),
@@ -20,16 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf6a565cf04b7_26108970 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfe6f9ad54ca1_53591661 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<h1><?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-</h1>
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsArticle']->value, 'item', false, NULL, 'article', array (
 ));
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
+<h1>Редактирование  экскурсии <?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+ - <?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+ </h1>
         <h3>ID = <?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
   </h3>
         <h2>Не отображать</h2>
@@ -126,7 +127,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?> 
       </br>
       <h2>Загрузка изображений</h2>
-                <div>
+                <div class="uploadimg">
                     
                           <form action="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /admin/uploadarticlesdescriptionimg/"  method="post" 

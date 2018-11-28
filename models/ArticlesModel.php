@@ -109,7 +109,7 @@ function getArticleByName($nameArticle){
 
 function updateArticleImage($itemId, $newFileName){
     
-    $rs = updateArticleInDb($itemId, NULL, NULL, NULL, NULL, NULL, NULL, NULL, $newFileName);
+    $rs = updateArticleInDb($itemId, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, $newFileName);
     
     return $rs;
     
@@ -177,17 +177,20 @@ function updateArticleImage($itemId, $newFileName){
   * 
   **/
  
- function insertArticleToDb($itemName, $itemTeaser,$itemText, $itemTeg, $itemCat, $itemStatus){
+ function insertArticleToDb($itemNameUrl, $itemDescriptionTag, $itemitemKeywordTag, $itemName, $itemTeaser,$itemText, $itemTeg, $itemCat, $itemStatus){
      global $db;
  
    $sql = "INSERT INTO `articles`
                   SET
                        `name`='{$itemName}',    
-                        `Teaser`='{$itemTeaser}',  
-                        `text` ='{$itemText}',
-                        `teg`='{$itemTeg}',   
-                        `category_id`='{$itemCat}',
-                        `status`='{$itemStatus}' " ; 
+                     `Teaser`='{$itemTeaser}',  
+                       `text` ='{$itemText}',
+                         `teg`='{$itemTeg}',   
+             `category_id`='{$itemCat}',
+                     `status`='{$itemStatus}',
+                 `name_url`= '{$itemNameUrl}',
+        `description_tag`= '{$itemDescriptionTag}',
+          `keywords_tag`=  '{$itemitemKeywordTag}' " ; 
    
   $rs = mysqli_query($db, $sql);
   return $rs;

@@ -4,6 +4,7 @@
         <title>{$rsPageTitle}</title>  
         <link rel="stylesheet" href="{$templateWebPath}css/main.css" type="text/css" />
         <link rel="alternate" type="application/rss+xml" title="Улетаем зимовать" href="http://uletaemzimovat.ru/rss/rss.php" />
+        <link rel="icon" type="image/png" href="/images/global/favicon.png" />
         <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
         <script type="text/javascript" src="/js/main.js" ></script>
         <meta name="description" content="{$smPageDescription}" />

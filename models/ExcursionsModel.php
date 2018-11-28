@@ -85,7 +85,7 @@ function getExcursionsAndCatName(){
   * 
  **/
  
- function insertExcursion($itemName, $itemPrice,$itemDescShort, $itemDesc, $itemCat, $itemStatus){
+ function insertExcursion($itemNameUrl, $itemDescriptionTag, $itemitemKeywordTag, $itemName, $itemPrice,$itemDescShort, $itemDesc, $itemCat, $itemStatus){
      global $db;
      
    $sql = "INSERT INTO `excursions`
@@ -95,7 +95,10 @@ function getExcursionsAndCatName(){
      `description_short` ='{$itemDescShort}',
                `description`='{$itemDesc}',   
                       `status`='{$itemStatus}',
-              `category_id`='{$itemCat}'   " ; 
+              `category_id`='{$itemCat}',
+                `name_url`= '{$itemNameUrl}',
+        `description_tag`= '{$itemDescriptionTag}',
+          `keywords_tag`=  '{$itemitemKeywordTag}'  " ; 
    
   $rs = mysqli_query($db, $sql);
   return $rs;
@@ -160,7 +163,7 @@ function getExcursionsAndCatName(){
 
 function updateProductImage($itemId, $newFileName){
     
-    $rs = updateProduct($itemId, NULL, NULL, NULL, NULL, NULL, NULL, $newFileName);
+    $rs = updateProduct($itemId, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, $newFileName);
     
     return $rs;
     

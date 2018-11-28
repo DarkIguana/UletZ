@@ -23,6 +23,7 @@ RewriteBase /
 
 RewriteRule ^([a-z]+)/([a-z]+)/(to)-(([a-z]+-*)*)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/(about)-(([a-z]+-*)*)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
+RewriteRule ^([a-z]+)/([a-z]+)/(the)-(([a-z]+-*)*)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
 
 #RewriteRule ^([a-z]+)/([a-z]+)/([a-z]+)/(([a-z]+-*)*)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/([a-z]+)/([a-z]+)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]

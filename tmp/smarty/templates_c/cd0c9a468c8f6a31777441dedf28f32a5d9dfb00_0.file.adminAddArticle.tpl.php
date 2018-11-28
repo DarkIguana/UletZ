@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-25 11:54:25
+/* Smarty version 3.1.32, created on 2018-11-28 10:49:33
   from '/home/lizard/www/site.local/views/admin/adminAddArticle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bfa7f61863b22_54452864',
+  'unifunc' => 'content_5bfe64adf26536_81379073',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd0c9a468c8f6a31777441dedf28f32a5d9dfb00' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminAddArticle.tpl',
-      1 => 1542966569,
+      1 => 1543398568,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bfa7f61863b22_54452864 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfe64adf26536_81379073 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2> Добавить Статью</h2>
 <h2>Не отображать</h2>
 <div>
@@ -45,9 +45,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </select>
 </div>
 <h1>URL name</h1>
-        <div><input type="edit" id="itemNameUrl_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
-" />  </div>
+        <div><input type="edit" id="newItemNameUrl"/>  </div>
+<small>только маленькие буквы, английские, без пробелов, можно исрользовать "-"</small>
+        <h1>Descriptoin Tag</h1>
+        <div><input type="edit" id="newItemDescriptionTag"/>  </div>
+<h1>Keyword</h1>
+        <div><input type="edit" id="newItemKeywordTag"/>  </div>
 <h2>Название</h2>
 <div>
     <input type="edit" id="newItemName" value=" " />   
