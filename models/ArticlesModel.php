@@ -120,7 +120,7 @@ function updateArticleImage($itemId, $newFileName){
  * 
  */
                
- function updateArticleInDb($itemId, $itemName, $itemNameUrl, $itemDescriptionTag, 
+ function updateArticleInDb($itemId, $itemName, $itemNameUrl, $itemPageTitle, $itemDescriptionTag, 
          $itemKeywordTag, $itemDate, $itemStatus, $itemTeaser, $itemText, $itemCat, 
          $itemTeg, $newFileName = null){
      global $db;                                                                                    
@@ -131,6 +131,9 @@ function updateArticleImage($itemId, $newFileName){
           }
       if ($itemNameUrl){
          $set[]="`name_url`='{$itemNameUrl}'";
+          }
+             if ($itemPageTitle){
+         $set[]="`page_title`='{$itemPageTitle}'";
           }
      if ($itemDescriptionTag){
          $set[]="`description_tag`='{$itemDescriptionTag}'";

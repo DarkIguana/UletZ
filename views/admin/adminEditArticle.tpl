@@ -2,11 +2,13 @@
 
         {foreach $rsArticle as $item name=article}
 <h3>Редактирование  статьи - {$item['name']} - {$smupCountry} - ID {$item['id']}  </h3>
-          
-        <h4  >Не отображать
-                                      
-            <input class="rightbox" type="checkbox" id="itemStatus_{$item['id']}" {if $item['status'] ==0 }checked="checked"{/if} />
-                </h4>
+  <br/>          
+<br/>     
+ <h4><label class="container">отображать
+  <input type="checkbox" id="itemStatus_{$item['id']}" {if $item['status'] ==0 }checked="checked"{/if} />
+  <span class="checkmark"></span>
+</label></h4>
+
                 <h4>Страна
         <select class="rightbox" id="itemCatId_{$item['id']}">
                      {foreach $countries as $itemCat}
@@ -36,7 +38,10 @@
         <div><input type="edit" class="longText" id="itemName_{$item['id']}" value="{$item['name']}" />  </div>
 <h4>URL name</h4>
         <div><input type="edit" class="longText" id="itemNameUrl_{$item['id']}" value="{$item['name_url']}" />  </div>
-<h4>Descriptoin Tag</h4>
+<h4>Page title</h4>
+        <div><input type="edit" class="longText" id="itemPageTitle_{$item['id']}" value="{$item['page_title']}" />  </div>
+
+        <h4>Descriptoin Tag</h4>
         <div><input type="edit" class="longText" id="itemDescriptionTag_{$item['id']}" value="{$item['description_tag']}" />  </div>
 <h4>Keyword</h4>
         <div><input type="edit" class="longText"  id="itemKeywordTag_{$item['id']}" value="{$item['keywords_tag']}" />  </div>

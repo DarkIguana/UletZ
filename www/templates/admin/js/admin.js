@@ -168,6 +168,7 @@ function updateArticleJs(itemId) {
     var itemName = $('#itemName_' + itemId).val();
     
     var itemNameUrl = $('#itemNameUrl_' + itemId).val();
+     var itemPageTitle = $('#itemPageTitle_' + itemId).val();
     var itemDescriptionTag = $('#itemDescriptionTag_' + itemId).val();
     var itemKeywordTag = $('#itemKeywordTag_' + itemId).val();
     
@@ -185,7 +186,7 @@ function updateArticleJs(itemId) {
         itemStatus = 0
     }
 
-    var postData = {itemId: itemId, itemName: itemName, itemNameUrl: itemNameUrl,
+    var postData = {itemId: itemId, itemName: itemName, itemNameUrl: itemNameUrl,  itemPageTitle: itemPageTitle,
         itemDescriptionTag: itemDescriptionTag, itemKeywordTag:itemKeywordTag, 
         itemDate: itemDate, itemCatId: itemCatId, itemTeaser: itemTeaser, itemText: itemText, 
         itemStatus: itemStatus, itemTeg: itemTeg};
@@ -309,6 +310,7 @@ function addPointJs() {
 function updatepointJs(itemId) {
     var itemName = $('#itemName_' + itemId).val();
     var itemNameUrl = $('#itemNameUrl_' + itemId).val();
+    var itemPageTitle = $('#itemPageTitle_' + itemId).val();
     var itemDescriptionTag = $('#itemDescriptionTag_' + itemId).val();
     var itemKeywordTag = $('#itemKeywordTag_' + itemId).val();
     var itemCatId = $('#itemCatId_' + itemId).val();
@@ -322,7 +324,7 @@ function updatepointJs(itemId) {
         itemStatus = 0
     }
 
-    var postData = {itemId: itemId, itemName: itemName,  itemNameUrl: itemNameUrl,
+    var postData = {itemId: itemId, itemName: itemName,  itemNameUrl: itemNameUrl,  itemPageTitle: itemPageTitle,
         itemDescriptionTag: itemDescriptionTag, itemKeywordTag:itemKeywordTag, 
         itemCatId: itemCatId, itemDescShort: itemDescShort, itemDesc: itemDesc,
         itemStatus: itemStatus};

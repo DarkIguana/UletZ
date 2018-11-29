@@ -447,8 +447,8 @@ function uploadarticlesdescriptionimgAction(){
 function updatearticleAction(){
     $itemId                 = $_POST['itemId'];
     $itemName           = $_POST['itemName'];
-    
     $itemNameUrl      = $_POST['itemNameUrl'];
+    $itemPageTitle      = $_POST['itemPageTitle'];
     $itemDescriptionTag      = $_POST['itemDescriptionTag'];
     $itemKeywordTag      = $_POST['itemKeywordTag'];
     
@@ -461,7 +461,7 @@ function updatearticleAction(){
     //  $newFileName      = $_POST['newFileName'];  
     
     
-     $res=updateArticleInDb($itemId, $itemName, $itemNameUrl, $itemDescriptionTag, 
+     $res=updateArticleInDb($itemId, $itemName, $itemNameUrl, $itemPageTitle, $itemDescriptionTag, 
              $itemKeywordTag, $itemDate, $itemStatus, $itemTeaser, $itemText, $itemCat, $itemTeg);
      
    if($res){
@@ -631,6 +631,7 @@ function updatepointAction(){
     $itemName           = $_POST['itemName'];
     
     $itemNameUrl      = $_POST['itemNameUrl'];
+     $itemPageTitle      = $_POST['itemPageTitle'];
     $itemDescriptionTag      = $_POST['itemDescriptionTag'];
     $itemKeywordTag      = $_POST['itemKeywordTag'];
     
@@ -640,7 +641,7 @@ function updatepointAction(){
     $itemCat             = $_POST['itemCatId']; 
     //  $newFileName      = $_POST['newFileName'];   
     
-     $res=updatePoint($itemId, $itemName, $itemNameUrl, $itemDescriptionTag, 
+     $res=updatePoint($itemId, $itemName, $itemNameUrl, $itemPageTitle, $itemDescriptionTag, 
              $itemKeywordTag, $itemStatus, $itemDescShort, $itemDesc, $itemCat);
      
      if($res){

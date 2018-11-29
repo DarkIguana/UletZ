@@ -1,54 +1,53 @@
 {* щаблон Редактирования одной Point*}
 
         {foreach $rsPoint as $item name=excursion}
-<h1>Редактирование  Point {$item['name']} - {$smupCountry} </h1>
-            <h3>ID = {$item['id']}  </h3>
-            <h2>Не отображать</h2>
-                    <div>
-                            <input type="checkbox" id="itemStatus_{$item['id']}" {if $item['status'] == 0 } checked="checked"{/if} />
-                    </div>
-            <h2>Изображение</h2>
-                <div>
-                    {if $item['image']}
-                      <img src="/images/points/{$smcountry}/{$item['image']}" width="400"/>
-                    {/if}
-                          <form action="/{$smcountry}/admin/uploadpointimg/"  method="post" 
-                                                            enctype="multipart/form-data">
-                                <input type="file" name="filename"></br>
-                                <input type="hidden" name="itemId" value="{$item['id']}"></br>
-                                <input type="submit" value="загрузить"></br>
-                       
-                        </form>
-             </div>
-            
-        
- 
-<h1>Страна</h1>
-        <div>
-            <select id="itemCatId_{$item['id']}">
-               
+<h3>Редактирование  Point {$item['name']} - {$smupCountry} - ID {$item['id']}  </h3>
+          
+           <h4><label class="container">отображать
+  <input type="checkbox" id="itemStatus_{$item['id']}" {if $item['status'] ==0 }checked="checked"{/if} />
+  <span class="checkmark"></span>
+</label></h4>
+<h4>Страна
+        <select class="rightbox" id="itemCatId_{$item['id']}">
                      {foreach $countries as $itemCat}
                          <option value="{$itemCat['id']}" {if $item['category_id'] == $itemCat['id'] } selected{/if}> {$itemCat['cat_name']}
                       {/foreach}    
                 </select>
-        </div>
-             
-<h1>Название</h1>
-        <div><input type="edit" id="itemName_{$item['id']}" value="{$item['name']}" />  </div>
-<h1>URL name</h1>
-        <div><input type="edit" id="itemNameUrl_{$item['id']}" value="{$item['name_url']}" />  </div>
-<h1>Descriptoin Tag</h1>
+        </h4>      
+                
+            <h4>Изображение</h4>
+                <div>
+                    {if $item['image']}
+                      <img src="/images/points/{$smcountry}/{$item['image']}" width="400"/>
+                    {/if}</br>
+                          <form action="/{$smcountry}/admin/uploadpointimg/"  method="post" 
+                                                            enctype="multipart/form-data">
+                                <input type="file" name="filename">
+                                <input type="hidden" name="itemId" value="{$item['id']}">
+                                <input class="buttonstand" type="submit" value="загрузить"></br>
+                       
+                        </form>
+             </div>
+ 
+<h4>Название</h4>
+        <div><input type="edit" class="longText" id="itemName_{$item['id']}" value="{$item['name']}" />  </div>
+<h4>URL name</h4>
+        <div><input type="edit" class="longText" id="itemNameUrl_{$item['id']}" value="{$item['name_url']}" />  </div>
+<h4>Page title</h4>
+        <div><input type="edit" class="longText" id="itemPageTitle_{$item['id']}" value="{$item['page_title']}" />  </div>
+
+        <h4>Descriptoin Tag</h4>
         <div><input type="edit" class="longText" id="itemDescriptionTag_{$item['id']}" value="{$item['description_tag']}" />  </div>
-<h1>Keyword</h1>
+<h4>Keyword</h4>
         <div><input type="edit" class="longText"  id="itemKeywordTag_{$item['id']}" value="{$item['keywords_tag']}" />  </div>
                     
-<h1>Описание короткое</h1>
+<h4>Описание короткое</h4>
         <div>
              <textarea rows="5"  class="longText" type="edit" id="itemDescShort_{$item['id']}" />{$item['description_short']}
          </textarea>
        </div>
          
-<h1>Описание</h1>
+<h4>Описание</h4>
           <div><textarea class="ckeditor" id="itemDesc_{$item['id']}">
                      {$item['description']}
                  </textarea>
@@ -63,15 +62,15 @@
                     
                           <form action="/{$smcountry}/admin/uploadpointdescriptionimg/"  method="post" 
                                                             enctype="multipart/form-data">
-                                <input type="file" name="filename"></br>
-                                <input type="hidden" name="itemId" value="{$item['id']}"></br>
-                                <input type="submit" value="загрузить"></br>
+                                <input type="file" name="filename">
+                                <input type="hidden" name="itemId" value="{$item['id']}">
+                                <input class="buttonstand" type="submit" value="загрузить"></br>
                        
                         </form>
              </div>
  <div>
      </br></br>
-                     <input type="button" value="Сохранить" onclick="updatepointJs('{$item['id']}');"/>
+                     <input class="save" type="button" value="Сохранить" onclick="updatepointJs('{$item['id']}');"/>
 </div>
 
                      

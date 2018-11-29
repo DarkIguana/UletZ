@@ -94,7 +94,7 @@ function getPointsAndCatName(){
  * 
  **/
  
- function updatePoint ($itemId, $itemName, $itemNameUrl, $itemDescriptionTag, 
+ function updatePoint ($itemId, $itemName, $itemNameUrl, $itemPageTitle, $itemDescriptionTag, 
              $itemKeywordTag, $itemStatus, $itemDescShort, $itemDesc, $itemCat, 
          $newFileName = null){
                 
@@ -106,6 +106,9 @@ function getPointsAndCatName(){
           }
       if ($itemNameUrl){
          $set[]="`name_url`='{$itemNameUrl}'";
+          }
+           if ($itemPageTitle){
+         $set[]="`page_title`='{$itemPageTitle}'";
           }
      if ($itemDescriptionTag){
          $set[]="`description_tag`='{$itemDescriptionTag}'";
