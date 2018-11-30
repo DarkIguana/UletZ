@@ -36,7 +36,7 @@ function indexAction($smarty, $id, $country) {
 function addnewcatAction() {
     $catMenuName = $_POST['newMenuCategoryName'];
     $catMenuParentId = $_POST['generalMenuCatId'];
- $res = insertCat($catMenuName, $catMenuParentId);
+    $res = insertCat($catMenuName, $catMenuParentId);
     if ($res) {
         $resData['success'] = 1;
         $resData['message'] = ' Категория добавлена';
@@ -55,7 +55,7 @@ function updatecategoryAction() {
     $itemId = $_POST['itemId'];
     $parentId = $_POST['parentId'];
     $newName = $_POST['newName'];
- $res = updateCategoryData($itemId, $parentId, $newName);
+    $res = updateCategoryData($itemId, $parentId, $newName);
 
     if ($res) {
         $resData['success'] = 1;
@@ -67,17 +67,18 @@ function updatecategoryAction() {
     echo json_encode($resData);
     return;
 }
+
 /** -------------------------Экскурсии ---------------* */
 
 /**
  * страница управления Экскурсиями
  * */
 function excursionsAction($smarty, $id, $country) {
-   $countries = getMainCutMenu();
+    $countries = getMainCutMenu();
     $countryId = getCountryId($country);
     $rsMenu = getMenuByCounry($countryId);
     $rsExcursionsHead = getHeadExcursionsByCat($countryId);
-   $rsSubMenu = getAllMenuChildrenForCat($countryId);
+    $rsSubMenu = getAllMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
     $upCountry = ucfirst($country);
     $smarty->assign('smupCountry', $upCountry);
@@ -87,7 +88,7 @@ function excursionsAction($smarty, $id, $country) {
     $smarty->assign('rsMenu', $rsMenu);
     $smarty->assign('rsExcursionsHead', $rsExcursionsHead);/** d($smarty); * */
     $smarty->assign('pageTitle', 'Admin Page');
-  loadTemplate($smarty, 'adminHeader');
+    loadTemplate($smarty, 'adminHeader');
     loadTemplate($smarty, 'adminExcursions');
     loadTemplate($smarty, 'adminFooter');
 }
@@ -96,7 +97,7 @@ function excursionsAction($smarty, $id, $country) {
  * страница добавления Экскурсии
  * */
 function addexcursionAction($smarty, $id, $country) {
- $countries = getMainCutMenu();
+    $countries = getMainCutMenu();
     $countryId = getCountryId($country);
     $rsMenu = getMenuByCounry($countryId);
     //$rsExcursions = getExcursionsAndCatName();
@@ -161,6 +162,7 @@ function addexcursiontodbAction() {
     echo json_encode($resData);
     return;
 }
+
 /**
  * получаем данные об экскурсии из формы и посылаем в БД
  * 
@@ -232,7 +234,7 @@ function uploadexcdescriptionimgAction() {
     // проверка загружен ли файл
     if (is_uploaded_file($_FILES['filename']['tmp_name'])) {
         $res = move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT'] . '/images/excursions/' . $country . '/' . $_FILES['filename']['name']);
-          if ($res) {
+        if ($res) {
             header("Location: /$country/admin/editexcursion/$itemId/");
         }
     }
@@ -454,14 +456,11 @@ function addpointAction($smarty, $id, $country) {
     //$rsExcursions = getExcursionsAndCatName();
     $rsSubMenu = getAllMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
-
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-
     $smarty->assign('pageTitle', 'Admin Page Point');
-
     loadTemplate($smarty, 'adminAddHeader');
     loadTemplate($smarty, 'adminAddPoint');
     loadTemplate($smarty, 'adminFooter');
@@ -471,27 +470,21 @@ function addpointAction($smarty, $id, $country) {
  * страница изменения одной Point
  * */
 function editpointAction($smarty, $idPoint, $country) {
-
     $countries = getMainCutMenu();
     $countryId = getCountryId($country);
     $rsMenu = getMenuByCounry($countryId);
     $idPoint = isset($_GET['id']) ? $_GET['id'] : "1";
     $rsPoint = getPointById($idPoint);
-
     $rsSubMenu = getAllMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
-
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-
     $upCountry = ucfirst($country);
     $smarty->assign('smupCountry', $upCountry);
     $smarty->assign('rsPoint', $rsPoint);
-
     $smarty->assign('pageTitle', 'Admin Page Point');
-
     loadTemplate($smarty, 'adminHeader');
     loadTemplate($smarty, 'adminEditPoint');
     loadTemplate($smarty, 'adminFooter');
@@ -505,15 +498,12 @@ function addPointToDbAction() {
     $itemPageTitle = $_POST['itemPageTitle'];
     $itemDescriptionTag = $_POST['itemDescriptionTag'];
     $itemitemKeywordTag = $_POST['itemKeywordTag'];
-
     $itemName = $_POST['itemName'];
     $itemDesc = $_POST['itemDesc'];
     $itemDescShort = $_POST['itemDescShort'];
     $itemCat = $_POST['itemCatId'];
     $itemStatus = $_POST['itemStatus'];
-
     $res = insertPoint($itemNameUrl, $itemPageTitle, $itemDescriptionTag, $itemitemKeywordTag, $itemName, $itemDescShort, $itemDesc, $itemCat, $itemStatus);
-
     if ($res) {
         $resData['success'] = 1;
         $resData['message'] = ' Изменения успншно внесены';
@@ -533,12 +523,10 @@ function addPointToDbAction() {
 function updatepointAction() {
     $itemId = $_POST['itemId'];
     $itemName = $_POST['itemName'];
-
     $itemNameUrl = $_POST['itemNameUrl'];
     $itemPageTitle = $_POST['itemPageTitle'];
     $itemDescriptionTag = $_POST['itemDescriptionTag'];
     $itemKeywordTag = $_POST['itemKeywordTag'];
-
     $itemStatus = $_POST['itemStatus'];
     $itemDescShort = $_POST['itemDescShort'];
     $itemDesc = $_POST['itemDesc'];
@@ -595,7 +583,6 @@ function uploadpointimgAction() {
  * */
 function uploadpointdescriptionimgAction() {
     $country = isset($_GET['country']) ? $_GET['country'] : null;
-
     $maxSize = 2 * 1024 * 1024;
     $itemId = $_POST['itemId'];
 
@@ -619,25 +606,19 @@ function uploadpointdescriptionimgAction() {
  * страница управления добавить
  * */
 function addAction($smarty, $id, $country) {
-
     $countries = getMainCutMenu();
     $countryId = getCountryId($country);
     $rsMenu = getMenuByCounry($countryId);
-
-
     $rsSubMenu = getAllMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
-
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-
     /** d($smarty); 
      *  $rsExcursionsHead = getHeadExcursionsByCat($countryId);
      *   $smarty->assign('rsExcursionsHead', $rsExcursionsHead); * */
     $smarty->assign('pageTitle', 'Admin Page');
-
     loadTemplate($smarty, 'adminAddHeader');
     loadTemplate($smarty, 'adminAdd');
     loadTemplate($smarty, 'adminFooter');

@@ -69,7 +69,7 @@ h3 {
 }
 .hrefstandart{
     color:  #1f618d;
-        text-decoration: underline;
+    text-decoration: underline;
 }
 /* --------------menu--------------- */
 .menuToggle{
@@ -77,7 +77,7 @@ h3 {
     cursor: pointer;
 }
 .menuBlockMob{
-   display: none; 
+    display: none; 
 }
 .menuBlock li {
     display: inline-block;
@@ -95,7 +95,7 @@ h3 {
 }
 .countryMenu{
     margin-top: 17px;
-  }
+}
 #countryMenuActive{
     background: #f1829c;
     border-radius: 5px;
@@ -154,7 +154,7 @@ h3 {
     max-width: 600px; 
     margin-left: auto;
     margin-right: auto;
-     text-align: center;
+    text-align: center;
 }
 .articleHeader{
     text-align: center;
@@ -179,9 +179,9 @@ figcaption{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-       /* justify-content: center;
+    /* justify-content: center;
 align-self: center;
-   margin: 10px; */ 
+margin: 10px; */ 
     align-items: stretch;
 }
 
@@ -210,22 +210,22 @@ align-self: center;
 .excursionsTwoList{
     display: flex;
     flex-wrap: wrap;
-     justify-content: space-between;
-   /* justify-content: center; */
-    
+    justify-content: space-between;
+    /* justify-content: center; */
+
 }
 .excursionsListItemBox{ 
     display: flex;
     flex-direction: column;  
-   /* margin: 1%; */
+    /* margin: 1%; */
     margin: 14px 0; 
 }
 .imgConteinerArticleHead {
     width: 300px;
 }
-   figure img{
-        width: 100%;
-    }
+figure img{
+    width: 100%;
+}
 .price_table {
     width: 100%; /* Ширина таблицы */
     border-collapse: collapse; /* Убираем двойные линии между ячейками */
@@ -277,13 +277,13 @@ align-self: center;
     background: #f1829c;
     width: 45%;
     text-decoration: underline;
-   
+
 }
 /* end podrobno button   font-size: 150%; */
 .toPoints{
-     text-align:center;
-     padding: 20px;
-    
+    text-align:center;
+    padding: 20px;
+
 }
 /* --------------IMG--------------- */
 .img_conteiner {
@@ -310,10 +310,10 @@ align-self: center;
     width: 3%;
 }
 .priceBlockWrapper{
-   background: url(/images/global/bluedot.png) repeat-y;
-   background-size: 0.5%;
-   padding-left: 2%; 
-   margin-top: 10px;
+    background: url(/images/global/bluedot.png) repeat-y;
+    background-size: 0.5%;
+    padding-left: 2%; 
+    margin-top: 10px;
 }
 div.priceBlockWrapper p{
     padding-top: 0;
@@ -343,10 +343,10 @@ div.priceBlockWrapper p{
     color: #fff;
     padding: 0 20px 0 20px;
 }
- .bottom_article{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        font-size: 100%;     
-    }
+.bottom_article{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 100%;     
+}

@@ -222,7 +222,7 @@ function addArticleJs() {
     var itemDescriptionTag = $('#newItemDescriptionTag').val();
     var itemKeywordTag = $('#newItemKeywordTag').val();
     var itemStatus = $('#newItemStatus').prop('checked');
-    if (!itemStatus) {     
+    if (!itemStatus) {
         itemStatus = 1
     } else {
         itemStatus = 0

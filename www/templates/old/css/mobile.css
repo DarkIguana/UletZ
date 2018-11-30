@@ -22,7 +22,7 @@ and (max-device-width : 600px)
     .countryMenu{
         margin-top: 0px;
         font-size: 250%;
- }
+    }
     .menu-icon {
         height: 50px;
         width: 50px;
@@ -32,8 +32,8 @@ and (max-device-width : 600px)
 
     }
     .mobileMenuHeader{
-      display: inline; 
-      color: #fff;
+        display: inline; 
+        color: #fff;
         padding-left: 9px;
 
     }
@@ -125,13 +125,13 @@ and (max-device-width : 600px)
     .subMenu a:nth-child(n+1){
         background-color: #3b5252;
     }
-   .menuBlockMob ul:last-child{
+    .menuBlockMob ul:last-child{
         padding-bottom: 600px;
     } 
     /*-------------------------- menu end----------------------*/ 
     .phoneBox {
-         background-position: 0 10%, 0 100%;	
-   }
+        background-position: 0 10%, 0 100%;	
+    }
     .collomnWidh{
         width: 100%;  
     }
@@ -161,14 +161,14 @@ and (max-device-width : 600px)
         font-size: 2em;
     }
     h3 {
-       padding-left: 15px; 
+        padding-left: 15px; 
     }
     #content_Block{
         padding-top: 160px;  
     }
     .iconmessengers {
-   padding-top: 20px;
-}
+        padding-top: 20px;
+    }
     #imgHeaderArticles{
         float: none;
         padding: 3px 0px;
@@ -192,10 +192,10 @@ and (max-device-width : 600px)
         margin: 5px 0px;
     }
     .toPoints{
-      padding-top: 50px;
-      padding-bottom: 50px;
-     font-size: 150%;    
-}
+        padding-top: 50px;
+        padding-bottom: 50px;
+        font-size: 150%;    
+    }
     #button_back{
         padding-top: 40px;
         padding-bottom: 40px;
@@ -204,7 +204,7 @@ and (max-device-width : 600px)
         margin-right: auto;
         font-size: inherit;
         max-width: 600px;
-          border-radius: 15px;
+        border-radius: 15px;
     }
     .bottom_article_exc{
         display: flex;
@@ -213,16 +213,15 @@ and (max-device-width : 600px)
         align-items: center;
         font-size: 190%;     
     }
-     .bottom_article{
+    .bottom_article{
         font-size: 190%;     
     }
     .priceBlock{
         display: inline;
         width: 8%;
     }
-.priceBlockWrapper{
-margin: 0 40px 0 40px;
-}
+    .priceBlockWrapper{
+        margin: 0 40px 0 40px;
+    }
 }
 
-    

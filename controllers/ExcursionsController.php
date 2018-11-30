@@ -11,44 +11,39 @@ include_once '../models/TagModel.php'; // функции формрования 
  * 
  * @param object $smarty шаблонизатор
  */
+
 function indexAction($smarty, $id, $country) {
     $countries = getMainCutMenu();
     $countryId = getCountryId($country);
     $rsMenu = getMenuByCounry($countryId);
     $rsExcursions = getActiveExcursionsByCat($countryId);
-    
     $pageDescriptionArray = getDescription($countryId, 'excursions');
-    $pageDescriptionTmp = array_shift($pageDescriptionArray);  
-    $pageDescription = array_shift($pageDescriptionTmp);  
- 
-    $keywordsArray = getKeywordsTagPrime($countryId,  'excursions');
-    $keywordsTmp = array_shift($keywordsArray);  
+    $pageDescriptionTmp = array_shift($pageDescriptionArray);
+    $pageDescription = array_shift($pageDescriptionTmp);
+    $keywordsArray = getKeywordsTagPrime($countryId, 'excursions');
+    $keywordsTmp = array_shift($keywordsArray);
     $keywords = array_shift($keywordsTmp);
     $smarty->assign('smKeywords', $keywords);
-    
     $rsSubMenu = getMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
-
     $rsIntro = getIntro($countryId);
     $smarty->assign('smIntro', $rsIntro);
-    $rsIntrotemp=$rsIntro[1];
-    $pageTitle=$rsIntrotemp['name'] ;
+    $rsIntrotemp = $rsIntro[1];
+    $pageTitle = $rsIntrotemp['name'];
     $rsFooter = getFooter();
     $smarty->assign('smFooter', $rsFooter);
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
     $smarty->assign('rsMenu', $rsMenu);
-
     $smarty->assign('rsExcursions', $rsExcursions);
-
     $smarty->assign('rsPageTitle', $pageTitle);
     $smarty->assign('smPageDescription', $pageDescription);
-   
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'excursions');
     loadTemplate($smarty, 'footer');
 }
+
 /**
  * формирование  страницы 1 экскурсии по name_url
  * 
@@ -57,29 +52,24 @@ function indexAction($smarty, $id, $country) {
 function toAction($smarty) {
     $nameExcursion = isset($_GET['name_url']) ? $_GET['name_url'] : "KoTalu";
     $country = isset($_GET['country']) ? $_GET['country'] : "thailand";
-
     $countries = getMainCutMenu();
     $countryId = getCountryId($country);
     $rsMenu = getMenuByCounry($countryId);
-
     $pageDescriptionArray = getDescriptionTag($nameExcursion, 'excursions');
-    $pageDescriptionTmp = array_shift($pageDescriptionArray);  
-    $pageDescription = array_shift($pageDescriptionTmp);  
-    
+    $pageDescriptionTmp = array_shift($pageDescriptionArray);
+    $pageDescription = array_shift($pageDescriptionTmp);
     $keywordsArray = getKeywordsTag($nameExcursion, 'excursions');
-    $keywordsTmp = array_shift($keywordsArray);  
+    $keywordsTmp = array_shift($keywordsArray);
     $keywords = array_shift($keywordsTmp);
     $smarty->assign('smKeywords', $keywords);
-    
     $rsExcursion = getExcursionByName($nameExcursion);
-    $rspagetitle=$rsExcursion[0]['page_title'];
-if (!$rspagetitle){
-    $rspagetitle='Экскурсии';            
-};
-  $smarty->assign('rsPageTitle', $rspagetitle);
+    $rspagetitle = $rsExcursion[0]['page_title'];
+    if (!$rspagetitle) {
+        $rspagetitle = 'Экскурсии';
+    };
+    $smarty->assign('rsPageTitle', $rspagetitle);
     $rsSubMenu = getMenuChildrenForCat($countryId);
     $smarty->assign('smSubMenu', $rsSubMenu);
-
     $smarty->assign('countries', $countries);
     $smarty->assign('smcountry', $country);
     $smarty->assign('countryId', $countryId);
@@ -87,13 +77,8 @@ if (!$rspagetitle){
     $rsFooter = getFooter();
     $smarty->assign('smFooter', $rsFooter);
     $smarty->assign('rsExcursion', $rsExcursion);
-
-    
     $smarty->assign('smPageDescription', $pageDescription);
-
-
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'oneExcursion');
     loadTemplate($smarty, 'footer');
 }
-
