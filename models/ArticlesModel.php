@@ -1,76 +1,74 @@
 <?php
 
-/* 
+/*
  * модель для таблицы статей (articles)
  * 
  */
 
-function getArticles($limit = null){
+function getArticles($limit = null) {
     global $db;
     $sql = 'SELECT *
                             FROM `articles`
                             ORDER BY id DESC';
-                 if ($limit){
-                $sql.=" LIMIT {$limit}";
-        }
-  $rs = mysqli_query($db, $sql);
+    if ($limit) {
+        $sql .= " LIMIT {$limit}";
+    }
+    $rs = mysqli_query($db, $sql);
     return createSmartyRsArray($rs);
 }
 
- /**
+/**
  * получить список всех статей по стране
  * 
- **/
-
-function getArticlesByCat($countryId){
-     global $db;
+ * */
+function getArticlesByCat($countryId) {
+    global $db;
     $sql = "SELECT * 
                               FROM articles 
-                              WHERE category_id='{$countryId}'"; 
-  $rs = mysqli_query($db, $sql);
-  return createSmartyRsArray($rs);
- }
+                              WHERE category_id='{$countryId}'";
+    $rs = mysqli_query($db, $sql);
+    return createSmartyRsArray($rs);
+}
+
 /**
  * получить список заголовков всех статей по стране
  * 
- **/
-
-function getHeadArticlesByCat($countryId){
-     global $db;
+ * */
+function getHeadArticlesByCat($countryId) {
+    global $db;
     $sql = "SELECT id, name, status, image 
                               FROM articles 
-                              WHERE category_id='{$countryId}'"; 
-  $rs = mysqli_query($db, $sql);
-  return createSmartyRsArray($rs);
- }
- /**
+                              WHERE category_id='{$countryId}'";
+    $rs = mysqli_query($db, $sql);
+    return createSmartyRsArray($rs);
+}
+
+/**
  * получить список всех активных статей по стране
  * 
- **/
-
-function getActiveArticlesByCat($countryId){
-     global $db;
+ * */
+function getActiveArticlesByCat($countryId) {
+    global $db;
     $sql = "SELECT * 
                               FROM articles 
                               WHERE `category_id`='{$countryId}'
-                              AND `status`='1'  "; 
-  $rs = mysqli_query($db, $sql);
-  return createSmartyRsArray($rs);
- }
- 
+                              AND `status`='1'  ";
+    $rs = mysqli_query($db, $sql);
+    return createSmartyRsArray($rs);
+}
 
- /*
+/*
  * список статей с именем категории
  */
 
-function getArticlesAndCatName(){
+function getArticlesAndCatName() {
     global $db;
     $sql = 'SELECT art.*, cat.cat_name 
                     FROM `articles`AS `art` 
                     LEFT JOIN `menu`AS `cat` 
                     ON art.category_id=cat.id 
                     ORDER BY id';
-   $rs = mysqli_query($db, $sql);
+    $rs = mysqli_query($db, $sql);
     return createSmartyRsArray($rs);
 }
 
@@ -78,28 +76,28 @@ function getArticlesAndCatName(){
  * получить статю с именем категории по ID
  */
 
-function getArticleById($articleId){
+function getArticleById($articleId) {
     global $db;
     $articleId = intval($articleId);
-            $sql = "SELECT art.*, m.cat_name 
+    $sql = "SELECT art.*, m.cat_name 
                 FROM `articles`AS `art` 
                 LEFT JOIN `menu`AS `m` ON art.category_id=m.id 
                 WHERE art.id='{$articleId}' ";
-        $rs= mysqli_query($db, $sql);
-          return createSmartyRsArray($rs);
+    $rs = mysqli_query($db, $sql);
+    return createSmartyRsArray($rs);
 }
+
 /*
  * получить статю с именем категории по Name
  */
 
-function getArticleByName($nameArticle){
+function getArticleByName($nameArticle) {
     global $db;
-              $sql = "SELECT *
+    $sql = "SELECT *
                 FROM `articles`
                 WHERE name_url='{$nameArticle}' ";
-        $rs= mysqli_query($db, $sql);
-          return createSmartyRsArray($rs);                
-       
+    $rs = mysqli_query($db, $sql);
+    return createSmartyRsArray($rs);
 }
 
 /*
@@ -107,83 +105,80 @@ function getArticleByName($nameArticle){
  * 
  */
 
-function updateArticleImage($itemId, $newFileName){
-    
-    $rs = updateArticleInDb($itemId, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, $newFileName);
-    
+function updateArticleImage($itemId, $newFileName) {
+
+    $rs = updateArticleInDb($itemId, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, $newFileName);
+
     return $rs;
-    
 }
 
 /*
  * обновление данных стати
  * 
  */
-               
- function updateArticleInDb($itemId, $itemName, $itemNameUrl, $itemPageTitle, $itemDescriptionTag, 
-         $itemKeywordTag, $itemDate, $itemStatus, $itemTeaser, $itemText, $itemCat, 
-         $itemTeg, $newFileName = null){
-     global $db;                                                                                    
-     $set = array();
-     
-     if ($itemName){
-         $set[]="`name`='{$itemName}'";
-          }
-      if ($itemNameUrl){
-         $set[]="`name_url`='{$itemNameUrl}'";
-          }
-             if ($itemPageTitle){
-         $set[]="`page_title`='{$itemPageTitle}'";
-          }
-     if ($itemDescriptionTag){
-         $set[]="`description_tag`='{$itemDescriptionTag}'";
-          }
-     if ($itemKeywordTag){
-         $set[]="`keywords_tag`='{$itemKeywordTag}'";
-          }
-    if ($itemDate >0 ){
-         $set[]="`date`='{$itemDate}'";
-          }
-    if ($itemStatus !==null){
-         $set[]="`status`='{$itemStatus}'";
-        }
-    if ($itemTeg){
-         $set[]="`teg`='{$itemTeg}'";
-          }
-     if ($itemTeaser){
-         $set[]="`teaser`='{$itemTeaser}'";
-          }
-     if ($itemText){
-         $set[]="`text`='{$itemText}'";
-          }
-     if ($itemCat){
-         $set[]="`category_id`='{$itemCat}'";
-          }
-    if ($newFileName){
-         $set[]="`image`='{$newFileName}'";
-          }
-          
-   $setStr = implode($set, ",");
-   
-   $sql = "UPDATE `articles` 
+
+function updateArticleInDb($itemId, $itemName, $itemNameUrl, $itemPageTitle, $itemDescriptionTag, $itemKeywordTag, $itemDate, $itemStatus, $itemTeaser, $itemText, $itemCat, $itemTeg, $newFileName = null) {
+    global $db;
+    $set = array();
+
+    if ($itemName) {
+        $set[] = "`name`='{$itemName}'";
+    }
+    if ($itemNameUrl) {
+        $trimmedItemNameUrl = trim($itemNameUrl);
+        $cleanItemNameUrl = strtolower($trimmedItemNameUrl);
+        $set[] = "`name_url`='{$cleanItemNameUrl}'";
+    }
+    if ($itemPageTitle) {
+        $set[] = "`page_title`='{$itemPageTitle}'";
+    }
+    if ($itemDescriptionTag) {
+        $set[] = "`description_tag`='{$itemDescriptionTag}'";
+    }
+    if ($itemKeywordTag) {
+        $set[] = "`keywords_tag`='{$itemKeywordTag}'";
+    }
+    if ($itemDate > 0) {
+        $set[] = "`date`='{$itemDate}'";
+    }
+    if ($itemStatus !== null) {
+        $set[] = "`status`='{$itemStatus}'";
+    }
+    if ($itemTeg) {
+        $set[] = "`teg`='{$itemTeg}'";
+    }
+    if ($itemTeaser) {
+        $set[] = "`teaser`='{$itemTeaser}'";
+    }
+    if ($itemText) {
+        $set[] = "`text`='{$itemText}'";
+    }
+    if ($itemCat) {
+        $set[] = "`category_id`='{$itemCat}'";
+    }
+    if ($newFileName) {
+        $set[] = "`image`='{$newFileName}'";
+    }
+
+    $setStr = implode($set, ",");
+
+    $sql = "UPDATE `articles` 
                     SET {$setStr}
                     WHERE id = '{$itemId}' ";
-                    
-   $rs = mysqli_query($db, $sql);
+
+    $rs = mysqli_query($db, $sql);
     return $rs;
 }
 
-
-
-  /**
-  * добавляем новую статью
-  * 
-  **/
- 
- function insertArticleToDb($itemNameUrl, $itemDescriptionTag, $itemitemKeywordTag, $itemName, $itemTeaser,$itemText, $itemTeg, $itemCat, $itemStatus){
-     global $db;
- 
-   $sql = "INSERT INTO `articles`
+/**
+ * добавляем новую статью
+ * 
+ * */
+function insertArticleToDb($itemNameUrl, $itemPageTitle, $itemDescriptionTag, $itemitemKeywordTag, $itemName, $itemTeaser, $itemText, $itemTeg, $itemCat, $itemStatus) {
+    global $db;
+    $trimmedItemNameUrl = trim($itemNameUrl);
+    $cleanItemNameUrl = strtolower($trimmedItemNameUrl);
+    $sql = "INSERT INTO `articles`
                   SET
                        `name`='{$itemName}',    
                      `Teaser`='{$itemTeaser}',  
@@ -191,30 +186,32 @@ function updateArticleImage($itemId, $newFileName){
                          `teg`='{$itemTeg}',   
              `category_id`='{$itemCat}',
                      `status`='{$itemStatus}',
-                 `name_url`= '{$itemNameUrl}',
+                 `name_url`= '{$cleanItemNameUrl}',
+                `page_title`= '{$itemPageTitle}',
         `description_tag`= '{$itemDescriptionTag}',
-          `keywords_tag`=  '{$itemitemKeywordTag}' " ; 
-   
-  $rs = mysqli_query($db, $sql);
-  return $rs;
- }
- /**
+          `keywords_tag`=  '{$itemitemKeywordTag}' ";
+
+    $rs = mysqli_query($db, $sql);
+    return $rs;
+}
+
+/**
  * получить pageTitle (по стране)
  * 
- **/
- function getPageTitle($countryId){
-     global $db;
+ * */
+function getPageTitle($countryId) {
+    global $db;
     $sql = "SELECT description
                               FROM menu
-                              WHERE parent_id='{$countryId}' AND url_cat_name='articles'"; 
-  $rs = mysqli_query($db, $sql);
-   return createSmartyRsArray($rs);
-   /** 
-   $array = mysqli_query($db, $sql);
-    $row = mysqli_fetch_assoc($array);
-    $rs = $row['id'];
-   
-    return $rs;
-    * 
-    */
- }
+                              WHERE parent_id='{$countryId}' AND url_cat_name='articles'";
+    $rs = mysqli_query($db, $sql);
+    return createSmartyRsArray($rs);
+    /**
+      $array = mysqli_query($db, $sql);
+      $row = mysqli_fetch_assoc($array);
+      $rs = $row['id'];
+
+      return $rs;
+     * 
+     */
+}

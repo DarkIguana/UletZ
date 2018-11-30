@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-29 07:08:15
+/* Smarty version 3.1.32, created on 2018-11-30 18:22:42
   from '/home/lizard/www/site.local/views/admin/adminEditExcursion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bff824f7df068_55530222',
+  'unifunc' => 'content_5c0171e2f411e4_03595574',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '98d7a1383cebeae405cd7044b96837bbb2b10ffe' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminEditExcursion.tpl',
-      1 => 1543471692,
+      1 => 1543598559,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bff824f7df068_55530222 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c0171e2f411e4_03595574 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsExcursion']->value, 'item', false, NULL, 'excursion', array (
@@ -74,11 +74,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </form>
              </div>
                
-<h4>Название</h4>
-        <div><input type="edit" class="longText" id="itemName_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
-" />  </div>
-        
+       
 <h4>URL name</h4>
         <div><input type="edit" class="longText" id="itemNameUrl_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
@@ -87,7 +83,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <div><input type="edit" class="longText" id="itemPageTitle_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['page_title'];?>
 " />  </div>
-
 <h4>Descriptoin Tag</h4>
         <div><input type="edit" class="longText" id="itemDescriptionTag_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['description_tag'];?>
@@ -96,13 +91,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <div><input type="edit" class="longText" id="itemKeywordTag_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['keywords_tag'];?>
 " />  </div>
-                
 <h4>Цена</h4>
         <div><input type="edit" class="longText" id="itemPrice_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
 " /></div>
-        
-<h4>Описание короткое</h4>
+<h4>Название</h4>
+        <div><input type="edit" class="longText" id="itemName_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+" />  </div>
+ <h4>Описание короткое</h4>
         <div>
              <textarea rows="5"  class="longText" type="edit" id="itemDescShort_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " /><?php echo $_smarty_tpl->tpl_vars['item']->value['description_short'];?>
@@ -110,7 +107,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
          </textarea>
          </div>
          
-<h4>Описание</h4>
+<h4>Описание полное</h4>
           <div><textarea class="ckeditor" id="itemDesc_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['item']->value['description'];?>
 

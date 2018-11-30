@@ -3,92 +3,87 @@
 /**
  * модель для таблицы экскурсий (Excursions)
  * 
- **/
+ * */
 
- /**
+/**
  * получить список всех экскурсий по категории
  * 
- **/
-
-function getExcursions (){
-     global $db;
+ * */
+function getExcursions() {
+    global $db;
     $sql = 'SELECT * 
                               FROM excursions 
-                              ORDER BY category_id'; 
-  $rs = mysqli_query($db, $sql);
-  return createSmartyRsArray($rs);
- }
+                              ORDER BY category_id';
+    $rs = mysqli_query($db, $sql);
+    return createSmartyRsArray($rs);
+}
 
-  /**
+/**
  * получить список всех экскурсий по категории (стране)
  * 
- **/
-function getHeadExcursionsByCat($countryId){
-     global $db;
+ * */
+function getHeadExcursionsByCat($countryId) {
+    global $db;
     $sql = "SELECT id, name, status, image
                               FROM excursions 
                               WHERE category_id='{$countryId}'
-                              ORDER BY id ASC"; 
-  $rs = mysqli_query($db, $sql);
-  return createSmartyRsArray($rs);
- }
- 
- /**
+                              ORDER BY id ASC";
+    $rs = mysqli_query($db, $sql);
+    return createSmartyRsArray($rs);
+}
+
+/**
  * получить список заголовков всех экскурсий по сране
  * 
- **/
-
-function getExcursionsByCat($countryId){
-     global $db;
+ * */
+function getExcursionsByCat($countryId) {
+    global $db;
     $sql = "SELECT * 
                               FROM excursions 
                               WHERE category_id='{$countryId}'
-                              ORDER BY id ASC"; 
-  $rs = mysqli_query($db, $sql);
-  return createSmartyRsArray($rs);
- }
- 
-  /**
+                              ORDER BY id ASC";
+    $rs = mysqli_query($db, $sql);
+    return createSmartyRsArray($rs);
+}
+
+/**
  * получить список всех активных экскурсий по категории (стране)
  * 
- **/
-
-function getActiveExcursionsByCat($countryId){
-     global $db;
+ * */
+function getActiveExcursionsByCat($countryId) {
+    global $db;
     $sql = " SELECT id, name, name_url, description_short, price, image
                 FROM `excursions` 
                 WHERE `category_id`='{$countryId}' 
                 AND `status`='1'
-                ORDER BY `id` ASC"; 
-  $rs = mysqli_query($db, $sql);
-  return createSmartyRsArray($rs);
- }
+                ORDER BY `id` ASC";
+    $rs = mysqli_query($db, $sql);
+    return createSmartyRsArray($rs);
+}
 
- 
- /**
+/**
  * список экскурсий с именем категории
- **/
-
-function getExcursionsAndCatName(){
+ * */
+function getExcursionsAndCatName() {
     global $db;
     $sql = 'SELECT exc.*, cat.cat_name 
                     FROM `excursions`AS `exc` 
                     LEFT JOIN `menu`AS `cat` 
                     ON exc.category_id=cat.id 
                     ORDER BY id';
-   $rs = mysqli_query($db, $sql);
+    $rs = mysqli_query($db, $sql);
     return createSmartyRsArray($rs);
 }
- 
- /**
-  * добавляем новую экскурсию
-  * 
- **/
- 
- function insertExcursion($itemNameUrl, $itemDescriptionTag, $itemitemKeywordTag, $itemName, $itemPrice,$itemDescShort, $itemDesc, $itemCat, $itemStatus){
-     global $db;
-     
-   $sql = "INSERT INTO `excursions`
+
+/**
+ * добавляем новую экскурсию
+ * 
+ * */
+function insertExcursion($itemNameUrl, $itemPageTitle, $itemDescriptionTag, $itemitemKeywordTag, $itemName, $itemPrice, $itemDescShort, $itemDesc, $itemCat, $itemStatus) {
+    global $db;
+    $trimmedItemNameUrl = trim($itemNameUrl);
+    $cleanItemNameUrl = strtolower($trimmedItemNameUrl);
+    $sql = "INSERT INTO `excursions`
                   SET
                        `name`='{$itemName}',    
                         `price`='{$itemPrice}',  
@@ -96,120 +91,118 @@ function getExcursionsAndCatName(){
                `description`='{$itemDesc}',   
                       `status`='{$itemStatus}',
               `category_id`='{$itemCat}',
-                `name_url`= '{$itemNameUrl}',
+                `name_url`= '{$cleanItemNameUrl}',
+                    `page_title`= '{$itemPageTitle}',
         `description_tag`= '{$itemDescriptionTag}',
-          `keywords_tag`=  '{$itemitemKeywordTag}'  " ; 
-   
-  $rs = mysqli_query($db, $sql);
-  return $rs;
- }
- 
- /**
- * обновление данных экскурсий
- * 
- **/ 
- function updateProduct ($itemId, $itemName, $itemNameUrl, $itemPageTitle, $itemDescriptionTag, 
-         $itemKeywordTag, $itemPrice, $itemStatus, $itemDescShort, $itemDesc, $itemCat, 
-         $newFileName = null){
-     global $db;                                                                                    
-     $set = array();
-     
-     if ($itemName){
-         $set[]="`name`='{$itemName}'";
-          }
-      
-     if ($itemNameUrl){
-         $set[]="`name_url`='{$itemNameUrl}'";
-          }
-     if ($itemPageTitle){
-         $set[]="`page_title`='{$itemPageTitle}'";
-          }
-     if ($itemDescriptionTag){
-         $set[]="`description_tag`='{$itemDescriptionTag}'";
-          }
-     if ($itemKeywordTag){
-         $set[]="`keywords_tag`='{$itemKeywordTag}'";
-          }
-    if ($itemPrice >0 ){
-         $set[]="`price`='{$itemPrice}'";
-          }
-    if ($itemStatus !==null){
-         $set[]="`status`='{$itemStatus}'";
-          }
-     if ($itemDescShort){
-         $set[]="`description_short`='{$itemDescShort}'";
-          }
-     if ($itemDesc){
-         $set[]="`description`='{$itemDesc}'";
-          }
-     if ($itemCat){
-         $set[]="`category_id`='{$itemCat}'";
-          }
-    if ($newFileName){
-         $set[]="`image`='{$newFileName}'";
-          }
-          
-   $setStr = implode($set, ",");
-   
-   $sql = "UPDATE `excursions` 
-                    SET {$setStr}
-                    WHERE id = '{$itemId}' ";
-                    
-   $rs = mysqli_query($db, $sql);
+          `keywords_tag`=  '{$itemitemKeywordTag}'  ";
+
+    $rs = mysqli_query($db, $sql);
     return $rs;
 }
- 
+
+/**
+ * обновление данных экскурсий
+ * 
+ * */
+function updateProduct($itemId, $itemName, $itemNameUrl, $itemPageTitle, $itemDescriptionTag, $itemKeywordTag, $itemPrice, $itemStatus, $itemDescShort, $itemDesc, $itemCat, $newFileName = null) {
+    global $db;
+    $set = array();
+
+    if ($itemName) {
+        $set[] = "`name`='{$itemName}'";
+    }
+
+    if ($itemNameUrl) {
+        $trimmedItemNameUrl = trim($itemNameUrl);
+        $cleanItemNameUrl = strtolower($trimmedItemNameUrl);
+        $set[] = "`name_url`='{$cleanItemNameUrl}'";
+    }
+    if ($itemPageTitle) {
+        $set[] = "`page_title`='{$itemPageTitle}'";
+    }
+    if ($itemDescriptionTag) {
+        $set[] = "`description_tag`='{$itemDescriptionTag}'";
+    }
+    if ($itemKeywordTag) {
+        $set[] = "`keywords_tag`='{$itemKeywordTag}'";
+    }
+    if ($itemPrice > 0) {
+        $set[] = "`price`='{$itemPrice}'";
+    }
+    if ($itemStatus !== null) {
+        $set[] = "`status`='{$itemStatus}'";
+    }
+    if ($itemDescShort) {
+        $set[] = "`description_short`='{$itemDescShort}'";
+    }
+    if ($itemDesc) {
+        $set[] = "`description`='{$itemDesc}'";
+    }
+    if ($itemCat) {
+        $set[] = "`category_id`='{$itemCat}'";
+    }
+    if ($newFileName) {
+        $set[] = "`image`='{$newFileName}'";
+    }
+
+    $setStr = implode($set, ",");
+
+    $sql = "UPDATE `excursions` 
+                    SET {$setStr}
+                    WHERE id = '{$itemId}' ";
+
+    $rs = mysqli_query($db, $sql);
+    return $rs;
+}
+
 /**
  * обновление фотографии экскурсий
  * 
- **/
+ * */
+function updateProductImage($itemId, $newFileName) {
 
-function updateProductImage($itemId, $newFileName){
-    
-    $rs = updateProduct($itemId, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, $newFileName);
-    
+    $rs = updateProduct($itemId, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, $newFileName);
+
     return $rs;
-    
 }
 
 /**
  * получить экскурсию с именем категории по ID
- **/
-
-function getExcursionById($excursionId){
+ * */
+function getExcursionById($excursionId) {
     global $db;
     $excursionId = intval($excursionId);
-            $sql = "SELECT exc.*, m.cat_name 
+    $sql = "SELECT exc.*, m.cat_name 
                 FROM `excursions`AS `exc` 
                 LEFT JOIN `menu`AS `m` ON exc.category_id=m.id 
                 WHERE exc.id='{$excursionId}' ";
-        $rs= mysqli_query($db, $sql);
-          return createSmartyRsArray($rs);     
+    $rs = mysqli_query($db, $sql);
+    return createSmartyRsArray($rs);
 }
 
 /**
  * получить экскурсию с именем категории по name_url
- **/
-
-function getExcursionByName($excursionName){
+ * */
+function getExcursionByName($excursionName) {
     global $db;
-           //$excursionName = string($excursionName);
-            $sql = "SELECT exc.*, m.cat_name 
+    //$excursionName = string($excursionName);
+    $sql = "SELECT exc.*, m.cat_name 
                 FROM `excursions`AS `exc` 
                 LEFT JOIN `menu`AS `m` ON exc.category_id=m.id 
                 WHERE exc.name_url='{$excursionName}' ";
-        $rs= mysqli_query($db, $sql);
-          return createSmartyRsArray($rs);   
+    $rs = mysqli_query($db, $sql);
+    return createSmartyRsArray($rs);
 }
+
 /**
  * получить intro (по стране)
  * 
- **/
-function getIntro($countryId){
-     global $db;
+ * */
+function getIntro($countryId) {
+    global $db;
     $sql = "SELECT * 
                               FROM general 
-                              WHERE category_id='{$countryId}'"; 
-  $rs = mysqli_query($db, $sql);
-  return createSmartyRsArray($rs);
- }
+                              WHERE category_id='{$countryId}'";
+    $rs = mysqli_query($db, $sql);
+    return createSmartyRsArray($rs);
+}

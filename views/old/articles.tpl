@@ -10,7 +10,7 @@
         <div id="descriptionHeaderArticles" >  
             <a href="/{$smcountry}/articles/about-{$item['name_url']}/">
                 <h2>{$item['name']} </h2>
-                <p>{$item['teaser']}</p>
+                <p>{$item['teaser']} <span class="hrefstandart">&nbsp;Читать&nbsp;далее...</span></p>
             </a>
         </div>     
     </div>

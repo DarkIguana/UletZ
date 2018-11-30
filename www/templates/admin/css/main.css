@@ -142,10 +142,9 @@ h4 {
    color: black;
 }
 
-#contentBlock{
-    width: 600px;
-    float: left;
-    padding-left: 90px;
+#content_Block{
+padding-left: 20px;
+    padding-top: 70px;
 }
 table{ 
     border: 0px; 

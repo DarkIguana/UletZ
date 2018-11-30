@@ -5,7 +5,7 @@
             <div>
             <h2 ><a href="/{$smcountry}/excursions/to-{$item['name_url']}/">{$item['name']}</a> </h2>
             </div>
-            <p>{$item['description_short']} <a href="/{$smcountry}/excursions/to-{$item['name_url']}/" class="hrefstandart">Узнать подробнее...</a></p>
+            <p>{$item['description_short']} <a href="/{$smcountry}/excursions/to-{$item['name_url']}/" class="hrefstandart">&nbsp;Узнать&nbsp;подробнее...</a></p>
 
             <a href="/{$smcountry}/excursions/to-{$item['name_url']}/" class="buttonAndImage">
                 <table class="button_podrobno" >

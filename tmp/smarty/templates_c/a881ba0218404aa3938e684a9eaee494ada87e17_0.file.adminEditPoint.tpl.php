@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-29 07:14:33
+/* Smarty version 3.1.32, created on 2018-11-30 18:20:01
   from '/home/lizard/www/site.local/views/admin/adminEditPoint.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bff83c9a4a1b2_64785674',
+  'unifunc' => 'content_5c0171419f5ed4_07986456',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a881ba0218404aa3938e684a9eaee494ada87e17' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminEditPoint.tpl',
-      1 => 1543472071,
+      1 => 1543598397,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bff83c9a4a1b2_64785674 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c0171419f5ed4_07986456 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsPoint']->value, 'item', false, NULL, 'excursion', array (
@@ -56,7 +56,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </select>
         </h4>      
                 
-            <h4>Изображение</h4>
+            <h4>Заглавное Изображение</h4>
                 <div>
                     <?php if ($_smarty_tpl->tpl_vars['item']->value['image']) {?>
                       <img src="/images/points/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
@@ -74,10 +74,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </form>
              </div>
  
-<h4>Название</h4>
-        <div><input type="edit" class="longText" id="itemName_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
-" />  </div>
 <h4>URL name</h4>
         <div><input type="edit" class="longText" id="itemNameUrl_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['name_url'];?>
@@ -86,8 +82,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <div><input type="edit" class="longText" id="itemPageTitle_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['page_title'];?>
 " />  </div>
-
-        <h4>Descriptoin Tag</h4>
+<h4>Descriptoin Tag</h4>
         <div><input type="edit" class="longText" id="itemDescriptionTag_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['description_tag'];?>
 " />  </div>
@@ -95,7 +90,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <div><input type="edit" class="longText"  id="itemKeywordTag_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['keywords_tag'];?>
 " />  </div>
-                    
+<h4>Название</h4>
+        <div><input type="edit" class="longText" id="itemName_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+" />  </div>
 <h4>Описание короткое</h4>
         <div>
              <textarea rows="5"  class="longText" type="edit" id="itemDescShort_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
@@ -103,8 +101,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
          </textarea>
        </div>
-         
-<h4>Описание</h4>
+ <h4>Описание полное</h4>
           <div><textarea class="ckeditor" id="itemDesc_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 ">
                      <?php echo $_smarty_tpl->tpl_vars['item']->value['description'];?>

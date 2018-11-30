@@ -10,8 +10,8 @@
                 </a></li>
             {/foreach} 
     </ul>
-            <h2 > <a href="/{$smcountry}/admin/" class="editButtonPassive"> Редактировать</a> &nbsp; &nbsp; &nbsp; &nbsp;<a class="addButtonActive" href="/{$smcountry}/admin/add/">  Добавить </a></h2>
-  
+    <h2 > <a href="/{$smcountry}/admin/" class="editButtonPassive"> Редактировать</a> &nbsp; &nbsp; &nbsp; &nbsp;<a class="addButtonActive" href="/{$smcountry}/admin/add/">  Добавить </a></h2>
+
     {* <a href="/{$smcountry}/admin/points/"> <div class="subMenuTwo">Points</div>  </a> *}
-    
+
 </div>

@@ -76,6 +76,7 @@ function addExcursionJs() {
     var itemDescShort = $('#newItemDescShort').val();
     var itemDesc = $('#newItemDesc').val();
     var itemNameUrl = $('#newItemNameUrl').val();
+    var itemPageTitle = $('#newItemPageTitle').val();
     var itemDescriptionTag = $('#newItemDescriptionTag').val();
     var itemKeywordTag = $('#newItemKeywordTag').val();
     var itemStatus = $('#newitemStatus').prop('checked');
@@ -86,7 +87,7 @@ function addExcursionJs() {
         itemStatus = 0
     }
 
-    var postData = {itemNameUrl:itemNameUrl, itemDescriptionTag:itemDescriptionTag, 
+    var postData = {itemNameUrl: itemNameUrl, itemPageTitle: itemPageTitle, itemDescriptionTag: itemDescriptionTag,
         itemKeywordTag: itemKeywordTag, itemName: itemName, itemPrice: itemPrice, itemCatId: itemCatId,
         itemDescShort: itemDescShort, itemDesc: itemDesc, itemStatus: itemStatus};
 
@@ -105,6 +106,7 @@ function addExcursionJs() {
                 $('#newItemDescShort').val('');
                 $('#newItemDesc').val('');
                 $('#newItemNameUrl').val('');
+                $('#newItemPageTitle').val('');
                 $('#newItemDescriptionTag').val('');
                 $('#newItemKeywordTag').val('');
             }
@@ -126,12 +128,12 @@ function updateExcursionJs(itemId) {
     var itemPageTitle = $('#itemPageTitle_' + itemId).val();
     var itemDescriptionTag = $('#itemDescriptionTag_' + itemId).val();
     var itemKeywordTag = $('#itemKeywordTag_' + itemId).val();
-    
+
     var itemCatId = $('#itemCatId_' + itemId).val();
     var itemDescShort = $('#itemDescShort_' + itemId).val();
     var itemDesc = CKEDITOR.instances['itemDesc_' + itemId].getData();
     var itemStatus = $('#itemStatus_' + itemId).prop('checked');
-       // var newFileName        = $('#newFileName_'+itemId).val(); 
+    // var newFileName        = $('#newFileName_'+itemId).val(); 
     if (!itemStatus) {
         itemStatus = 1
     } else {
@@ -139,8 +141,8 @@ function updateExcursionJs(itemId) {
     }
 
     var postData = {itemId: itemId, itemName: itemName, itemNameUrl: itemNameUrl, itemPageTitle: itemPageTitle,
-        itemDescriptionTag: itemDescriptionTag, itemKeywordTag:itemKeywordTag, 
-        itemPrice: itemPrice, itemCatId: itemCatId, itemDescShort: itemDescShort, 
+        itemDescriptionTag: itemDescriptionTag, itemKeywordTag: itemKeywordTag,
+        itemPrice: itemPrice, itemCatId: itemCatId, itemDescShort: itemDescShort,
         itemDesc: itemDesc, itemStatus: itemStatus};
 
     $.ajax({
@@ -166,12 +168,12 @@ function updateExcursionJs(itemId) {
 function updateArticleJs(itemId) {
 
     var itemName = $('#itemName_' + itemId).val();
-    
+
     var itemNameUrl = $('#itemNameUrl_' + itemId).val();
-     var itemPageTitle = $('#itemPageTitle_' + itemId).val();
+    var itemPageTitle = $('#itemPageTitle_' + itemId).val();
     var itemDescriptionTag = $('#itemDescriptionTag_' + itemId).val();
     var itemKeywordTag = $('#itemKeywordTag_' + itemId).val();
-    
+
     var itemDate = $('#itemDate_' + itemId).val();
     var itemCatId = $('#itemCatId_' + itemId).val();
     var itemTeaser = $('#itemTeaser_' + itemId).val();
@@ -186,9 +188,9 @@ function updateArticleJs(itemId) {
         itemStatus = 0
     }
 
-    var postData = {itemId: itemId, itemName: itemName, itemNameUrl: itemNameUrl,  itemPageTitle: itemPageTitle,
-        itemDescriptionTag: itemDescriptionTag, itemKeywordTag:itemKeywordTag, 
-        itemDate: itemDate, itemCatId: itemCatId, itemTeaser: itemTeaser, itemText: itemText, 
+    var postData = {itemId: itemId, itemName: itemName, itemNameUrl: itemNameUrl, itemPageTitle: itemPageTitle,
+        itemDescriptionTag: itemDescriptionTag, itemKeywordTag: itemKeywordTag,
+        itemDate: itemDate, itemCatId: itemCatId, itemTeaser: itemTeaser, itemText: itemText,
         itemStatus: itemStatus, itemTeg: itemTeg};
 
     $.ajax({
@@ -216,16 +218,17 @@ function addArticleJs() {
     var itemText = $('#newItemText').val();
     var itemTeg = $('#newItemTeg').val();
     var itemNameUrl = $('#newItemNameUrl').val();
+    var itemPageTitle = $('#newItemPageTitle').val();
     var itemDescriptionTag = $('#newItemDescriptionTag').val();
     var itemKeywordTag = $('#newItemKeywordTag').val();
     var itemStatus = $('#newItemStatus').prop('checked');
-    if (!itemStatus) {
+    if (!itemStatus) {     
         itemStatus = 1
     } else {
         itemStatus = 0
     }
 
-    var postData = {itemNameUrl:itemNameUrl, itemDescriptionTag:itemDescriptionTag, 
+    var postData = {itemNameUrl: itemNameUrl, itemPageTitle: itemPageTitle, itemDescriptionTag: itemDescriptionTag,
         itemKeywordTag: itemKeywordTag, itemName: itemName, itemCatId: itemCatId,
         itemTeaser: itemTeaser, itemText: itemText, itemTeg: itemTeg, itemStatus: itemStatus};
 
@@ -243,8 +246,8 @@ function addArticleJs() {
                 $('#newItemTeaser').val('');
                 $('#newItemText').val('');
                 $('#newItemTeg').val('');
-                
                 $('#newItemNameUrl').val('');
+                $('#newItemPageTitle').val('');
                 $('#newItemDescriptionTag').val('');
                 $('#newItemKeywordTag').val('');
             }
@@ -263,12 +266,12 @@ function addPointJs() {
     var itemCatId = $('#newItemCatId').val();
     var itemDescShort = $('#newItemDescShort').val();
     var itemDesc = $('#newItemDesc').val();
-    var itemStatus = $('#newitemStatus').prop('checked');
-    
+    var itemStatus = $('#newItemStatus').prop('checked');
+    var itemPageTitle = $('#newItemPageTitle').val();
     var itemNameUrl = $('#newItemNameUrl').val();
     var itemDescriptionTag = $('#newItemDescriptionTag').val();
     var itemKeywordTag = $('#newItemKeywordTag').val();
-       
+
     // var newFileName        = $('#newFileName_'+itemId).val(); 
     if (!itemStatus) {
         itemStatus = 1
@@ -276,7 +279,7 @@ function addPointJs() {
         itemStatus = 0
     }
 
-    var postData = {itemNameUrl:itemNameUrl, itemDescriptionTag:itemDescriptionTag, 
+    var postData = {itemNameUrl: itemNameUrl, itemPageTitle: itemPageTitle, itemDescriptionTag: itemDescriptionTag,
         itemKeywordTag: itemKeywordTag, itemName: itemName, itemCatId: itemCatId,
         itemDescShort: itemDescShort, itemDesc: itemDesc, itemStatus: itemStatus};
 
@@ -294,6 +297,7 @@ function addPointJs() {
                 $('#newItemDescShort').val('');
                 $('#newItemDesc').val('');
                 $('#newItemNameUrl').val('');
+                $('#newItemPageTitle').val('');
                 $('#newItemDescriptionTag').val('');
                 $('#newItemKeywordTag').val('');
             }
@@ -324,8 +328,8 @@ function updatepointJs(itemId) {
         itemStatus = 0
     }
 
-    var postData = {itemId: itemId, itemName: itemName,  itemNameUrl: itemNameUrl,  itemPageTitle: itemPageTitle,
-        itemDescriptionTag: itemDescriptionTag, itemKeywordTag:itemKeywordTag, 
+    var postData = {itemId: itemId, itemName: itemName, itemNameUrl: itemNameUrl, itemPageTitle: itemPageTitle,
+        itemDescriptionTag: itemDescriptionTag, itemKeywordTag: itemKeywordTag,
         itemCatId: itemCatId, itemDescShort: itemDescShort, itemDesc: itemDesc,
         itemStatus: itemStatus};
 

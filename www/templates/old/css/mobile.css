@@ -191,6 +191,11 @@ and (max-device-width : 600px)
         width: 100%;
         margin: 5px 0px;
     }
+    .toPoints{
+      padding-top: 50px;
+      padding-bottom: 50px;
+     font-size: 150%;    
+}
     #button_back{
         padding-top: 40px;
         padding-bottom: 40px;
@@ -198,6 +203,8 @@ and (max-device-width : 600px)
         margin-left: auto;
         margin-right: auto;
         font-size: inherit;
+        max-width: 600px;
+          border-radius: 15px;
     }
     .bottom_article_exc{
         display: flex;
