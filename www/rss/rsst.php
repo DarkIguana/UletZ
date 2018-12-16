@@ -4,7 +4,22 @@
 
 include_once '../../config/db.php'; 
 
+/* Показываем браузеру, что это xml-документ  */
+header("content-type:text/xml");
 
+
+/* Выводим название и описание канала  */
+ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<rss version=\"2.0\">
+
+<channel>
+<language>ru</language>
+
+<title>Улетаем зимовать</title>
+
+<link>http://uletaemzimovat.ru</link>
+<description>Статьи об азии </description>"; 
+ 
 
 /* В цикле выводим все заметки из базы данных 
 из таблицы articles (у Вас будет другая таблица)*/
@@ -23,7 +38,8 @@ if  (mysqli_num_rows($result) > 0){
 
    while ($myrow = mysqli_fetch_array($result)){
 
-    echo 
+    echo '<item>'. 
+
       '<title>'.strip_tags($myrow['name']).'</title>'.
       
       '<link>http://uletaemzimovat.ru/'.$myrow['url_cat_name'].'/articles/about-'.$myrow['name_url'].'/</link>'.
@@ -32,12 +48,13 @@ if  (mysqli_num_rows($result) > 0){
       '<content:encoded><![CDATA['.$myrow['text'].']]></content:encoded>'.
       '<pubDate>".date(DATE_RSS, strtotime('.$myrow['date'].'))."</pubDate>'.
       '<author>Анна Гросс</author>'.
-      '<figure><enclosure url="http://uletaemzimovat.ru/images/articles/'.$myrow['url_cat_name'].'/'.$myrow['image'].'" type="image/jpeg"/></figure>'.
-      '<guid>http://uletaemzimovat.ru/'.$myrow['url_cat_name'].'/articles/about-'.$myrow['name_url'].'/</guid>'
-;
+      '<figure><enclosure url="http://uletaemzimovat.ru/images/articles/"'.$myrow['url_cat_name'].'/'.$myrow['image'].' type="image/jpeg"/></figure>'.
+      '<guid>http://uletaemzimovat.ru/'.$myrow['url_cat_name'].'/articles/about-'.$myrow['name_url'].'/</guid>'.
+
+     "</item>";
    }
 }
-
+echo "</channel></rss>";
 
 
 ?>

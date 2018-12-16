@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-23 06:57:32
+/* Smarty version 3.1.32, created on 2018-12-04 07:00:54
   from '/home/lizard/www/site.local/views/admin/adminAddMenuBlock.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bf796cc67fc41_76434208',
+  'unifunc' => 'content_5c061816c621b6_00406633',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8b15144f35d53a0859e9b8c6e1744be0bb027ade' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminAddMenuBlock.tpl',
-      1 => 1542952649,
+      1 => 1543608046,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bf796cc67fc41_76434208 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c061816c621b6_00406633 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="menuBlock">
     <ul class="countryMenu menu"> 
         <?php
@@ -41,11 +41,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?> 
     </ul>
-            <h2 > <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+    <h2 > <a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /admin/" class="editButtonPassive"> Редактировать</a> &nbsp; &nbsp; &nbsp; &nbsp;<a class="addButtonActive" href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /admin/add/">  Добавить </a></h2>
-  
-        
+
+    
 </div>
 <?php }
 }

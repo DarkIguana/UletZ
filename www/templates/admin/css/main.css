@@ -205,6 +205,25 @@ table th{
     border-radius: 5px;
     border: 1px solid #666;
 }
+.buttonRSS{
+    float: right;
+    background-color: #FF0000;
+    /* For WebKit (Safari, Chrome, etc) */
+    background: #FF0000 -webkit-gradient(linear, 0 0, 0  100%, from(#FFAA00), to(#FF0000), color-stop(0.5, #FF0000));
+    /* Mozilla,Firefox/Gecko */
+    background: #FF0000 -moz-linear-gradient(#FFAA00, #FF0000, #FFAA00) no-repeat;
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFAA00, endColorstr=#FF0000);
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFAA00, endColorstr=#FFAA00)" no-repeat;
+    padding: 3px 7px;
+    color: white;
+    font-weight: bold;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #666;
+}
 /* Customize the label (the container) */
 .container {
     display: block;

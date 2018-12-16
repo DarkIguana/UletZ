@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-28 22:06:06
+/* Smarty version 3.1.32, created on 2018-12-04 06:56:41
   from '/home/lizard/www/site.local/views/admin/adminArticles.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bff033e5682d0_17838302',
+  'unifunc' => 'content_5c061719dfe1c8_50672678',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'df58bf68ce98b281bb968dbf813782edfa764734' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminArticles.tpl',
-      1 => 1543439098,
+      1 => 1543608046,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bff033e5682d0_17838302 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c061719dfe1c8_50672678 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h1> Редактирование Статей - <?php echo $_smarty_tpl->tpl_vars['smupCountry']->value;?>
  </h1>
 <table >
@@ -31,41 +31,41 @@ function content_5bff033e5682d0_17838302 (Smarty_Internal_Template $_smarty_tpl)
         <th>Изображение</th>
         <th>Изменить</th>
     </tr>
-                     <?php
+    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsHeadArticles']->value, 'item', false, NULL, 'articles', array (
 ));
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
-     <tr>
-          <td><?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+        <tr>
+            <td><?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 </td>
-          <td><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </td> 
-         
-          <td>
-              <input type="checkbox" id="itemStatus_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+
+            <td>
+                <input type="checkbox" id="itemStatus_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " <?php if ($_smarty_tpl->tpl_vars['item']->value['status'] == 0) {?> checked="checked"<?php }?> />
-          </td>
-          <td> <?php if ($_smarty_tpl->tpl_vars['item']->value['image']) {?>
-                  <img src="/images/articles/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+            </td>
+            <td> <?php if ($_smarty_tpl->tpl_vars['item']->value['image']) {?>
+                <img src="/images/articles/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
 " width="100"/>
-              <?php }?></td>
-          <td>
-                       <form method="LINK" action="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
+                <?php }?></td>
+                <td>
+                    <form method="LINK" action="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
 /admin/editarticle/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 /">
-                                    <input type="submit" value="Изменить">
-                  </form>
-          </td> 
-     </tr>  
-                    <?php
+                        <input type="submit" value="Изменить">
+                    </form>
+                </td> 
+            </tr>  
+            <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-          
-</table>
-                       
+
+            </table>
+
 <?php }
 }

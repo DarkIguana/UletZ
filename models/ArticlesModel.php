@@ -215,3 +215,23 @@ function getPageTitle($countryId) {
      * 
      */
 }
+
+/**
+ * получить все статьи для RSS (за 3дня)
+ * делаем выборку всех записей таблицы и сортируем ее по дате добавления новости AND `date` >= DATE_SUB(CURRENT_DATE, INTERVAL 3 day)
+ * */
+function getRssArticles() {
+    global $db;
+    //  AND `date` >= DATE_SUB(CURRENT_DATE, INTERVAL 3 day)
+    $sql = "SELECT articles.*, menu.url_cat_name 
+            FROM `articles` 
+            LEFT JOIN `menu` 
+            ON articles.category_id=menu.id 
+            WHERE articles.status='1' 
+            
+            ORDER BY date DESC ";
+
+    $rs_result = mysqli_query($db, $sql);
+    mysqli_close($db);
+    return $rs_result;
+}

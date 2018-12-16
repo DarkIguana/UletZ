@@ -26,9 +26,7 @@
               enctype="multipart/form-data">
             <input type="file" name="filename">
             <input type="hidden" name="itemId" value="{$item['id']}">
-
             <input class="buttonstand" type="submit" value="загрузить"></br>
-
         </form>
     </div>
     <h4>URL name</h4>
