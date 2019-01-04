@@ -599,6 +599,21 @@ function uploadpointdescriptionimgAction() {
         }
     }
 }
+/**
+ * отображение изображений для статей Point на сервер
+ * */
+function showfilesindirAction($smarty) {
+    $country = isset($_GET['country']) ? $_GET['country'] : null;
+    
+    $type = $_POST['type'];
+
+ 
+$dir    = "../www/images/$type/$country";
+opendir($dir);
+$files= scandir($dir);
+
+ $smarty->assign('rsFiles', $files);
+}
 
 /** -------------------------добавить ---------------* */
 

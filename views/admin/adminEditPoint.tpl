@@ -64,7 +64,16 @@
         <input class="buttonstand" type="submit" value="загрузить"></br>
 
     </form>
-</div>
+  {*      
+        <form action="/{$smcountry}/admin/showfilesindir/"  method="post" 
+          enctype="multipart/form-data">
+        <input type="hidden" name="type" value="points">
+        <input class="buttonstand" type="submit" value="показать"></br>
+
+    </form>  *}
+    
+</div></br>
+     <a class="buttonstand" href="/browser/index.php" target="_blank"> посмотреть файлы в новом окне </a>
 <div>
     </br></br>
     <input class="save" type="button" value="Сохранить" onclick="updatepointJs('{$item['id']}');"/>

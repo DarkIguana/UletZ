@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-09 13:26:10
+/* Smarty version 3.1.32, created on 2019-01-04 04:46:06
   from '/home/lizard/www/site.local/views/old/analyticstracking.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5be57ce24e3344_42219342',
+  'unifunc' => 'content_5c2ed6fe933e84_94320702',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '03142722a0c59c4e0bbf297839f5d9755c52f0e2' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/analyticstracking.tpl',
-      1 => 1541766356,
+      1 => 1546530940,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5be57ce24e3344_42219342 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c2ed6fe933e84_94320702 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  
      <?php echo '<script'; ?>
  async src="https://www.googletagmanager.com/gtag/js?id=UA-129003710-1"><?php echo '</script'; ?>
@@ -66,6 +66,7 @@ function content_5be57ce24e3344_42219342 (Smarty_Internal_Template $_smarty_tpl)
 >
 <noscript><div><img src="https://mc.yandex.ru/watch/51072710" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<meta name="yandex-verification" content="d7b0534ca990f779" />
    
 <?php }
 }

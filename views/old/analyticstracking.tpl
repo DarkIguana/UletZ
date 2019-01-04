@@ -37,4 +37,5 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/51072710" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<meta name="yandex-verification" content="d7b0534ca990f779" />
  {/literal}  

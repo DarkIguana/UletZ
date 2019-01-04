@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-29 16:05:02
+/* Smarty version 3.1.32, created on 2019-01-04 04:46:06
   from '/home/lizard/www/site.local/views/old/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5c00001e82c835_97387007',
+  'unifunc' => 'content_5c2ed6fedd9ff9_34246212',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eb6a563a67f1c61a339a2b52add99a6bfad3b40b' => 
     array (
       0 => '/home/lizard/www/site.local/views/old/index.tpl',
-      1 => 1543494302,
+      1 => 1546531184,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c00001e82c835_97387007 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c2ed6fedd9ff9_34246212 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="subHead">    
     <div class="introBox collomnMinWidh collomnWidh">
@@ -93,6 +93,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 </div>
    <p class="toPoints"><a href="/<?php echo $_smarty_tpl->tpl_vars['smcountry']->value;?>
-/points/" class="hrefstandart"> Другие экскурсии и список достопримечателтностей...</a> </p>
+/points/" class="hrefstandart"> Другие экскурсии и список достопримечательностей...</a> </p>
 <?php }
 }
