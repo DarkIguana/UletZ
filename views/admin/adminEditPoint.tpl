@@ -71,9 +71,9 @@
         <input class="buttonstand" type="submit" value="показать"></br>
 
     </form>  *}
-    
-</div></br>
-     <a class="buttonstand" href="/browser/index.php" target="_blank"> посмотреть файлы в новом окне </a>
+ </br>
+     <a class="buttonstand" href="/browser/index.php" target="_blank"> посмотреть загруженные файлы</a>   
+</div>
 <div>
     </br></br>
     <input class="save" type="button" value="Сохранить" onclick="updatepointJs('{$item['id']}');"/>

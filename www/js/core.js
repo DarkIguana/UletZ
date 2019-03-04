@@ -45,15 +45,15 @@ var directoryObject = {
 					var path = $(this).closest('ul').attr('rel')+'/'+file;
 					$('body').append('<div><img src="'+path+'" id="'+directoryObject.idTooltip+'" alt="Preview" /></div>');
 					$('#'+directoryObject.idTooltip)
-						.css('top', (obj.pageY - directoryObject.offsetX) + 'px')
-						.css('left', (obj.pageX - directoryObject.offsetY) + 'px')
+						.css('top', (directoryObject.offsetY) + 'px')
+						.css('right', (directoryObject.offsetX) + 'px')
 						.fadeIn(100);
 				} else if (obj.type == 'mouseout') {
 					$('#'+directoryObject.idTooltip).remove();
 				} else {
 					$('#'+directoryObject.idTooltip)
-						.css('top', (obj.pageY - directoryObject.offsetX) + 'px')
-						.css('left', (obj.pageX + directoryObject.offsetY) + 'px');
+						.css('top', (directoryObject.offsetY) + 'px')
+						.css('right', (directoryObject.offsetX) + 'px');
 				}
 			}
 			

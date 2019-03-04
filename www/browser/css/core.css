@@ -65,9 +65,11 @@ p {
 	background: url(/browser/images/js.png) no-repeat 0 3px;
 }
 #preview {
-	position: absolute;
+	position: fixed;
 	background: #fff;
 	border: solid 1px #aaa;
 	padding: 5px;
 	display: none;
+        max-width: 30%;
+       
 }

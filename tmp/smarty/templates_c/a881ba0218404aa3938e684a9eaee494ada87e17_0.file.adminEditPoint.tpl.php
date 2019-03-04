@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2019-01-01 13:44:51
+/* Smarty version 3.1.32, created on 2019-01-04 09:39:00
   from '/home/lizard/www/site.local/views/admin/adminEditPoint.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5c2b60c3d200b3_40821713',
+  'unifunc' => 'content_5c2f1ba4437b46_34647754',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a881ba0218404aa3938e684a9eaee494ada87e17' => 
     array (
       0 => '/home/lizard/www/site.local/views/admin/adminEditPoint.tpl',
-      1 => 1546346685,
+      1 => 1546591103,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c2b60c3d200b3_40821713 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c2f1ba4437b46_34647754 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsPoint']->value, 'item', false, NULL, 'excursion', array (
 ));
 if ($_from !== null) {
@@ -126,9 +126,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <input class="buttonstand" type="submit" value="загрузить"></br>
 
     </form>
-      
-</div></br>
-     <a class="buttonstand" href="/browser/index.php" target="_blank"> посмотреть файлы в новом окне </a>
+   </br>
+     <a class="buttonstand" href="/browser/index.php" target="_blank"> посмотреть загруженные файлы</a>   
+</div>
 <div>
     </br></br>
     <input class="save" type="button" value="Сохранить" onclick="updatepointJs('<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>

@@ -1,6 +1,7 @@
 <?php
 require_once('inc/autoload.php');
-$path = ROOT_PATH.DS;
+$path = BASE_PATH.DS;
+$pathTarget=BASE_PATH.DS;
 $rel = DS;
 $up = null;
 

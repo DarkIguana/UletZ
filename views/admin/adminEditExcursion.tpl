@@ -65,6 +65,8 @@
         <input class="buttonstand"  type="submit" value="загрузить"></br>
 
     </form>
+        </br>
+     <a class="buttonstand" href="/browser/index.php" target="_blank"> посмотреть загруженные файлы</a>
 </div>
 <div>
     </br></br>
