@@ -1,7 +1,15 @@
 {* шаблон главной странцы*}
+<div class="subHead">  
+<div class="phoneBox doubleCollomnWidh">
+            <div class="phoneBoxImgPhone collomnMinWidh">
+                <div><img src="/images/global/messengers-icons.png" class="iconmessengers"/></div>
+                <div class="phoneNum"><h2> {$smIntro[0].description} </h2></div>
+            </div>
+</div>
+    </div>
 <div class="excursionsTwoList">
     {foreach $rsExcursions as $item name=excursion}
-        <div class="excursionsListItemBox">
+        <div class="excursionsListItemBox  collomnMinWidh collomnWidh">
 
             <h2 ><a href="/{$smcountry}/excursions/item/{$item['name_url']}/">{$item['name']}</a> </h2>
 

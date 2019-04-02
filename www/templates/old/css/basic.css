@@ -171,6 +171,9 @@ figcaption{
 .collomnWidh{
     width: 48%;  
 }
+.doubleCollomnWidh{
+    width: 100%;  
+}
 .subHead{
     display: flex;
     flex-wrap: wrap;
