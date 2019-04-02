@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /item/ 	# временная заглушка
+Disallow: /admin/	# запрещает ссылки из панели администратора
+Host: uletaemzimovat.ru
+Sitemap: http://uletaemzimovat.ru/sitemap.xml
+
