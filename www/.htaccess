@@ -21,17 +21,26 @@ RewriteEngine on
 ErrorDocument 404 /err404.html
 RewriteBase /
 
+#редирект на зеркало без www
+RewriteCond %{HTTP_HOST} ^www.uletaemzimovat\.ru$ [NC]
+RewriteRule ^(.*)$ http://uletaemzimovat.ru/$1 [R=301,L]
+
 RewriteRule ^([a-z]+)/([a-z]+)/(to)-(([a-z]+-*)*)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/(about)-(([a-z]+-*)*)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/(the)-(([a-z]+-*)*)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
 
 #RewriteRule ^([a-z]+)/([a-z]+)/([a-z]+)/(([a-z]+-*)*)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/([a-z]+)/([a-z]+)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
+#Временная заглушка для google убить старые линки
+RewriteRule ^([a-z]+)/([a-z]+)/(item)/([0-9]+)/$ /err404.html [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/([a-z]+)/([0-9]+)/$ /?country=$1&controller=$2&action=$3&id=$4&%{QUERY_STRING} [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/([a-z]+)/$ /?country=$1&controller=$2&action=$3&%{QUERY_STRING} [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/([0-9]+)/$ /?country=$1&action=$2&id=$3&%{QUERY_STRING} [NS,L]
+RewriteRule ^vietnam/excursions/$ /?country=vietnam&controller=excursions&action=to&name_url=default&%{QUERY_STRING} [NS,L] #заглушка на вьетнам экскурсии
 RewriteRule ^([a-z]+)/([a-z]+)/$ /?country=$1&controller=$2&%{QUERY_STRING} [NS,L]
-RewriteRule ^([a-z]+)/$ /?country=$1&%{QUERY_STRING} [NS,L]
+#RewriteRule ^([a-z]+)/$ /?country=$1&%{QUERY_STRING} [NS,L] #заглушка на вьетнам экскурсии
+RewriteRule ^vietnam/$ /?country=vietnam&controller=excursions&action=to&name_url=default&%{QUERY_STRING} [NS,L] #заглушка на вьетнам экскурсии
+RewriteRule ^thailand/$ /?country=thailand&%{QUERY_STRING} [NS,L] #заглушка на вьетнам экскурсии
 
 RewriteCond $1 !^(index\.php)
 RewriteCond %{REQUEST_URL} !\.(css|js|jpg|gif)$

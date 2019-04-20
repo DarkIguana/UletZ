@@ -4,105 +4,232 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  -->
+
 
 <url>
-  <loc>http://www.uletaemzimovat.ru/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/vietnam/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/vietnam/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/articles/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/articles/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/excursions/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/excursions/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/vietnam/articles/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/vietnam/articles/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/vietnam/excursions/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/vietnam/excursions/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/excursions/to/kotalu/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/excursions/to-ko-talu/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/excursions/to/safari/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/excursions/to-safari/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/excursions/to/kaengkrachang/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/excursions/to-kaeng-krachang/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/excursions/to/palau/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/excursions/to-pala-u/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/excursions/to/obzornayapriroda/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/excursions/to-obzornaya-priroda/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/excursions/to/samroyot/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/excursions/to-sam-roi-yot/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/excursions/to/phetchabury/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/excursions/to-phetchaburi/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/excursions/to/aomanao/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/excursions/to-ao-manao/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/excursions/to/vineyard/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/excursions/to-vineyard/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/vietnam/excursions/to/vanquoc/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/points/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-khmer-ruins/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/articles/item/13/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-karen/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/thailand/articles/item/14/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-thai-food-gai-ian/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.uletaemzimovat.ru/vietnam/articles/item/12/</loc>
-  <lastmod>2018-11-12T09:55:32+00:00</lastmod>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-huahin-zachem-budde-v-puze-dyrka/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-okazyvaetsia-u-banana-est-kostochka/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-rynok-na-relsah/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-orolevskaia-pescera/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-huahin-tours-zemlia-dikih-slonov-kuiburi/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-hua-hin/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-huahin-shutochki-gida/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-thai-food-kak-gotovit-muravev/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-pescera-letuchih-myshei/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-esli-nelzia-no-hochetsia/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-ty-tupaiia/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-langury-neveroiatno-milye-suscestva/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-mest-taiskih-jen/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-karambola/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-trusiki-s-pushapom/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-pliaj-i-kokos-eto-buddizm/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-sviascennye-muravi/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/articles/about-smeh-v-nochi/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/vietnam/articles/about-on-two-wheels-in-vietnam/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/vietnam/articles/about-vetnamskaia-ulybka/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/vietnam/articles/about-vetnamskaia-svadba/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/vietnam/excursions/to-bach-ma/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/vietnam/points/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/points/the-kuybury/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://uletaemzimovat.ru/thailand/points/the-huay-mongkol/</loc>
+  <lastmod>2019-04-01T16:39:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
