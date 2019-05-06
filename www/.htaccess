@@ -25,14 +25,17 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^www.uletaemzimovat\.ru$ [NC]
 RewriteRule ^(.*)$ http://uletaemzimovat.ru/$1 [R=301,L]
 
+#Временная заглушка для google убить старые линки
+RewriteRule ^([a-z]+)/([a-z]+)/(item)/([0-9]+)/$ /err404.html [NS,L]
+RewriteRule ^([a-z]+)/([a-z]+)/(item)/([a-z]+)/$ /err404.html [NS,L]
+RewriteRule ^([a-z]+)/([a-z]+)/(to)/([a-z]+)/$ /err404.html [NS,L]
+
 RewriteRule ^([a-z]+)/([a-z]+)/(to)-(([a-z]+-*)*)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/(about)-(([a-z]+-*)*)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/(the)-(([a-z]+-*)*)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
 
 #RewriteRule ^([a-z]+)/([a-z]+)/([a-z]+)/(([a-z]+-*)*)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/([a-z]+)/([a-z]+)/$ /?country=$1&controller=$2&action=$3&name_url=$4&%{QUERY_STRING} [NS,L]
-#Временная заглушка для google убить старые линки
-RewriteRule ^([a-z]+)/([a-z]+)/(item)/([0-9]+)/$ /err404.html [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/([a-z]+)/([0-9]+)/$ /?country=$1&controller=$2&action=$3&id=$4&%{QUERY_STRING} [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/([a-z]+)/$ /?country=$1&controller=$2&action=$3&%{QUERY_STRING} [NS,L]
 RewriteRule ^([a-z]+)/([a-z]+)/([0-9]+)/$ /?country=$1&action=$2&id=$3&%{QUERY_STRING} [NS,L]
